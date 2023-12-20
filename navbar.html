@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Include Font Awesome CSS -->
+    <script
+      src="https://kit.fontawesome.com/53025ffb8e.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Tailwind css link  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <title>Navbar</title>
+  </head>
+  <body>
+
+  <div class="md:bg-[#008069] py-3">
+      <div class="container mx-auto px-3">
+        <div class="flex justify-between items-center">
+          <div class="w-[80px]">
+            <img
+              class="object-cover w-full h-full"
+              src="img/your-logo.webp"
+              alt=""
+            />
+          </div>
+
+          <div class="search-container hidden lg:block">
+            <div class="relative flex">
+              <div
+                class="absolute md:hidden inset-y-0 left-0 pl-3 flex items-center"
+              >
+                <i class="fas fa-bars text-black"></i>
+              </div>
+              <input
+                type="text"
+                class="search-input md:pl-4 pl-10 md:w-[600px] w-full"
+                placeholder="Search..."
+              />
+              <div class="absolute inset-y-0 right-0 pr-3 flex items-center">
+                <i class="fas fa-search text-black"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex gap-8 items-center text-black md:text-white">
+            <!-- hover:border hover:border-white hover:rounded-sm hover:px-2 -->
+            <div class="cursor-pointer hidden md:block">
+              <h4 class="text-[12px]">Hello, User</h4>
+              <h2 class="font-bold">Account &..</h2>
+            </div>
+
+            <div class="cursor-pointer hidden md:block">
+              <h4 class="text-[12px]">Refer</h4>
+              <h2 class="font-bold">& Earn</h2>
+            </div>
+
+            <div class="flex flex-row gap-1">
+              <div><i class="fa-solid fa-cart-plus text-[22px]"></i></div>
+              <div class="relative">
+                <h3 class="font-bold">Cart</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="search-container lg:hidden mt-4 z-[0]">
+          <div class="relative flex">
+            <div
+              class="absolute lg:hidden inset-y-0 left-0 pl-3 flex items-center"
+            >
+              <i id="toggleNavbar" class="fas fa-bars text-black"></i>
+            </div>
+            <input
+              type="text"
+              class="search-input bg-gray-200 md:bg-white lg:pl-4 pl-10 md:w-[600px] w-full"
+              placeholder="Search..."
+            />
+            <div class="absolute inset-y-0 right-0 pr-3 flex items-center">
+              <i class="fas fa-search text-black"></i>
+            </div>
+          </div>
+        </div>
+        <!-- navbar start  -->
+        <div
+          id="navbar"
+          class="lg:hidden fixed top-0 left-0 h-full z-30 invisible opacity-0 transition-transform transform overflow-y-scroll w-[230px]"
+        >
+          <div class="flex flex-col bg-white py-8 space-y-4">
+            <div class="flex flex-row items-center gap-5">
+              <span class="ml-[20px]"
+                ><i
+                  class="fa-solid fa-user w-[40px] h-[40px] text-[20px] flex justify-center items-center text-white rounded-full bg-[#BDBDBD] p-2"
+                ></i
+              ></span>
+              <h3 class="text-[20px] font-normal">Sign In</h3>
+            </div>
+            <hr class="mt-1" />
+
+            <ul>
+              <li
+                class="hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
+              >
+                <a href="#" class="ml-[16px]">
+                  <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
+                    <i class="fa-solid fa-table-list"></i
+                  ></span>
+                  My Orders</a
+                >
+              </li>
+
+              <li
+                class="hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
+              >
+                <a href="#" class="ml-[16px]">
+                  <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
+                    <i class="fa-solid fa-user"></i
+                  ></span>
+                  My Account</a
+                >
+              </li>
+
+              <li
+                class="hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
+              >
+                <a href="#" class="ml-[16px]">
+                  <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
+                    <i class="fa-solid fa-clipboard-list"></i
+                  ></span>
+                  Prescriptions</a
+                >
+              </li>
+
+              <li
+                class="hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
+              >
+                <a href="#" class="ml-[16px]">
+                  <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
+                    <i class="fa-solid fa-heart"></i
+                  ></span>
+                  Favourite</a
+                >
+              </li>
+
+              <li
+                class="hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
+              >
+                <a href="#" class="ml-[16px]">
+                  <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
+                    <i class="fa-solid fa-location-dot"></i
+                  ></span>
+                  Manage Address</a
+                >
+              </li>
+
+              <li
+                class="hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
+              >
+                <a href="#" class="ml-[16px]">
+                  <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
+                    <i class="fa-solid fa-notes-medical"></i
+                  ></span>
+                  Request Medicine</a
+                >
+              </li>
+
+              <li
+                class="hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
+              >
+                <a href="#" class="ml-[16px]">
+                  <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
+                    <i class="fa-solid fa-gift"></i
+                  ></span>
+                  Refer And Earn</a
+                >
+              </li>
+
+              <li
+                class="hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
+              >
+                <a href="#" class="ml-[16px]">
+                  <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
+                    <i class="fa-solid fa-phone"></i
+                  ></span>
+                  Call To Order</a
+                >
+              </li>
+
+              <li
+                class="hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
+              >
+                <a href="#" class="ml-[16px]">
+                  <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
+                    <i class="fa-solid fa-clipboard-question"></i
+                  ></span>
+                  FAQs</a
+                >
+              </li>
+
+              <li
+                class="hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
+              >
+                <a href="#" class="ml-[16px]">
+                  <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
+                    <i class="fa-solid fa-calendar-days"></i
+                  ></span>
+                  Special Offers</a
+                >
+              </li>
+
+              <li
+                class="hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
+              >
+                <a href="#" class="ml-[16px]">
+                  <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
+                    <i class="fa-brands fa-square-facebook"></i
+                  ></span>
+                  Facebook Page</a
+                >
+              </li>
+
+              <li
+                class="hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
+              >
+                <a href="#" class="ml-[16px]">
+                  <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
+                    <i class="fa-solid fa-thumbs-up"></i
+                  ></span>
+                  Rate Us</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <!-- ====== -->
+<!-- SIDEBAR -->
+<section id="sidebar" class="shadow-md">
+  <a href="#" class="brand ml-6"> <i class='bx bx-menu toggle-sidebar' ></i><span class="ml-3">Categories</span> </a>
+
+  <ul class="side-menu">
+    <li class="content-div mb-2" onclick="changeContent('Covid-19', this)">
+      <a href="#">
+         <img src="img/covit.png" alt="">
+         <span class="ml-2">Covid-19 Special</span>
+      </a>      
+    </li>
+    <li class="content-div mb-2" onclick="changeContent('Women-Care', this)">
+      <a href="#">
+        <img src="img/women.png" alt="">
+        <span class="ml-2">Women Care</span>
+      </a>      
+    </li>
+    <li class="content-div mb-2" onclick="changeContent('Devices', this)">
+      <a href="#">
+        <img src="img/Devices.png" alt="">
+        <span class="ml-2">Devices</span>
+      </a>     
+    </li>
+    <li class="content-div mb-2" onclick="changeContent('Sexual-Wellness', this)">
+      <a href="#">
+        <img src="img/sexual.png" alt="">
+        <span class="ml-2">Sexual Wellness</span>
+      </a>      
+    </li>
+    <li class="content-div mb-2" onclick="changeContent('Herbal-and-Homeopathy', this)">
+      <a href="#">
+        <img src="img/Herbal.png" alt="">
+        <span class="ml-2">Herbal and Homeopathy</span>
+      </a>      
+    </li>
+    <li class="content-div mb-2" onclick="changeContent('Baby-Mom-care', this)">
+      <a href="#">
+        <img src="img/boby.png" alt="">
+        <span class="ml-2">Baby & Mom care</span>
+      </a>
+    </li>
+    <li class="content-div mb-2" onclick="changeContent('Nutrition-and-drinks', this)">
+      <a href="#">
+        <img src="img/nutrition.png" alt="">
+        <span class="ml-2">Nutrition and drinks</span>
+      </a>
+    </li>
+    <li class="content-div mb-2" onclick="changeContent('Personal-care', this)">
+      <a href="#">
+        <img src="img/personal.png" alt="">
+        <span class="ml-2">Personal care</span>
+      </a>
+    </li>
+    <li class="content-div mb-2" onclick="changeContent('Supplements-and-Vitamins', this)">
+      <a href="#">
+        <img src="img/supplemens.png" alt="">
+        <span class="ml-2">Supplements and Vitamins</span>
+      </a>
+    </li>
+    <li class="content-div mb-2" onclick="changeContent('Veterinary', this)">
+      <a href="#">
+        <img src="img/veterinary.png" alt="">
+        <span class="ml-2">Veterinary</span>
+      </a>
+    </li>
+    
+  </ul>
+ 
+</section>
+<!-- SIDEBAR -->
+
+<!-- NAVBAR -->
+<section id="content">
+  <!-- NAVBAR -->
+  <nav>
+    <i class='bx bx-menu toggle-sidebar' ></i>
+  </nav>
+  <!-- NAVBAR -->
+
+  <!-- MAIN -->
+  <main>    
+     <div id="right-sidebar-content" >
+        <div id="home" class="content-div">
+            <!-- Banner  -->
+          <div class="mb-8">
+            <img class="w-full h-full" src="img/cards/Home/Banner.webp" alt="">
+          </div>
+        </div>
+        <div id="Covid-19" class="content-div mb-10" style="display: none;">
+          <!-- Banner  -->
+          <div class="mb-8">
+            <img class="w-full h-full" src="img/covid/banner.webp" alt="">
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 h-full">
+            <!-- card  -->  
+            <div class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0]">
+              <div class="h-[200px]">
+                  <img class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/covid/img1.webp" alt="product image" />
+              </div>
+              <div class="px-2">
+                <h5 class="text-[14px] font-semibold text-black block ">Thermometer Digital Tip</h5>
+                  <div class="flex justify-between items-center mt-2.5 mb-5">
+                      <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+                      <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+                  </div>
+                  <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+            </div>
+             
+
+            <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+
+          </div>
+
+            <div class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0]">
+              <div class="h-[200px]">
+                  <img class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/covid/img2.webp" alt="product image" />
+              </div>
+              <div class="px-2">
+                <h5 class="text-[14px] font-semibold text-black">Sepnil Face Mask</h5>
+                  <div class="flex justify-between items-center mt-2.5 mb-5">
+                      <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+                      <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+                  </div>
+                  <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+            </div>
+             
+
+            <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+
+          </div>
+
+          <div class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0]">
+            <div class="h-[200px]">
+                <img class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/covid/img3.webp" alt="product image" />
+            </div>
+            <div class="px-2">
+              <h5 class="text-[14px] font-semibold text-black">MuiTypography-root jss6</h5>
+                <div class="flex justify-between items-center mt-2.5 mb-5">
+                    <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+                    <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+                </div>
+                <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+          </div>
+           
+
+          <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+
+        </div>
+
+
+        <div class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0]">
+          <div class="h-[200px]">
+              <img class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/covid/img4.webp" alt="product image" />
+          </div>
+          <div class="px-2">
+            <h5 class="text-[14px] font-semibold text-black">TN95 Mask Particulate </h5>
+              <div class="flex justify-between items-center mt-2.5 mb-5">
+                  <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+                  <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+              </div>
+              <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+        </div>
+         
+
+        <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+
+      </div>
+ 
+         </div>
+
+        </div>
+        <div id="Women-Care" class="content-div" style="display: none;">
+          <!-- Banner  -->
+          <div class="mb-8">
+            <img class="w-full h-full" src="img/cards/women/bannerwebp.webp" alt="">
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 h-full">
+            <!-- card  -->  
+            <div class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0]">
+              <div class="h-[200px]">
+                  <img class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/cards/women/img1.webp" alt="product image" />
+              </div>
+              <div class="px-2">
+                <h5 class="text-[14px] font-semibold text-black block ">Thermometer Digital Tip</h5>
+                  <div class="flex justify-between items-center mt-2.5 mb-5">
+                      <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+                      <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+                  </div>
+                  <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+            </div>
+             
+
+            <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+
+          </div>
+
+            <div class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0]">
+              <div class="h-[200px]">
+                  <img class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/cards/women/img2.webp" alt="product image" />
+              </div>
+              <div class="px-2">
+                <h5 class="text-[14px] font-semibold text-black">Sepnil Face Mask</h5>
+                  <div class="flex justify-between items-center mt-2.5 mb-5">
+                      <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+                      <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+                  </div>
+                  <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+            </div>
+             
+
+            <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+
+          </div>
+
+          <div class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0]">
+            <div class="h-[200px]">
+                <img class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/cards/women/img3.webp" alt="product image" />
+            </div>
+            <div class="px-2">
+              <h5 class="text-[14px] font-semibold text-black">MuiTypography-root jss6</h5>
+                <div class="flex justify-between items-center mt-2.5 mb-5">
+                    <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+                    <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+                </div>
+                <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+          </div>
+           
+
+          <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+
+        </div>
+
+
+        <div class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0]">
+          <div class="h-[200px]">
+              <img class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/cards/women/img4.webp" alt="product image" />
+          </div>
+          <div class="px-2">
+            <h5 class="text-[14px] font-semibold text-black">TN95 Mask Particulate </h5>
+              <div class="flex justify-between items-center mt-2.5 mb-5">
+                  <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+                  <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+              </div>
+              <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+        </div>
+         
+
+        <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+
+      </div>
+ 
+         </div>
+
+        </div>
+        <div id="Devices" class="content-div" style="display: none;">
+          <!-- Banner  -->
+          <div class="mb-8">
+            <img class="w-full h-full" src="img/cards/Devices/banner.webp" alt="">
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 h-full">
+            <!-- card  -->  
+            <div class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0]">
+              <div class="h-[200px]">
+                  <img class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/cards/Devices/img1.webp" alt="product image" />
+              </div>
+              <div class="px-2">
+                <h5 class="text-[14px] font-semibold text-black block ">Thermometer Digital Tip</h5>
+                  <div class="flex justify-between items-center mt-2.5 mb-5">
+                      <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+                      <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+                  </div>
+                  <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+            </div>
+             
+
+            <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+
+          </div>
+
+            <div class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0]">
+              <div class="h-[200px]">
+                  <img class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/cards/Devices/img2.webp" alt="product image" />
+              </div>
+              <div class="px-2">
+                <h5 class="text-[14px] font-semibold text-black">Sepnil Face Mask</h5>
+                  <div class="flex justify-between items-center mt-2.5 mb-5">
+                      <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+                      <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+                  </div>
+                  <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+            </div>
+             
+
+            <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+
+          </div>
+
+          <div class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0]">
+            <div class="h-[200px]">
+                <img class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/cards/Devices/img3.webp" alt="product image" />
+            </div>
+            <div class="px-2">
+              <h5 class="text-[14px] font-semibold text-black">MuiTypography-root jss6</h5>
+                <div class="flex justify-between items-center mt-2.5 mb-5">
+                    <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+                    <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+                </div>
+                <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+          </div>
+           
+
+          <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+
+        </div>
+
+
+        <div class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0]">
+          <div class="h-[200px]">
+              <img class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/cards/Devices/img4.webp" alt="product image" />
+          </div>
+          <div class="px-2">
+            <h5 class="text-[14px] font-semibold text-black">TN95 Mask Particulate </h5>
+              <div class="flex justify-between items-center mt-2.5 mb-5">
+                  <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+                  <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+              </div>
+              <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+        </div>
+         
+
+        <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+
+      </div>
+ 
+         </div>
+        </div>
+        <div id="Sexual-Wellness" class="content-div" style="display: none;">
+            <!-- Banner  -->
+          <div class="mb-8">
+            <img class="w-full h-full" src="img/cards/Sexual/banner.webp" alt="">
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 h-full">
+            <!-- card  -->  
+            <div class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0]">
+              <div class="h-[200px]">
+                  <img class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/cards/Sexual/img1.webp" alt="product image" />
+              </div>
+              <div class="px-2">
+                <h5 class="text-[14px] font-semibold text-black block ">Thermometer Digital Tip</h5>
+                  <div class="flex justify-between items-center mt-2.5 mb-5">
+                      <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+                      <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+                  </div>
+                  <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+            </div>
+             
+
+            <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+
+          </div>
+
+            <div class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0]">
+              <div class="h-[200px]">
+                  <img class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/cards/Sexual/img2.webp" alt="product image" />
+              </div>
+              <div class="px-2">
+                <h5 class="text-[14px] font-semibold text-black">Sepnil Face Mask</h5>
+                  <div class="flex justify-between items-center mt-2.5 mb-5">
+                      <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+                      <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+                  </div>
+                  <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+            </div>
+             
+
+            <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+
+          </div>
+
+          <div class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0]">
+            <div class="h-[200px]">
+                <img class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/cards/Sexual/img3.webp" alt="product image" />
+            </div>
+            <div class="px-2">
+              <h5 class="text-[14px] font-semibold text-black">MuiTypography-root jss6</h5>
+                <div class="flex justify-between items-center mt-2.5 mb-5">
+                    <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+                    <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+                </div>
+                <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+          </div>
+           
+
+          <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+
+        </div>
+
+
+        <div class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0]">
+          <div class="h-[200px]">
+              <img class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/cards/Sexual/img4.webp" alt="product image" />
+          </div>
+          <div class="px-2">
+            <h5 class="text-[14px] font-semibold text-black">TN95 Mask Particulate </h5>
+              <div class="flex justify-between items-center mt-2.5 mb-5">
+                  <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+                  <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+              </div>
+              <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+        </div>
+         
+
+        <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+
+      </div>
+ 
+         </div>
+        </div>
+        <div id="Herbal-and-Homeopathy" class="content-div" style="display: none;">
+          <!-- Banner  -->
+          <div class="mb-8">
+            <img class="w-full h-full" src="img/cards/Herbal/banner.webp" alt="">
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 h-full">
+            <!-- card  -->  
+            <div class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0]">
+              <div class="h-[200px]">
+                  <img class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/cards/Herbal/img1.webp" alt="product image" />
+              </div>
+              <div class="px-2">
+                <h5 class="text-[14px] font-semibold text-black block ">Thermometer Digital Tip</h5>
+                  <div class="flex justify-between items-center mt-2.5 mb-5">
+                      <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+                      <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+                  </div>
+                  <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+            </div>
+             
+
+            <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+
+          </div>
+
+            <div class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0]">
+              <div class="h-[200px]">
+                  <img class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/cards/Herbal/img2.webp" alt="product image" />
+              </div>
+              <div class="px-2">
+                <h5 class="text-[14px] font-semibold text-black">Sepnil Face Mask</h5>
+                  <div class="flex justify-between items-center mt-2.5 mb-5">
+                      <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+                      <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+                  </div>
+                  <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+            </div>
+             
+
+            <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+
+          </div>
+
+          <div class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0]">
+            <div class="h-[200px]">
+                <img class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/cards/Herbal/img3.webp" alt="product image" />
+            </div>
+            <div class="px-2">
+              <h5 class="text-[14px] font-semibold text-black">MuiTypography-root jss6</h5>
+                <div class="flex justify-between items-center mt-2.5 mb-5">
+                    <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+                    <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+                </div>
+                <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+          </div>
+           
+
+          <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+
+        </div>
+
+
+        <div class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0]">
+          <div class="h-[200px]">
+              <img class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/cards/Herbal/img4.webp" alt="product image" />
+          </div>
+          <div class="px-2">
+            <h5 class="text-[14px] font-semibold text-black">TN95 Mask Particulate </h5>
+              <div class="flex justify-between items-center mt-2.5 mb-5">
+                  <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+                  <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+              </div>
+              <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+        </div>
+         
+
+        <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+
+      </div>
+ 
+         </div>
+        </div>
+        <div id="Baby-Mom-care" class="content-div" style="display: none;">
+          <!-- Banner  -->
+          <div class="mb-8">
+            <img class="w-full h-full" src="img/cards/Baby/banner.webp" alt="">
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 h-full">
+            <!-- card  -->  
+            <div class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0]">
+              <div class="h-[200px]">
+                  <img class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/cards/Baby/img1.webp" alt="product image" />
+              </div>
+              <div class="px-2">
+                <h5 class="text-[14px] font-semibold text-black block ">Thermometer Digital Tip</h5>
+                  <div class="flex justify-between items-center mt-2.5 mb-5">
+                      <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+                      <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+                  </div>
+                  <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+            </div>
+             
+
+            <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+
+          </div>
+
+            <div class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0]">
+              <div class="h-[200px]">
+                  <img class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/cards/Baby/img2.webp" alt="product image" />
+              </div>
+              <div class="px-2">
+                <h5 class="text-[14px] font-semibold text-black">Sepnil Face Mask</h5>
+                  <div class="flex justify-between items-center mt-2.5 mb-5">
+                      <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+                      <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+                  </div>
+                  <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+            </div>
+             
+
+            <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+
+          </div>
+
+          <div class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0]">
+            <div class="h-[200px]">
+                <img class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/cards/Baby/img3.webp" alt="product image" />
+            </div>
+            <div class="px-2">
+              <h5 class="text-[14px] font-semibold text-black">MuiTypography-root jss6</h5>
+                <div class="flex justify-between items-center mt-2.5 mb-5">
+                    <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+                    <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+                </div>
+                <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+          </div>
+           
+
+          <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+
+        </div>
+
+
+        <div class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0]">
+          <div class="h-[200px]">
+              <img class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/cards/Baby/img4.webp" alt="product image" />
+          </div>
+          <div class="px-2">
+            <h5 class="text-[14px] font-semibold text-black">TN95 Mask Particulate </h5>
+              <div class="flex justify-between items-center mt-2.5 mb-5">
+                  <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+                  <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+              </div>
+              <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+        </div>
+         
+
+        <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+
+      </div>
+ 
+         </div>
+        </div>
+        <div id="Nutrition-and-drinks" class="content-div" style="display: none;">
+          <!-- Banner  -->
+          <div class="mb-8">
+            <img class="w-full h-full" src="img/cards/Nutrition/banner.webp" alt="">
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 h-full">
+            <!-- card  -->  
+            <div class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0]">
+              <div class="h-[200px]">
+                  <img class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/cards/Nutrition/img1.webp" alt="product image" />
+              </div>
+              <div class="px-2">
+                <h5 class="text-[14px] font-semibold text-black block ">Thermometer Digital Tip</h5>
+                  <div class="flex justify-between items-center mt-2.5 mb-5">
+                      <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+                      <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+                  </div>
+                  <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+            </div>
+             
+
+            <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+
+          </div>
+
+            <div class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0]">
+              <div class="h-[200px]">
+                  <img class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/cards/Nutrition/img2.webp" alt="product image" />
+              </div>
+              <div class="px-2">
+                <h5 class="text-[14px] font-semibold text-black">Sepnil Face Mask</h5>
+                  <div class="flex justify-between items-center mt-2.5 mb-5">
+                      <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+                      <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+                  </div>
+                  <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+            </div>
+             
+
+            <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+
+          </div>
+
+          <div class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0]">
+            <div class="h-[200px]">
+                <img class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/cards/Nutrition/img3.webp" alt="product image" />
+            </div>
+            <div class="px-2">
+              <h5 class="text-[14px] font-semibold text-black">MuiTypography-root jss6</h5>
+                <div class="flex justify-between items-center mt-2.5 mb-5">
+                    <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+                    <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+                </div>
+                <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+          </div>
+           
+
+          <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+
+        </div>
+
+
+        <div class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0]">
+          <div class="h-[200px]">
+              <img class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/cards/Nutrition/img4.webp" alt="product image" />
+          </div>
+          <div class="px-2">
+            <h5 class="text-[14px] font-semibold text-black">TN95 Mask Particulate </h5>
+              <div class="flex justify-between items-center mt-2.5 mb-5">
+                  <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+                  <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+              </div>
+              <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+        </div>
+         
+
+        <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+
+      </div>
+ 
+         </div>
+        </div>
+        <div id="Personal-care" class="content-div" style="display: none;">
+          <!-- Banner  -->
+          <div class="mb-8">
+            <img class="w-full h-full" src="img/cards/Personal/banner.webp" alt="">
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 h-full">
+            <!-- card  -->  
+            <div class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0]">
+              <div class="h-[200px]">
+                  <img class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/cards/Personal/img1.webp" alt="product image" />
+              </div>
+              <div class="px-2">
+                <h5 class="text-[14px] font-semibold text-black block ">Thermometer Digital Tip</h5>
+                  <div class="flex justify-between items-center mt-2.5 mb-5">
+                      <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+                      <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+                  </div>
+                  <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+            </div>
+             
+
+            <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+
+          </div>
+
+            <div class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0]">
+              <div class="h-[200px]">
+                  <img class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/cards/Personal/img2.webp" alt="product image" />
+              </div>
+              <div class="px-2">
+                <h5 class="text-[14px] font-semibold text-black">Sepnil Face Mask</h5>
+                  <div class="flex justify-between items-center mt-2.5 mb-5">
+                      <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+                      <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+                  </div>
+                  <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+            </div>
+             
+
+            <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+
+          </div>
+
+          <div class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0]">
+            <div class="h-[200px]">
+                <img class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/cards/Personal/img3.webp" alt="product image" />
+            </div>
+            <div class="px-2">
+              <h5 class="text-[14px] font-semibold text-black">MuiTypography-root jss6</h5>
+                <div class="flex justify-between items-center mt-2.5 mb-5">
+                    <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+                    <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+                </div>
+                <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+          </div>
+           
+
+          <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+
+        </div>
+
+
+        <div class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0]">
+          <div class="h-[200px]">
+              <img class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/cards/Personal/img4.webp" alt="product image" />
+          </div>
+          <div class="px-2">
+            <h5 class="text-[14px] font-semibold text-black">TN95 Mask Particulate </h5>
+              <div class="flex justify-between items-center mt-2.5 mb-5">
+                  <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+                  <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+              </div>
+              <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+        </div>
+         
+
+        <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+
+      </div>
+ 
+         </div>
+        </div>
+        <div id="Supplements-and-Vitamins" class="content-div" style="display: none;">
+           <!-- Banner  -->
+           <div class="mb-8">
+            <img class="w-full h-full" src="img/cards/Supplements/banner.webp" alt="">
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 h-full">
+            <!-- card  -->  
+            <div class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0]">
+              <div class="h-[200px]">
+                  <img class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/cards/Supplements/img1.webp" alt="product image" />
+              </div>
+              <div class="px-2">
+                <h5 class="text-[14px] font-semibold text-black block ">Thermometer Digital Tip</h5>
+                  <div class="flex justify-between items-center mt-2.5 mb-5">
+                      <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+                      <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+                  </div>
+                  <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+            </div>
+             
+
+            <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+
+          </div>
+
+            <div class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0]">
+              <div class="h-[200px]">
+                  <img class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/cards/Supplements/img2.webp" alt="product image" />
+              </div>
+              <div class="px-2">
+                <h5 class="text-[14px] font-semibold text-black">Sepnil Face Mask</h5>
+                  <div class="flex justify-between items-center mt-2.5 mb-5">
+                      <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+                      <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+                  </div>
+                  <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+            </div>
+             
+
+            <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+
+          </div>
+
+          <div class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0]">
+            <div class="h-[200px]">
+                <img class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/cards/Supplements/img3.webp" alt="product image" />
+            </div>
+            <div class="px-2">
+              <h5 class="text-[14px] font-semibold text-black">MuiTypography-root jss6</h5>
+                <div class="flex justify-between items-center mt-2.5 mb-5">
+                    <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+                    <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+                </div>
+                <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+          </div>
+           
+
+          <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+
+        </div>
+
+
+        <div class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0]">
+          <div class="h-[200px]">
+              <img class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/cards/Supplements/img4.webp" alt="product image" />
+          </div>
+          <div class="px-2">
+            <h5 class="text-[14px] font-semibold text-black">TN95 Mask Particulate </h5>
+              <div class="flex justify-between items-center mt-2.5 mb-5">
+                  <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+                  <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+              </div>
+              <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+        </div>
+         
+
+        <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+
+      </div>
+ 
+         </div>
+        </div>
+        <div id="Veterinary" class="content-div" style="display: none;">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 h-full">
+            <!-- card  -->  
+            <div class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0]">
+              <div class="h-[200px]">
+                  <img class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/cards/Veterinary/img1.webp" alt="product image" />
+              </div>
+              <div class="px-2">
+                <h5 class="text-[14px] font-semibold text-black block ">Thermometer Digital Tip</h5>
+                  <div class="flex justify-between items-center mt-2.5 mb-5">
+                      <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+                      <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+                  </div>
+                  <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+            </div>
+             
+
+            <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+
+          </div>
+
+            <div class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0]">
+              <div class="h-[200px]">
+                  <img class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/cards/Veterinary/img2.webp" alt="product image" />
+              </div>
+              <div class="px-2">
+                <h5 class="text-[14px] font-semibold text-black">Sepnil Face Mask</h5>
+                  <div class="flex justify-between items-center mt-2.5 mb-5">
+                      <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+                      <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+                  </div>
+                  <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+            </div>
+             
+
+            <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+
+          </div>
+
+          <div class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0]">
+            <div class="h-[200px]">
+                <img class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/cards/Veterinary/img3.webp" alt="product image" />
+            </div>
+            <div class="px-2">
+              <h5 class="text-[14px] font-semibold text-black">MuiTypography-root jss6</h5>
+                <div class="flex justify-between items-center mt-2.5 mb-5">
+                    <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+                    <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+                </div>
+                <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+          </div>
+           
+
+          <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+
+        </div>
+
+
+        <div class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0]">
+          <div class="h-[200px]">
+              <img class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/cards/Veterinary/img4.webp" alt="product image" />
+          </div>
+          <div class="px-2">
+            <h5 class="text-[14px] font-semibold text-black">TN95 Mask Particulate </h5>
+              <div class="flex justify-between items-center mt-2.5 mb-5">
+                  <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+                  <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+              </div>
+              <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+        </div>
+         
+
+        <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+
+      </div>
+ 
+         </div>
+        </div>
+     </div>
+  </main>
+  <!-- MAIN -->
+</section>
+<!-- NAVBAR -->
+
+    
+    <script src="script.js">
+     
+    </script>
+  </body>
+</html>
