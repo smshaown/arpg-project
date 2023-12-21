@@ -298,64 +298,64 @@
   <!-- NAVBAR -->
 
   <ul class="side-menu">
-    <li class="content-div -mb-[11px] hover:bg-[#E1EDE9]" onclick="changeContent('Covid-19', this)">
+    <li class="content-div -mb-[11px] hover:bg-[#E1EDE9] py-[0px]" onclick="changeContent('Covid-19', this)">
       <a href="#">
          <img src="img/covit.png" alt="">
-         <span class="ml-2">Covid-19 Special</span>
+         <span class="ml-2 text-[13px]">Covid-19 Special</span>
       </a>      
     </li>
-    <li class="content-div -mb-[11px]" onclick="changeContent('Women-Care', this)">
+    <li class="content-div -mb-[11px] hover:bg-[#E1EDE9]" onclick="changeContent('Women-Care', this)">
       <a href="#">
         <img src="img/women.png" alt="">
-        <span class="ml-2">Women Care</span>
+        <span class="ml-2 text-[13px]">Women Care</span>
       </a>      
     </li>
-    <li class="content-div -mb-[11px]" onclick="changeContent('Devices', this)">
+    <li class="content-div -mb-[11px] hover:bg-[#E1EDE9]" onclick="changeContent('Devices', this)">
       <a href="#">
         <img src="img/Devices.png" alt="">
-        <span class="ml-2">Devices</span>
+        <span class="ml-2 text-[13px]">Devices</span>
       </a>     
     </li>
-    <li class="content-div -mb-[11px]" onclick="changeContent('Sexual-Wellness', this)">
+    <li class="content-div -mb-[11px] hover:bg-[#E1EDE9]" onclick="changeContent('Sexual-Wellness', this)">
       <a href="#">
         <img src="img/sexual.png" alt="">
-        <span class="ml-2">Sexual Wellness</span>
+        <span class="ml-2 text-[13px]">Sexual Wellness</span>
       </a>      
     </li>
-    <li class="content-div -mb-[11px]" onclick="changeContent('Herbal-and-Homeopathy', this)">
+    <li class="content-div -mb-[11px] hover:bg-[#E1EDE9]" onclick="changeContent('Herbal-and-Homeopathy', this)">
       <a href="#">
         <img src="img/Herbal.png" alt="">
-        <span class="ml-2">Herbal and Homeopathy</span>
+        <span class="ml-2 text-[13px]">Herbal and Homeopathy</span>
       </a>      
     </li>
-    <li class="content-div -mb-[11px]" onclick="changeContent('Baby-Mom-care', this)">
+    <li class="content-div -mb-[11px] hover:bg-[#E1EDE9]" onclick="changeContent('Baby-Mom-care', this)">
       <a href="#">
         <img src="img/boby.png" alt="">
-        <span class="ml-2">Baby & Mom care</span>
+        <span class="ml-2 text-[13px]">Baby & Mom care</span>
       </a>
     </li>
-    <li class="content-div -mb-[11px]" onclick="changeContent('Nutrition-and-drinks', this)">
+    <li class="content-div -mb-[11px] hover:bg-[#E1EDE9]" onclick="changeContent('Nutrition-and-drinks', this)">
       <a href="#">
         <img src="img/nutrition.png" alt="">
-        <span class="ml-2">Nutrition and drinks</span>
+        <span class="ml-2 text-[13px]">Nutrition and drinks</span>
       </a>
     </li>
-    <li class="content-div -mb-[11px]" onclick="changeContent('Personal-care', this)">
+    <li class="content-div -mb-[11px] hover:bg-[#E1EDE9]" onclick="changeContent('Personal-care', this)">
       <a href="#">
         <img src="img/personal.png" alt="">
-        <span class="ml-2">Personal care</span>
+        <span class="ml-2 text-[13px]">Personal care</span>
       </a>
     </li>
-    <li class="content-div -mb-[11px]" onclick="changeContent('Supplements-and-Vitamins', this)">
+    <li class="content-div -mb-[11px] hover:bg-[#E1EDE9]" onclick="changeContent('Supplements-and-Vitamins', this)">
       <a href="#">
         <img src="img/supplemens.png" alt="">
-        <span class="ml-2">Supplements and Vitamins</span>
+        <span class="ml-2 text-[13px]">Supplements and Vitamins</span>
       </a>
     </li>
-    <li class="content-div -mb-[11px]" onclick="changeContent('Veterinary', this)">
+    <li class="content-div -mb-[11px] hover:bg-[#E1EDE9]" onclick="changeContent('Veterinary', this)">
       <a href="#">
         <img src="img/veterinary.png" alt="">
-        <span class="ml-2">Veterinary</span>
+        <span class="ml-2 text-[13px]">Veterinary</span>
       </a>
     </li>
     
@@ -369,10 +369,8 @@
  
 
   <!-- MAIN -->
-  <main>    
-     <div id="right-sidebar-content" >
-
-      <!-- product start  -->
+  <main id="right-sidebar-content">    
+     <!-- product start  -->
      <section>
       <div id="home" class="content-div">
         <!-- Banner  -->
@@ -388,8 +386,8 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 h-full">
         <!-- card  -->  
         <div  class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0] cursor-pointer">
-          <div class="h-[200px]">
-              <img onclick="changeContent('product-details')" class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/covid/img1.webp" alt="product image" />
+          <div class="h-[200px]" onclick="changeContent('product-details')">
+              <img  class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/covid/img1.webp" alt="product image" />
           </div>
           <div class="px-2">
             <h5 onclick="changeContent('product-details')" class="text-[14px] font-semibold text-black block ">Thermometer Digital Tip</h5>
@@ -1203,7 +1201,7 @@
      <!-- product end  -->
 
      <div  id="product-details" class="content-div mb-10" style="display: none;">
-        <div class="px-[40px] mt-8">
+        <div class="md:px-[40px] px-[10px] mt-8">
            <div class="px-4 py-4 rounded-md" style="box-shadow: 0 3px 10px rgb(0 0 0 / 0.2)">
               <div class="flex flex-row gap-2 ">
                 <div class="w-[100px]">
@@ -1363,9 +1361,6 @@
           
         </div>
      </div>
-       
-     </div>
-
   </main>
   <!-- MAIN -->
 </section>
