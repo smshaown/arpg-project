@@ -18,7 +18,7 @@
 
 
     <!-- Header section start  -->
-  <div class="md:bg-[#008069] border-b-[1px] border-[#cccccc30] py-3">
+  <div class="md:bg-[#008069] border-b-[1px] border-[#cccccc30] py-3 fixed w-full" style="z-index: 999;">
       <div class="container mx-auto px-3">
         <div class="flex justify-between items-center">
           <div class="w-[80px]">
@@ -237,51 +237,49 @@
           </div>
         </div>
       </div>
+      <div class="container mx-auto py-2 text-white">
+        <div class="flex justify-between items-center">
+            <div>
+              <a href="#" class="font-bold toggle-categories">
+                <i class='bx bx-menu toggle-sidebar '></i><span class="ml-2">Categories</span>
+              </a>
+            </div>
+            <div class="flex items-center gap-4 text-sm">
+              <div class="">
+                <a href="#" class="font-bold ">
+                  <i class='bx bx-phone-call'></i> <span class="">Categories</span>
+                </a>
+              </div>
+              <div class="">
+                <a href="#" class="font-bold " onclick="changeContent('product-details', this)">
+                  <i class='bx bx-heart'></i> <span class="">Healthcare Product</span>
+                </a>
+              </div>
+              <div class="">
+                <a href="#" class="font-bold">
+                  <i class='bx bx-plus-medical'></i> <span class="">Pharmacy Register</span>
+                </a>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 text-sm">
+              <div class="flex items-center gap-1">
+                <h2 class="text-xs font-bold mr-1">Career</h2>
+                 <button class="text-[10px] bg-[#3A0FE6] rounded-full px-1.5 py-.5 font-bold">We are hiring</button>
+              </div>
+              <div class="flex items-center gap-1">
+                <h4>To quick order</h4>
+                <div>
+                  <a href="#" class="font-bold">
+                    <i class='bx bx-upload'></i> <span class="">Upload Prescription</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+        </div>
+        </div>
  </div>
 
  
- <div class="bg-[#008069]">
-  <div class="container mx-auto py-2 text-white">
-    <div class="flex justify-between items-center">
-        <div>
-          <a href="#" class="font-bold toggle-categories">
-            <i class='bx bx-menu toggle-sidebar '></i><span class="ml-2">Categories</span>
-          </a>
-        </div>
-        <div class="flex items-center gap-4 text-sm">
-          <div class="">
-            <a href="#" class="font-bold ">
-              <i class='bx bx-phone-call'></i> <span class="">Categories</span>
-            </a>
-          </div>
-          <div class="">
-            <a href="#" class="font-bold " onclick="changeContent('product-details', this)">
-              <i class='bx bx-heart'></i> <span class="">Healthcare Product</span>
-            </a>
-          </div>
-          <div class="">
-            <a href="#" class="font-bold">
-              <i class='bx bx-plus-medical'></i> <span class="">Pharmacy Register</span>
-            </a>
-          </div>
-        </div>
-        <div class="flex items-center gap-4 text-sm">
-          <div class="flex items-center gap-1">
-            <h2 class="text-xs font-bold mr-1">Career</h2>
-             <button class="text-[10px] bg-[#3A0FE6] rounded-full px-1.5 py-.5 font-bold">We are hiring</button>
-          </div>
-          <div class="flex items-center gap-1">
-            <h4>To quick order</h4>
-            <div>
-              <a href="#" class="font-bold">
-                <i class='bx bx-upload'></i> <span class="">Upload Prescription</span>
-              </a>
-            </div>
-          </div>
-        </div>
-    </div>
-    </div>
-  </div>
 
 
       <!-- ====== -->
@@ -292,12 +290,12 @@
   </a> -->
 
    <!-- NAVBAR -->
-   <nav>
+   <!-- <nav>
     <i class='bx bx-menu toggle-sidebar' ></i>
-  </nav>
+  </nav> -->
   <!-- NAVBAR -->
 
-  <ul class="side-menu">
+  <ul class="side-menu mt-[18px]">
     <li class="content-div -mb-[11px] hover:bg-[#E1EDE9] py-[0px]" onclick="changeContent('Covid-19', this)">
       <a href="#">
          <img src="img/covit.png" alt="">
@@ -374,8 +372,8 @@
      <section>
       <div id="home" class="content-div">
         <!-- Banner  -->
-      <div class="mb-8">
-        <img class="w-full h-full" src="img/cards/Home/Banner.webp" alt="">
+      <div class="mb-8 h-[372px] ">
+        <img class="w-full h-full object-cover" src="img/Home.webp" alt="">
       </div>
     </div>
     <div id="Covid-19" class="content-div mb-10" style="display: none;">
