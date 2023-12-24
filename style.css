@@ -253,6 +253,29 @@ main {
 	background-color: #E6FCF6;
 	color: #008069;
   }
+
+
+  /* button toggle start  */
+  .tab-button {
+	color: #000;
+	font-weight: 600;
+    padding: 8px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+	text-transform: uppercase;
+  }
+
+  /* .tab-button:hover {
+    background-color: #414366;
+  } */
+
+  .tab-button.active {
+    background-color: #AFFFF2;
+  }
+
+  
+
 @media screen and (max-width: 768px) {
 	#content {
 		position: relative;
