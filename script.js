@@ -124,3 +124,5 @@ document.addEventListener('DOMContentLoaded', function () {
   clickedTabLink.classList.add('active'); // Add the 'active' class here
 }
 
+
+

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+    src="https://kit.fontawesome.com/53025ffb8e.js"
+    crossorigin="anonymous"
+  ></script>
+  <!-- Tailwind css link  -->
+  <script src="https://cdn.tailwindcss.com"></script>
+ 
+  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+  <!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<!-- style css link  -->
+ <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <div>
+        <a href="#" id="Customer-popup1" class="font-bold">
+          <i class='bx bx-upload'></i> <span class="">Upload Prescription</span>
+        </a>
+      </div>
+
+    
+              
+     <!-- Customer-popup1 start -->
+     <div id="Customer-popup2" class="overlay">
+        <div class="bg-white md:w-[500px] h-[500px] md:mt-[-100px]  rounded shadow-md popup-animation">
+          <div class="bg-[#0C817A] relative px-4 pt-4 pb-4 ">
+            <h2 class="text-white text-lg font-bold text-center"> Add Customer </h2>    
+            <span id="Customer-close" class="absolute cursor-pointer right-[8px] top-[1px] text-white hover:text-gray-400">x</span>      
+          </div>
+
+          <div class="mt-4 px-4 ">
+            <form  id="customerForm">
+              <div class="mt-1">
+                <label for="">Mobile number </label>
+                <input type="text" name="mobileNumber" class="appearance-none block w-full text-gray-700 border border-gray-400 rounded md:mt-2 py-2 px-4 mb-3 leading-tight focus:outline-none focus:shadow focus:border-gray-500" placeholder="find customer by phone">
+              </div>
+              <div class="mt-2">
+                <label for="">Customer name</label>
+                <input type="text" name="customerName" class="appearance-none block w-full text-gray-700 border border-gray-400 rounded md:mt-2 py-2 px-4 mb-3 leading-tight focus:outline-none focus:shadow focus:border-gray-500" placeholder="find customer by name">
+              </div>
+              <div class="mt-2">
+                <label for="">Address</label>
+                <input type="text" name="address" class="appearance-none block w-full text-gray-700 border border-gray-400 rounded md:mt-2 py-2 px-4 mb-3 leading-tight focus:outline-none focus:shadow focus:border-gray-500" placeholder="">
+              </div>
+              <div class="mt-2 pb-6">
+                <label for="">Gender</label>
+                <div class="relative">
+                  <select name="gender" class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-2 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">                      
+                    <option value="পুরুষ">পুরুষ</option>
+                    <option value="মহিলা">মহিলা</option>
+                    <option value="বাচ্চা">বাচ্চা</option>                     
+                  </select>
+                  <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                  </div>
+                </div>
+              </div>
+             <div class="flex justify-center items-center">
+              <button  id="submitBtn" class="tab-button mt-6">Add Customer <i class="fa fa-paper-plane"></i></button>
+
+            
+             </div>
+
+            </form>
+          </div>
+        
+        </div>
+      </div>
+   <!-- খকর্মচারী-যুক্ত-করুন-popup1 end -->
+
+    
+    <script src="js/popup.js">
+        
+
+
+    </script>
+</body>
+</html>

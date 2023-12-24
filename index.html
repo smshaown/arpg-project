@@ -274,11 +274,37 @@
               <div class="flex items-center gap-1">
                 <h4>To quick order</h4>
                 <div>
-                  <a href="#" class="font-bold">
+                  <a href="#" id="Customer-popup1" class="font-bold">
                     <i class='bx bx-upload'></i> <span class="">Upload Prescription</span>
                   </a>
                 </div>
               </div>
+
+
+              
+     <!-- Customer-popup1 start -->
+        <div id="Customer-popup2" class="overlay">
+          <div class="bg-white md:w-[500px] h-[500px] rounded shadow-md popup-animation">
+            <div class="shadow-md relative px-4 pt-4 pb-4 ">
+              <h2 class="text-black text-lg font-bold"> Prescriptions </h2>    
+              <span id="Customer-close" class="absolute cursor-pointer right-[10px] top-[20px] text-black hover:text-gray-400">x</span>      
+            </div>
+
+            <div class="mt-4 px-4 ">
+              <div>
+                <label for="fileInput" class="block w-full py-12 text-[#000] text-center border-dotted border-2 border-[#4A6058] rounded-sm cursor-pointer text-[16px]">
+                  Upload File in PDF or JPEG*
+              </label>
+              <input type="file" id="fileInput" class="hidden" accept=".pdf, .jpeg, .jpg">
+              </div>
+            </div>
+          
+          </div>
+        </div>
+     <!-- খকর্মচারী-যুক্ত-করুন-popup1 end -->
+
+
+
             </div>
         </div>
         </div>
@@ -1950,9 +1976,7 @@
     });
   </script>
   
-    <script src="script.js">
-    
-     
-    </script>
+    <script src="script.js"></script>
+    <script src="js/popup.js"> </script>
   </body>
 </html>
