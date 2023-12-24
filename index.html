@@ -10,8 +10,13 @@
     ></script>
     <!-- Tailwind css link  -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css" />
+   
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- style css link  -->
+   <link rel="stylesheet" href="style.css" />
     <title>Arogga</title>
   </head>
   <body>
@@ -251,12 +256,12 @@
                 </a>
               </div>
               <div class="">
-                <a href="#" class="font-bold " onclick="changeContent('product-details', this)">
+                <a href="#Healthcare-Product" class="font-bold " onclick="changeContent('Healthcare-Product', this)">
                   <i class='bx bx-heart'></i> <span class="">Healthcare Product</span>
                 </a>
               </div>
               <div class="">
-                <a href="#" class="font-bold">
+                <a href="#Pharmacy-Register" onclick="changeContent('Pharmacy-Register', this)"  class="font-bold">
                   <i class='bx bx-plus-medical'></i> <span class="">Pharmacy Register</span>
                 </a>
               </div>
@@ -264,7 +269,7 @@
             <div class="flex items-center gap-4 text-sm">
               <div class="flex items-center gap-1">
                 <h2 class="text-xs font-bold mr-1">Career</h2>
-                 <button class="text-[10px] bg-[#3A0FE6] rounded-full px-1.5 py-.5 font-bold">We are hiring</button>
+                 <button onclick="changeContent('Career', this)" class="text-[10px] bg-[#3A0FE6] rounded-full px-1.5 py-.5 font-bold">We are hiring</button>
               </div>
               <div class="flex items-center gap-1">
                 <h4>To quick order</h4>
@@ -370,12 +375,234 @@
   <main id="right-sidebar-content">    
      <!-- product start  -->
      <section>
+      <!-- Home page start  -->
       <div id="home" class="content-div">
-        <!-- Banner  -->
-      <div class="mb-8 h-[372px] ">
-        <img class="w-full h-full object-cover" src="img/Home.webp" alt="">
+        <!-- Banner and swiper js start -->
+        <section>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper shadow-md">
+              <div class="swiper-slide">
+                <img src="img/swiperImg/swiper6.webp" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/swiperImg/img2.webp" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/swiperImg/img3.webp" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/swiperImg/img4.webp" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/swiperImg/img5.webp" alt="">
+              </div>
+             
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </section>
+        <!-- swiper end  -->
+        <!-- upto 10% oof + cashback card start  -->
+          <section class="mt-12 mb-24">
+            <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-cnert ">
+              <div class="w-full md:w-[230px] h-[144px] justify-center items-center">
+              <div class="relative w-full h-[96px] bg-[#E4EAF2]">
+                <div class="absolute top-0 left-0">
+                  <div class="relative w-[150px]" style="background-color: var(--red-400)" >
+                    <p class="py-[7px] pl-[6px] pr-[16px] relative rounded-b- text-white font-bold text-[7px]"><span class="uppercase">upto</span> 10% OFF + Cashback</p>
+                    <div class="absolute top-0 -right-[16px] w-[32px] h-[28px]" style="clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); background-color:var(--red-400)"></div>
+                  </div>
+                  
+                  <div class="flex justify-between items-center gap-2 pl-2 pr-1">
+                    <div>
+                      <h2 class="text-[1.vw] my-3 font-bold" style="color: var(--olive-green)">Upload Presciption</h2>
+
+                      <button class="px-3 text-center font-bold text-xs py-1 rounded-[4px] text-white" style="background-color: var(--midnight-blue)" >Click Heres</button>
+                    </div>
+                    <div class="w-full md:w-[112px] h-[112px]">
+                      <img class="w-full h-full " src="img/tenOff/upload.webp" alt="upload-prescription.webp">
+                    </div>
+                  </div>
+                 
+                  
+                </div>
+              </div>
+            </div>
+              <div class="w-[230px] h-[144px]">
+              <div class="relative w-full h-[96px] bg-[#E4EAF2]">
+                <div class="absolute top-0 left-0">
+                  <div class="relative w-[150px]" style="background-color: var(--red-400)" >
+                    <p class="py-[7px] pl-[6px] pr-[16px] relative rounded-b- text-white font-bold text-[0.7vw]"><span class="uppercase">upto</span> 10% OFF + Cashback</p>
+                    <div class="absolute top-0 -right-[16px] w-[32px] h-[28px]" style="clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); background-color:var(--red-400)"></div>
+                  </div>
+                  
+                  <div class="flex justify-between items-center gap-2 pl-2 pr-1">
+                    <div>
+                      <h2 class="text-[1.vw] my-3 font-bold" style="color: var(--olive-green)">Upload Presciption</h2>
+
+                      <button class="px-3 text-center font-bold text-xs py-1 rounded-[4px] text-white" style="background-color: var(--midnight-blue)" >Click Heres</button>
+                    </div>
+                    <div class="w-[112px] h-[112px]">
+                      <img class="w-full h-full " src="img/tenOff/pharmacyregisteraction.webp" alt="upload-prescription.webp">
+                    </div>
+                  </div>
+                 
+                  
+                </div>
+              </div>
+            </div>
+              <div class="w-[230px] h-[144px]">
+              <div class="relative w-full h-[96px] bg-[#E4EAF2]">
+                <div class="absolute top-0 left-0">
+                  <div class="relative w-[150px]" style="background-color: var(--red-400)" >
+                    <p class="py-[7px] pl-[6px] pr-[16px] relative rounded-b- text-white font-bold text-[0.7vw]"><span class="uppercase">upto</span> 10% OFF + Cashback</p>
+                    <div class="absolute top-0 -right-[16px] w-[32px] h-[28px]" style="clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); background-color:var(--red-400)"></div>
+                  </div>
+                  
+                  <div class="flex justify-between items-center gap-2 pl-2 pr-1">
+                    <div>
+                      <h2 class="text-[1.vw] my-3 font-bold" style="color: var(--olive-green)">Upload Presciption</h2>
+
+                      <button class="px-3 text-center font-bold text-xs py-1 rounded-[4px] text-white" style="background-color: var(--midnight-blue)" >Click Heres</button>
+                    </div>
+                    <div class="w-[112px] h-[112px]">
+                      <img class="w-full h-full " src="img/tenOff/cto.webp" alt="upload-prescription.webp">
+                    </div>
+                  </div>
+                 
+                  
+                </div>
+              </div>
+            </div>
+              <div class="w-[230px] h-[144px]">
+              <div class="relative w-full h-[96px] bg-[#E4EAF2]">
+                <div class="absolute top-0 left-0">
+                  <div class="relative w-[150px]" style="background-color: var(--red-400)" >
+                    <p class="py-[7px] pl-[6px] pr-[16px] relative rounded-b- text-white font-bold text-[0.7vw]"><span class="uppercase">upto</span> 10% OFF + Cashback</p>
+                    <div class="absolute top-0 -right-[16px] w-[32px] h-[28px]" style="clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); background-color:var(--red-400)"></div>
+                  </div>
+                  
+                  <div class="flex justify-between items-center gap-2 pl-2 pr-1">
+                    <div>
+                      <h2 class="text-[1.vw] my-3 font-bold" style="color: var(--olive-green)">Upload Presciption</h2>
+
+                      <button class="px-3 text-center font-bold text-xs py-1 rounded-[4px] text-white" style="background-color: var(--midnight-blue)" >Click Heres</button>
+                    </div>
+                    <div class="w-[112px] h-[112px]">
+                      <img class="w-full h-full " src="img/tenOff/healthcare.webp" alt="upload-prescription.webp">
+                    </div>
+                  </div>
+                 
+                  
+                </div>
+              </div>
+            </div>
+            </div>
+          </section>
+        <!-- upto 10% oof + cashback card start  -->
+          <!-- Health Products slide start  -->
+          <section>
+            <!-- covied slide  -->
+              <div>
+                <div class="flex justify-between items-center my-10">
+                  <h2 class="text[24px] font-semibold">Covid-19 Special</h2>
+                  <a class="text-white w-[91px] h-[26px] text-[14px] flex justify-center items-center rounded-[5px] cursor-pointer" style="background-color: var(--dark);" href="#">View All</a>
+                </div>
+                <div class="swiper Health-products-slide">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div  class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0] cursor-pointer">
+                        <div class="h-[200px]" onclick="changeContent('product-details')">
+                            <img  class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/covid/img1.webp" alt="product image" />
+                        </div>
+                        <div class="px-2">
+                          <h5 onclick="changeContent('product-details')" class="text-[14px] font-semibold text-black block ">Thermometer Digital Tip</h5>
+                            <div class="flex justify-between items-center mt-2.5 mb-5">
+                                <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+                                <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+                            </div>
+                            <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+                      </div>
+                       
+              
+                      <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+              
+                    </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0]">
+                        <div class="h-[200px]">
+                            <img class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/covid/img2.webp" alt="product image" />
+                        </div>
+                        <div class="px-2">
+                          <h5 class="text-[14px] font-semibold text-black">Sepnil Face Mask</h5>
+                            <div class="flex justify-between items-center mt-2.5 mb-5">
+                                <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+                                <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+                            </div>
+                            <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+                      </div>
+                       
+              
+                      <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+              
+                    </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0]">
+                      <div class="h-[200px]">
+                          <img class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/covid/img3.webp" alt="product image" />
+                      </div>
+                      <div class="px-2">
+                        <h5 class="text-[14px] font-semibold text-black">MuiTypography-root jss6</h5>
+                          <div class="flex justify-between items-center mt-2.5 mb-5">
+                              <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+                              <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+                          </div>
+                          <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+                    </div>
+                     
+              
+                    <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+              
+                  </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0]">
+                        <div class="h-[200px]">
+                            <img class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/covid/img4.webp" alt="product image" />
+                        </div>
+                        <div class="px-2">
+                          <h5 class="text-[14px] font-semibold text-black">TN95 Mask Particulate </h5>
+                            <div class="flex justify-between items-center mt-2.5 mb-5">
+                                <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+                                <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+                            </div>
+                            <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+                      </div>
+                       
+                  
+                      <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+                  
+                    </div>
+                    </div>
+                    <div class="swiper-slide">Slide 5</div>
+                    <div class="swiper-slide">Slide 6</div>
+                    <div class="swiper-slide">Slide 7</div>
+                    <div class="swiper-slide">Slide 8</div>
+                    <div class="swiper-slide">Slide 9</div>
+                  </div>
+                  <!-- <div class="swiper-pagination"></div> -->
+                  <div class="swiper-button-next" style="background-color: var(--dark);border-radius: 50%; padding: 22px; color: #fff; box-shadow: 0 2px 6px 0 rgba(27,27,27,.32); font-size: 16px !important;"></div>
+                  <div class="swiper-button-prev"  style="background-color: var(--dark);border-radius: 50%; padding: 22px; color: #fff; box-shadow: 0 2px 6px 0 rgba(27,27,27,.32); font-size: 16px !important;"></div>
+                </div>
+              </div>
+          </section>
+          <!-- Health Products slide end  -->
       </div>
-    </div>
+    
     <div id="Covid-19" class="content-div mb-10" style="display: none;">
       <!-- Banner  -->
       <div class="mb-8">
@@ -459,6 +686,7 @@
      </div>
 
     </div>
+
     <div id="Women-Care" class="content-div" style="display: none;">
       <!-- Banner  -->
       <div class="mb-8">
@@ -1198,7 +1426,8 @@
 
      <!-- product end  -->
 
-     <div  id="product-details" class="content-div mb-10" style="display: none;">
+    <section>
+      <div  id="product-details" class="content-div mb-10" style="display: none;">
         <div class="md:px-[40px] px-[10px] mt-8">
            <div class="px-4 py-4 rounded-md" style="box-shadow: 0 3px 10px rgb(0 0 0 / 0.2)">
               <div class="flex flex-row gap-2 ">
@@ -1359,13 +1588,370 @@
           
         </div>
      </div>
+
+     <!-- Healthcare-Product? -->
+     <div id="Healthcare-Product" class="content-div mb-10" style="display: none;" >
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 h-full">
+        <!-- card  -->  
+        <div class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0]">
+          <div class="h-[200px]">
+              <img class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/cards/Supplements/img1.webp" alt="product image" />
+          </div>
+          <div class="px-2">
+            <h5 class="text-[14px] font-semibold text-black block ">Thermometer Digital Tip</h5>
+              <div class="flex justify-between items-center mt-2.5 mb-5">
+                  <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+                  <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+              </div>
+              <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+        </div>
+         
+
+        <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+
+      </div>
+
+        <div class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0]">
+          <div class="h-[200px]">
+              <img class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/cards/Supplements/img2.webp" alt="product image" />
+          </div>
+          <div class="px-2">
+            <h5 class="text-[14px] font-semibold text-black">Sepnil Face Mask</h5>
+              <div class="flex justify-between items-center mt-2.5 mb-5">
+                  <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+                  <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+              </div>
+              <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+        </div>
+         
+
+        <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+
+      </div>
+
+      <div class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0]">
+        <div class="h-[200px]">
+            <img class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/cards/Supplements/img3.webp" alt="product image" />
+        </div>
+        <div class="px-2">
+          <h5 class="text-[14px] font-semibold text-black">MuiTypography-root jss6</h5>
+            <div class="flex justify-between items-center mt-2.5 mb-5">
+                <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+                <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+            </div>
+            <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+      </div>
+       
+
+      <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+
+    </div>
+
+
+    <div class="w-full h-auto max-w-56 rounded-lg hover:shadow border border-gay-200 hover:bg-[#e0e0e0]">
+      <div class="h-[200px]">
+          <img class="w-full h-full hover:scale-110 transition duration-500 cursor-pointer p-4 rounded-t-lg " src="img/cards/Supplements/img4.webp" alt="product image" />
+      </div>
+      <div class="px-2">
+        <h5 class="text-[14px] font-semibold text-black">TN95 Mask Particulate </h5>
+          <div class="flex justify-between items-center mt-2.5 mb-5">
+              <div class="text-[14px] text-[#747474] line-through"><p>৳ 90</p></div>
+              <div><h5 class="py-[3px] px-[4px] text-[14px] font-medium rounded-[2px] bg-red-500 text-white">20% Off</h5></div>
+          </div>
+          <h4 class="font-semibold text-[16px] text-[#373737] -mt-[10px] mb-[10px] ">৳ 72</h4>
+    </div>
+     
+
+    <button class="w-full text-center font-extrabold uppercase border-[1px] border-[#10847e] text-[#10847e] hover:text-white hover:bg-[#10847e] text-[14px] py-2 ease-in-out duration-200">ADD TO CART</button>
+
+  </div>
+
+     </div>
+     </div>
+
+     <!-- "Pharmacy-Register page? -->
+     <div id="Pharmacy-Register" class="content-div" style="display: none;" >
+      <div class="flex justify-center items-center">
+        <div class="w-[790px] h-full py-6 px-4 flex justify-center items-center shadow-md">
+          <div class="w-1/2 hidden md:inline-block">
+            <img class="w-full h-full" src="img/Register.jpg" alt="">
+          </div>
+          <div class="md:w-1/2 w-full flex flex-col justify-center items-center">
+            <form class="md:w-[250px] w-full">
+              <h3 class="text-[20px] font-medium">Pharmacy Registration</h3>
+              <hr class="border-[1px] my-4 border-gary-500" />
+             <div>
+              <label for="" class="text-[16px]">Full Name</label>
+              <input class="appearance-none border-2 text-[16] mt-2 mb-3 border-gray-200 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-[#4A6058]" type="text" placeholder="Full Name">
+             </div>
+             <div>
+              <label for="" class="text-[16px]">Phone</label>
+              <input class="appearance-none border-2 text-[16] mt-2 mb-3 border-gray-200 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-[#4A6058]" type="text" placeholder="Phone">
+             </div>
+             <div>
+              <label for="" class="text-[16px]">Pharmacy Name</label>
+              <input class="appearance-none border-2 text-[16] mt-2 mb-3 border-gray-200 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-[#4A6058]" type="text" placeholder="Pharmacy Name">
+             </div>
+             <div>
+              <label for="" class="text-[16px]">Drugs Licence Number</label>
+              <input class="appearance-none border-2 text-[16] mt-2 mb-3 border-gray-200 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-[#4A6058]" type="text" placeholder="Drugs Licence Number">
+             </div>
+             <div>
+                <div>
+                  <h5 class="text-[16px]">Upload Drug License Photo</h5>
+                  <label for="fileInput" class="block w-full py-3 text-center border-dotted border-2 border-[#4A6058] rounded-sm cursor-pointer text-[16px]">
+                    Upload File in PDF or JPEG*
+                </label>
+                <input type="file" id="fileInput" class="hidden" accept=".pdf, .jpeg, .jpg">
+                </div>
+             </div>
+             <hr class="border-dotted border-[1px] border-[#4A6058] my-3" />
+              <div class="grid md:justify-items-end justify-items-center">
+                <button class="py-1.5 px-2 uppercase font-bold bg-[#008069] rounded-[5px] text-[14px] text-white hover:bg-[#000] hover:text-white">submit</button>
+              </div>
+            </form>
+        </div>
+        </div>
+      </div>
+     </div>
+
+     <!-- Career WE are hiring pages  -->
+     <div id="Career" class="content-div" style="display: none;">
+      <div class="flex flex-row gap-4">
+        <div id="left-side " class=" md:w-[30%] w-full">
+          <ul class="" id="tabs">
+            <h2 class="text-[#0000007f] font-bold block py-3 px-4 ">epartments</h2>
+            <li><a href="#" onclick="openTab(1)" class="block py-3 px-4 font-semibold active">All Departments (12)</a></li>
+            <li><a href="#" onclick="openTab(2)" class="block py-3 px-4 font-semibold">warehouse (1)</a></li>
+            <li><a href="#" onclick="openTab(3)" class="block py-3 px-4 font-semibold">customer care (2)</a></li>
+            <li><a href="#" onclick="openTab(4)" class="block py-3 px-4 font-semibold">technology (1)</a></li>
+            <li><a href="#" onclick="openTab(5)" class="block py-3 px-4 font-semibold">marketing (1)</a></li>
+            <li><a href="#" onclick="openTab(6)" class="block py-3 px-4 font-semibold">sales &_operation (2)</a></li>
+            <li><a href="#" onclick="openTab(7)" class="block py-3 px-4 font-semibold">delivery 2 (1)</a></li>
+            <li><a href="#" onclick="openTab(8)" class="block py-3 px-4 font-semibold">health &_beauty (2)</a></li>
+            <li><a href="#" onclick="openTab(9)" class="block py-3 px-4 font-semibold">tech 1_-_mern (1)</a></li>
+          </ul>
+        </div>
+        <div id="right-side" class="md:w-[70%] w-full p-4 border-l-2 border-gray-500">
+          <h2 class="text-[#0000007f] font-bold uppercase pb-3">FEATURED ROLES</h2>
+          <div id="tab-1" class="career-tab-content active">
+           <div class="cursor-pointer hover:bg-[#F2F6FB] rounded-md p-3 mb-2 ">
+            <h2 class="text-xl font-semibold mb-2 text-[#10837d]">মেডিসিন প্যাকার/ পিকার (ফার্মেসি)</h2>
+            <div class="text-[#A6AAB0] text-[1rem] font-medium">
+               <p>warehouse | Part Time</p>
+               <p> Arogga Limited, 6th floor (Lift-5) Plot D/15-1, Road 36, Block D, Section  10, Jutpotti Paris Road Mirpur, Dhaka 1216</p>
+            </div>
+           </div>
+
+           <div class="cursor-pointer hover:bg-[#F2F6FB] rounded-md p-3 mb-2">
+            <h2 class="text-xl font-semibold mb-2 text-[#10837d]">প্রেসক্রিপশন বুঝার মত দক্ষতা সম্পন্ন লোক প্রয়োজন।</h2>
+            <div class="text-[#A6AAB0] text-[1rem] font-medium">
+               <p>customer_care | Part Time</p>
+               <p> Arogga Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
+            </div>
+           </div>
+
+
+           <div class="cursor-pointer hover:bg-[#F2F6FB] rounded-md p-3 mb-2">
+            <h2 class="text-xl font-semibold mb-2 text-[#10837d]">technology | full_time</h2>
+            <div class="text-[#A6AAB0] text-[1rem] font-medium">
+               <p>customer_care | Part Time</p>
+               <p> Arogga Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
+            </div>
+           </div>
+           
+           <div class="cursor-pointer hover:bg-[#F2F6FB] rounded-md p-3 mb-2">
+            <h2 class="text-xl font-semibold mb-2 text-[#10837d]">Senior Developer (MERN)</h2>
+            <div class="text-[#A6AAB0] text-[1rem] font-medium">
+               <p>technology | full_time</p>
+               <p> Arogga Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
+            </div>
+           </div>
+
+           <div class="cursor-pointer hover:bg-[#F2F6FB] rounded-md p-3 mb-2">
+            <h2 class="text-xl font-semibold mb-2 text-[#10837d]">Senior Developer (MERN)</h2>
+            <div class="text-[#A6AAB0] text-[1rem] font-medium">
+               <p>technology | full_time</p>
+               <p> Arogga Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
+            </div>
+           </div>
+
+           <div class="cursor-pointer hover:bg-[#F2F6FB] rounded-md p-3 mb-2">
+            <h2 class="text-xl font-semibold mb-2 text-[#10837d]">Executive - Elderly Care Products</h2>
+            <div class="text-[#A6AAB0] text-[1rem] font-medium">
+               <p>technology | full_time</p>
+               <p> Arogga Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
+            </div>
+           </div>
+
+           <div class="cursor-pointer hover:bg-[#F2F6FB] rounded-md p-3 mb-2">
+            <h2 class="text-xl font-semibold mb-2 text-[#10837d]">Rider (Cycle/Motorcycle)</h2>
+            <div class="text-[#A6AAB0] text-[1rem] font-medium">
+               <p>technology | full_time</p>
+               <p> Arogga Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
+            </div>
+           </div>
+
+           <div class="cursor-pointer hover:bg-[#F2F6FB] rounded-md p-3 mb-2">
+            <h2 class="text-xl font-semibold mb-2 text-[#10837d]">Rider (Cycle/Motorcycle)</h2>
+            <div class="text-[#A6AAB0] text-[1rem] font-medium">
+               <p>technology | full_time</p>
+               <p> Arogga Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
+            </div>
+           </div>
+
+           <div class="cursor-pointer hover:bg-[#F2F6FB] rounded-md p-3 mb-2">
+            <h2 class="text-xl font-semibold mb-2 text-[#10837d]">Agent - Telesales</h2>
+            <div class="text-[#A6AAB0] text-[1rem] font-medium">
+               <p>technology | full_time</p>
+               <p> Arogga Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
+            </div>
+           </div>
+
+
+          </div>
+          <div id="tab-2" class="career-tab-content">
+              
+           <div class="cursor-pointer hover:bg-[#F2F6FB] rounded-md p-3 mb-2">
+            <h2 class="text-xl font-semibold mb-2 text-[#10837d]">প্রেসক্রিপশন বুঝার মত দক্ষতা সম্পন্ন লোক প্রয়োজন।</h2>
+            <div class="text-[#A6AAB0] text-[1rem] font-medium">
+               <p>customer_care | Part Time</p>
+               <p> Arogga Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
+            </div>
+           </div>
+
+          </div>
+          <div id="tab-3" class="career-tab-content">
+            <div class="cursor-pointer hover:bg-[#F2F6FB] rounded-md p-3 mb-2">
+            <h2 class="text-xl font-semibold mb-2 text-[#10837d]">technology | full_time</h2>
+            <div class="text-[#A6AAB0] text-[1rem] font-medium">
+               <p>customer_care | Part Time</p>
+               <p> Arogga Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
+            </div>
+           </div>
+          </div>
+          <div id="tab-4" class="career-tab-content">
+            <div class="cursor-pointer hover:bg-[#F2F6FB] rounded-md p-3 mb-2">
+              <h2 class="text-xl font-semibold mb-2 text-[#10837d]">Senior Developer (MERN)</h2>
+              <div class="text-[#A6AAB0] text-[1rem] font-medium">
+                 <p>technology | full_time</p>
+                 <p> Arogga Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
+              </div>
+             </div>
+          </div>
+          <div id="tab-5" class="career-tab-content">
+            <div class="cursor-pointer hover:bg-[#F2F6FB] rounded-md p-3 mb-2">
+              <h2 class="text-xl font-semibold mb-2 text-[#10837d]">Rider (Cycle/Motorcycle)</h2>
+              <div class="text-[#A6AAB0] text-[1rem] font-medium">
+                 <p>technology | full_time</p>
+                 <p> Arogga Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
+              </div>
+             </div>
+          </div>
+          <div id="tab-6" class="career-tab-content">
+            <div class="cursor-pointer hover:bg-[#F2F6FB] rounded-md p-3 mb-2">
+              <h2 class="text-xl font-semibold mb-2 text-[#10837d]">Executive - Elderly Care Products</h2>
+              <div class="text-[#A6AAB0] text-[1rem] font-medium">
+                 <p>technology | full_time</p>
+                 <p> Arogga Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
+              </div>
+             </div>
+          </div>
+          <div id="tab-7" class="career-tab-content">
+            <div class="cursor-pointer hover:bg-[#F2F6FB] rounded-md p-3 mb-2">
+              <h2 class="text-xl font-semibold mb-2 text-[#10837d]">Executive - Elderly Care Products</h2>
+              <div class="text-[#A6AAB0] text-[1rem] font-medium">
+                 <p>technology | full_time</p>
+                 <p> Arogga Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
+              </div>
+             </div>
+          </div>
+          <div id="tab-8" class="career-tab-content">
+            <div class="cursor-pointer hover:bg-[#F2F6FB] rounded-md p-3 mb-2">
+              <h2 class="text-xl font-semibold mb-2 text-[#10837d]">Agent - Telesales</h2>
+              <div class="text-[#A6AAB0] text-[1rem] font-medium">
+                 <p>technology | full_time</p>
+                 <p> Arogga Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
+              </div>
+             </div>
+          </div>
+          <div id="tab-9" class="career-tab-content">
+            <div class="cursor-pointer hover:bg-[#F2F6FB] rounded-md p-3 mb-2">
+              <h2 class="text-xl font-semibold mb-2 text-[#10837d]">Agent - Telesales</h2>
+              <div class="text-[#A6AAB0] text-[1rem] font-medium">
+                 <p>technology | full_time</p>
+                 <p> Arogga Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
+              </div>
+             </div>
+          </div>
+
+        </div>
+      </div>
+     </div>
+
+
+
+    </section>
   </main>
   <!-- MAIN -->
 </section>
 <!-- NAVBAR -->
 
     
+
+     <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+     <!-- Initialize Swiper -->
+  <script>   
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+
+
+    // Health products slide start js 
+    var swiper = new Swiper(".Health-products-slide", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 50,
+        },
+      },
+    });
+  </script>
+  
     <script src="script.js">
+    
      
     </script>
   </body>

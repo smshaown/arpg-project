@@ -9,15 +9,22 @@
 
 :root {
 	--grey: #F1F0F6;
-	--dark-grey: #8D8D8D;
+	--dark-grey: #F2F6FB;
 	--light: #fff;
 	--dark: #000;
 	--green: #81D43A;
+	--green-blue: #10837d;
+	--dark-green : #008069;
+	--olive-green: #4A6058;
 	--light-green: #E3FFCB;
 	--blue: #1775F1;
+	--midnight-blue: rgb(36, 81, 149);
 	--light-blue: #D0E4FF;
 	--dark-blue: #0C5FCD;
+	--red-400: #F27979;
 	--red: #FC3B56;
+	--tabs-color: rgb(16, 131, 125);
+
 }
 
 html {
@@ -147,13 +154,59 @@ main {
 /* MAIN */
 /* CONTENT */
 
+/* Swiper css code start */
+.swiper {
+	width: 100%;
+	height: 100%;
+  }
 
-/* img zoomer box style css  */
+  .swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 20px;
+  }
+
+  .swiper-slide img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;	
+	border-radius: 10px;
+  }
+
+  .swiper-button-next{
+	color: white;
+	font-size: 16px !important;
+  }
+  .swiper-button-prev{
+	color: white;
+	font-size: 16px !important;
+  }
 
 
+/* career page er active code start  */
 
+  .career-tab-content {
+	display: none;
+  }
 
+  .career-tab-content.active {
+	display: block;
+  }
 
+/* 
+  #tabs li a.active {
+    color: var(--tabs-color); 
+	font-weight: 700;
+  } */
+
+  #tabs li a:hover{
+	background-color: var(--dark-grey);
+  }
 
 
 @media screen and (max-width: 768px) {

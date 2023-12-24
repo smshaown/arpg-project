@@ -43,7 +43,6 @@
 
 // Right Side Bar Create the page start
 
-
 function changeContent(content, clickedLink) {
   var rightSidebarContent = document.getElementById("right-sidebar-content");
   var contentDiv = document.getElementById(content);
@@ -72,7 +71,7 @@ function changeContent(content, clickedLink) {
 
 
 
-// product deatils 
+// product deatils show all / show less
 document.addEventListener('DOMContentLoaded', function () {
 	const showAllToggle = document.getElementById('showAllToggle');
 	const additionalOffersList = document.querySelectorAll('.flex.flex-row.items-center.gap-2.mb-1');
@@ -94,4 +93,34 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
   });
 
+
+//   swiper js code start
+
+
+//   swiper js code start end
+
+ // Open the first tab by default
+ // JSON data representing tabs and content
+ 
+
+ // Open the first tab by default
+ openTab(1);
+
+ function openTab(tabNumber) {
+  // Hide all tabs first
+  const allTabs = document.querySelectorAll('#right-side .career-tab-content');
+  allTabs.forEach(tab => tab.classList.remove('active'));
+
+  // Remove active class from all tabs
+  const tabLinks = document.querySelectorAll('#tabs li a');
+  tabLinks.forEach(link => link.classList.remove('active'));
+
+  // Show the selected tab
+  const selectedTab = document.getElementById(`tab-${tabNumber}`);
+  selectedTab.classList.add('active');
+
+  // Add active class to the clicked tab link
+  const clickedTabLink = document.querySelector(`#tabs li:nth-child(${tabNumber}) a`);
+  clickedTabLink.classList.add('active'); // Add the 'active' class here
+}
 
