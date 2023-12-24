@@ -8,13 +8,13 @@
 }
 
 :root {
+	--primary-color: #008069;
 	--grey: #F1F0F6;
 	--dark-grey: #F2F6FB;
 	--light: #fff;
 	--dark: #000;
 	--green: #81D43A;
 	--green-blue: #10837d;
-	--dark-green : #008069;
 	--olive-green: #4A6058;
 	--light-green: #E3FFCB;
 	--blue: #1775F1;
@@ -42,6 +42,10 @@ a {
 
 li {
 	list-style: none;
+}
+
+.primary-color{
+	color: var(--primary-color);
 }
 
 
@@ -219,8 +223,36 @@ main {
 	background-color: rgba(0, 0, 0, 0.5);
 	justify-content: center;
 	align-items: center;
+	z-index: 999;
   }
 
+/* toggle list start */
+.prescriptionListHidden {
+	height: 0;
+	opacity: 0;
+	overflow: hidden;
+	transition: height 0.5s ease, opacity 0.5s ease;
+  }
+
+  .prescriptionListVisible {
+	height: auto;
+	opacity: 1;
+  }
+
+  .rotate180 {
+	transform: rotate(180deg);
+	transition: transform 0.5s ease;
+  }
+
+
+  .tab-content.hidden {
+	display: none;
+  }
+
+  .tab-user.active {
+	background-color: #E6FCF6;
+	color: #008069;
+  }
 @media screen and (max-width: 768px) {
 	#content {
 		position: relative;

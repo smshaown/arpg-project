@@ -54,7 +54,7 @@
 
           <div class="flex gap-8 items-center text-black md:text-white">
             <!-- hover:border hover:border-white hover:rounded-sm hover:px-2 -->
-            <div class="cursor-pointer hidden md:block">
+            <div class="cursor-pointer hidden md:block" onclick="changeContent('Hello-User', this)">
               <h4 class="text-[12px]">Hello, User</h4>
               <h2 class="font-bold">Account &..</h2>
             </div>
@@ -274,34 +274,11 @@
               <div class="flex items-center gap-1">
                 <h4>To quick order</h4>
                 <div>
-                  <a href="#" id="Customer-popup1" class="font-bold">
+                  <a href="#" id="Upload-Prescription-popup1" class="font-bold">
                     <i class='bx bx-upload'></i> <span class="">Upload Prescription</span>
                   </a>
                 </div>
               </div>
-
-
-              
-     <!-- Customer-popup1 start -->
-        <div id="Customer-popup2" class="overlay">
-          <div class="bg-white md:w-[500px] h-[500px] rounded shadow-md popup-animation">
-            <div class="shadow-md relative px-4 pt-4 pb-4 ">
-              <h2 class="text-black text-lg font-bold"> Prescriptions </h2>    
-              <span id="Customer-close" class="absolute cursor-pointer right-[10px] top-[20px] text-black hover:text-gray-400">x</span>      
-            </div>
-
-            <div class="mt-4 px-4 ">
-              <div>
-                <label for="fileInput" class="block w-full py-12 text-[#000] text-center border-dotted border-2 border-[#4A6058] rounded-sm cursor-pointer text-[16px]">
-                  Upload File in PDF or JPEG*
-              </label>
-              <input type="file" id="fileInput" class="hidden" accept=".pdf, .jpeg, .jpg">
-              </div>
-            </div>
-          
-          </div>
-        </div>
-     <!-- খকর্মচারী-যুক্ত-করুন-popup1 end -->
 
 
 
@@ -1452,6 +1429,148 @@
 
      <!-- product end  -->
 
+     <!-- Hello-User start  -->
+     <section>
+        <div id="Hello-User" class="content-div mb-10" style="display: none;">
+            <div class="flex flex-row gap-4">
+              <div class="w-[300px] rounded-lg" style="box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);" >
+                <div class="flex flex-col bg-white py-8 space-y-4">
+                  <div class="flex flex-row items-center gap-5">
+                    <span class="ml-[20px]" >
+                    <i class='bx bxs-user w-[40px] h-[40px] text-[20px] flex justify-center items-center text-white rounded-full bg-[#BDBDBD] p-2'></i></span>
+                    <h3 class="text-[20px] font-normal">Sign In</h3>
+                  </div>
+                  <hr class="mt-1" />
+      
+                  <ul id="helloUserTab" class="tab-container">
+                    <li id="tab1" class="tab-user active hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
+                    >
+                      <a href="#" class="ml-[16px]">
+                        <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
+                          <i class="fa-solid fa-table-list"></i
+                        ></span>
+                        My Orders</a
+                      >
+                    </li>
+      
+                    <li id="tab2" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
+                    >
+                      <a href="#" class="ml-[16px]">
+                        <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
+                          <i class="fa-solid fa-user"></i
+                        ></span>
+                        My Account</a
+                      >
+                    </li>
+      
+                    <li id="tab3" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
+                    >
+                      <a href="#" class="ml-[16px]">
+                        <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
+                          <i class="fa-solid fa-clipboard-list"></i
+                        ></span>
+                        Prescriptions</a
+                      >
+                    </li>
+      
+                    <li id="tab4" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
+                    >
+                      <a href="#" class="ml-[16px]">
+                        <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
+                          <i class="fa-solid fa-heart"></i
+                        ></span>
+                        Favourite</a
+                      >
+                    </li>
+      
+                    <li id="tab5" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
+                    >
+                      <a href="#" class="ml-[16px]">
+                        <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
+                          <i class="fa-solid fa-location-dot"></i
+                        ></span>
+                        Manage Address</a
+                      >
+                    </li>
+      
+                    <li id="tab6" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
+                    >
+                      <a href="#" class="ml-[16px]">
+                        <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
+                          <i class="fa-solid fa-notes-medical"></i
+                        ></span>
+                        Request Medicine</a
+                      >
+                    </li>
+      
+                    <li id="tab7" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
+                    >
+                      <a href="#" class="ml-[16px]">
+                        <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
+                          <i class="fa-solid fa-gift"></i
+                        ></span>
+                        Refer And Earn</a
+                      >
+                    </li>
+      
+                    <li id="tab8" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
+                    >
+                      <a href="#" class="ml-[16px]">
+                        <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
+                          <i class="fa-solid fa-phone"></i
+                        ></span>
+                        Call To Order</a
+                      >
+                    </li>
+      
+                    <li id="tab9" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
+                    >
+                      <a href="#" class="ml-[16px]">
+                        <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
+                          <i class="fa-solid fa-clipboard-question"></i
+                        ></span>
+                        FAQs</a
+                      >
+                    </li>
+      
+                    <li id="tab10" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
+                    >
+                      <a href="#" class="ml-[16px]">
+                        <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
+                          <i class="fa-solid fa-calendar-days"></i
+                        ></span>
+                        Special Offers</a
+                      >
+                    </li>
+      
+                    <li id="tab11" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
+                    >
+                      <a href="#" class="ml-[16px]">
+                        <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
+                          <i class="fa-brands fa-square-facebook"></i
+                        ></span>
+                        Facebook Page</a
+                      >
+                    </li>
+      
+                    <li id="tab12" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
+                    >
+                      <a href="#" class="ml-[16px]">
+                        <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
+                          <i class="fa-solid fa-thumbs-up"></i
+                        ></span>
+                        Rate Us</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div id="content1" class="tab-content">Content for My Orders</div>
+              <div id="content2" class="tab-content hidden">Content for My Account2</div>
+            </div>
+        </div>
+     </section>
+
     <section>
       <div  id="product-details" class="content-div mb-10" style="display: none;">
         <div class="md:px-[40px] px-[10px] mt-8">
@@ -1918,10 +2037,71 @@
 
 
     </section>
+
+    <!-- All Popup section start -->
+    <section>
+      <!-- Upload-Prescription start  -->
+      <div id="Upload-Prescription-popup2" class="overlay">
+        <div class="bg-white md:w-[700px] w-full h-auto rounded shadow-md popup-animation">
+          <div class="shadow-md relative px-4 pt-4 pb-4 ">
+            <h2 class="text-black text-lg font-bold"> Prescriptions </h2>    
+            <span id="Upload-Prescription-close" class="absolute cursor-pointer right-[10px] top-[20px] text-black hover:text-gray-400">x</span>      
+          </div>
+
+          <div class="mt-4 px-4 pb-3">
+            <div>
+              <div class="flex flex-row justify-between items-center cursor-pointer" onclick="toggleList()">
+                <h2 id="toggleHeader" class="text-[1.1rem] mb-[10px] text-[#008069]">কেন প্রেসক্রিপশনের ছবি আপলোড করবেন?</h2>
+                <span id="toggleIcon"><i class='bx bx-chevron-down text-[1rem]'></i></span>
+              </div>
+              <div id="prescriptionList" class="prescriptionListHidden">
+                <ul class="text-[14px] px-5 py-4" style="color: rgba(0, 0, 0, 0.87);">
+                  <li class="list-disc mt-1"><a href="#">প্রেসক্রিপশন হারানোর ভয় থেকে আপনি মুক্ত, আজীবনের জন্য আরোগ্য এপে আপনি খুজে পাবেন আপনার ডিজিটাল প্রেসক্রিপশন।</a></li>
+                  <li class="list-disc mt-1"><a href="#">ডাক্তারের হাতের লেখা বুঝা না গেলেও কোন সমস্যা নেই, আমাদের 'A' গ্রেড ফার্মাসিস্ট প্রেস্ক্রিপশন দেখে ঔষধ অর্ডারে আপনাকে সহযোগিতা করবে।</a></li>
+                  <li class="list-disc mt-1"><a href="#">আপনার প্রেসক্রিপশন কখনো তৃতীয় কোন পক্ষের সাথে শেয়ার করা হবে না।</a></li>
+                  <li class="list-disc mt-1"><a href="#">বাংলাদেশ সরকারের নিয়ম অনুসারে, কিছু মেডিসিন অর্ডার করার জন্য প্রেসক্রিপশন থাকা বাধ্যতামুলক।</a></li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <label for="fileInput" class="block w-full py-12 text-[#000] text-center border-dotted border-2 border-[#4A6058] rounded-sm cursor-pointer text-[16px]">
+                Upload File in PDF or JPEG*
+            </label>
+            <input type="file" id="fileInput" class="hidden" accept=".pdf, .jpeg, .jpg">
+            </div>
+
+            <div>
+              <h2 id="ValidPrescription-popup1" class="cursor-zoom-in font-bold text-[]  text-[#008069] mt-3">Valid prescription guide</h2>
+              <div id="ValidPrescription-popup2" class="overlay">
+                <div class="bg-white w-[300px] h-auto rounded shadow-md popup-animation">
+                  <div class="shadow-md relative px-4 pt-4 pb-4 ">
+                    <h2 class="text-black text-lg">Valid prescription</h2>    
+                    <span id="ValidPrescription-popup-close" class="absolute cursor-pointer right-[10px] top-[20px] text-black hover:text-gray-400">x</span>      
+                  </div>
+        
+                  <div class="mt-4 px-4 pb-8">
+                   
+                    <img class="w-full h-full" src="img/prescriptionImage.webp" alt="">
+                   
+                  </div>
+                
+                </div>
+              </div>
+            </div>
+
+            <button class="w-full py-2 text-[13px] bg-[#008069] mt-3 text-white uppercase font-bold cursor-pointer flex flex-row justify-center items-center rounded-md">
+              <i class='bx bx-upload mr-2 font-bold'></i>
+              Upload Prescription 
+            </button>
+          </div>
+        
+        </div>
+      </div>
+      <!-- Upload-Prescription end  -->
+
+    </section>
   </main>
-  <!-- MAIN -->
 </section>
-<!-- NAVBAR -->
 
     
 

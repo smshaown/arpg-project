@@ -125,4 +125,15 @@ document.addEventListener('DOMContentLoaded', function () {
 }
 
 
+// toggle list show and hidden 
+function toggleList() {
+    var list = document.getElementById('prescriptionList');
+    var header = document.getElementById('toggleHeader');
+    var icon = document.getElementById('toggleIcon');
 
+    list.classList.toggle('prescriptionListHidden');
+    list.classList.toggle('prescriptionListVisible');
+    
+    
+    icon.classList.toggle('rotate180');
+  }
