@@ -2230,10 +2230,79 @@
                           </div>
                         </div>
 
-                        <div class="mt-4 h-[130px] bg-[#FCFCFC] flex justify-center flex-col items-center border-dotted border-2 border-gray-600 cursor-pointer">
+                        <div id="addShippingAddress-popup1" class="mt-4 h-[130px] bg-[#FCFCFC] flex justify-center flex-col items-center border-dotted border-2 border-gray-600 cursor-pointer">
                           <i class='bx bx-plus'></i>
                           <h5>Add New ADdress-</h5>
                         </div>
+                       
+                      </div>
+                    
+                    </div>
+                  </div>
+
+                  <!-- Add Shipping Address popup start  -->
+                  <div id="addShippingAddress-popup2" class="overlay">
+                    <div class="bg-white w-[430px] h-auto rounded shadow-md">
+                      <div class="shadow-md relative px-4 pt-4 pb-4 ">
+                        <h2 class="text-black text-lg">Add Shipping Address</h2>    
+                        <span id="addShippingAddress-close" class="absolute cursor-pointer right-[10px] top-[20px] text-black hover:text-gray-400">x</span>      
+                      </div>
+            
+                      <div class="mt-4 px-4 pb-8">
+                      <div>
+                        <div class="mb-6 mt-2">
+                          <input type="text" id="large-input" class="block w-full p-3 text-gray-900 border border-[#008069] rounded-lg  sm:text-md  focus:border-[#008069] dark:bg-[#008069] dark:border-[#008069]" placeholder="Full Name" required />
+                      </div>
+                       
+                        <div class="mb-6 mt-2">
+                          <input type="text" id="large-input" class="block w-full p-3 text-gray-900 border border-[#008069] rounded-lg  sm:text-md  focus:border-[#008069] dark:bg-[#008069] dark:border-[#008069]" placeholder="" value="01709198065" required />
+                      </div>
+
+                        <div class="mb-6 mt-2">
+                            <select class="block w-full p-3 text-gray-900 border border-[#008069] rounded-lg  sm:text-md  focus:border-[#008069] dark:bg-[#008069] dark:border-[#008069] pr-2">
+                              <option selected>Select district</option>
+                              <option value="US">United States</option>
+                              <option value="CA">Canada</option>
+                              <option value="FR">France</option>
+                              <option value="DE">Germany</option>
+                            </select>
+                        </div>
+                       
+                        <div class="mb-6 mt-2">
+                            <select class="block w-full p-3 text-gray-900 border border-[#008069] rounded-lg  sm:text-md  focus:border-[#008069] dark:bg-[#008069] dark:border-[#008069] pr-2">
+                              <option selected>Select Area</option>
+                              <option value="US">United States</option>
+                              <option value="CA">Canada</option>
+                              <option value="FR">France</option>
+                              <option value="DE">Germany</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-6 mt-2">
+                          <input type="text" id="large-input" class="block w-full p-3 text-gray-900 border border-[#008069] rounded-lg  sm:text-md  focus:border-[#008069] dark:bg-[#008069] dark:border-[#008069]" placeholder="Address" required />
+                      </div>
+                      </div>
+
+                      <div>
+                        <h2>Address Type</h2>
+                        <div>
+                          <div class="flex flex-row justify-between items-center">
+                            <button class="text-[0.875rem] px-[15px] py-2 bg-[#008069] text-[#fff] font-semibold capitalize cursor-pointer rounded-md border border-[#000]">
+                              <i class='bx bx-home mr-1'></i> 
+                              Home</button>
+                              <button class="text-[0.875rem] px-[15px] py-2  font-semibold capitalize cursor-pointer rounded-md border border-[#000]">
+                                <i class='bx bx-buildings'></i> 
+                                Office</button>
+                              <button class="text-[0.875rem] px-[15px] py-2  font-semibold capitalize cursor-pointer rounded-md border border-[#000]">
+                                <i class='bx bx-building-house'></i>
+                                Home Town</button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div>
+
+                      </div>
                        
                       </div>
                     

@@ -18,6 +18,7 @@ function createPopup(popupTriggerId, popupId, closePopupId) {
   createPopup("Upload-Prescription-popup1", "Upload-Prescription-popup2", "Upload-Prescription-close");
   createPopup("ValidPrescription-popup1", "ValidPrescription-popup2", "ValidPrescription-popup-close");
   createPopup("Manage-Address-popup1", "Manage-Address-popup2", "Manage-Address-close");
+  createPopup("addShippingAddress-popup1", "addShippingAddress-popup2", "addShippingAddress-close");
 
 
 
