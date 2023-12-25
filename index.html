@@ -14,10 +14,12 @@
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- alpine js  -->
+  <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
 
   <!-- style css link  -->
    <link rel="stylesheet" href="style.css" />
-    <title>Arogga</title>
+    <title></title>
   </head>
   <body>
 
@@ -1483,7 +1485,7 @@
                       >
                     </li>
       
-                    <li id="tab5" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
+                    <li class="hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
                     >
                       <a href="#" id="Manage-Address-popup1" class="ml-[16px]">
                         <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
@@ -1493,7 +1495,7 @@
                       >
                     </li>
       
-                    <li id="tab6" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
+                    <li id="tab5" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
                     >
                       <a href="#" class="ml-[16px]">
                         <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
@@ -1503,7 +1505,7 @@
                       >
                     </li>
       
-                    <li id="tab7" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
+                    <li id="tab6" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
                     >
                       <a href="#" class="ml-[16px]">
                         <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
@@ -1513,7 +1515,7 @@
                       >
                     </li>
       
-                    <li id="tab8" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
+                    <li  class="hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
                     >
                       <a href="#" class="ml-[16px]">
                         <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
@@ -1523,7 +1525,7 @@
                       >
                     </li>
       
-                    <li id="tab9" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
+                    <li id="tab7" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
                     >
                       <a href="#" class="ml-[16px]">
                         <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
@@ -1533,7 +1535,7 @@
                       >
                     </li>
       
-                    <li id="tab10" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
+                    <li id="tab8" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
                     >
                       <a href="#" class="ml-[16px]">
                         <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
@@ -1543,7 +1545,7 @@
                       >
                     </li>
       
-                    <li id="tab11" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
+                    <li id="tab9" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
                     >
                       <a href="#" class="ml-[16px]">
                         <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
@@ -1553,7 +1555,7 @@
                       >
                     </li>
       
-                    <li id="tab12" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
+                    <li id="tab10" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
                     >
                       <a href="#" class="ml-[16px]">
                         <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
@@ -1663,6 +1665,358 @@
                      </div>
                    </div>
                 </div>
+
+                <!-- <Request Medicine start -->
+                <div id="content5" class="tab-content hidden w-full">
+                  <div class="px-3 py-3 h-auto" style="box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.1), 0px 0px 0px -1px rgba(0,0,0,0.1), 0px -5px 0px -12px rgba(0,0,0,0.1), 0px 3px 0px -3px rgba(0,0,0,0.1);">
+                    <div class="mb-6 mt-2">
+                      <label for="">Medicine Name</label>
+                      <input type="text" id="large-input" class="block w-full p-3 text-gray-900 border border-[#008069] rounded-lg  sm:text-md  focus:border-[#008069] dark:bg-[#008069] dark:border-[#008069]" placeholder="Medicine Name" required />
+                  </div>
+                    <div class="mb-6 mt-2">
+                      <label for="">Strength</label>
+                      <input type="number" id="large-input" class=" block w-full p-3 text-gray-900 border border-[#008069] rounded-lg  sm:text-md  focus:border-[#008069] dark:bg-[#008069] dark:border-[#008069]" placeholder="i. e 10mg" required />
+                  </div>
+                    <div class="mb-6 mt-2">
+                      <label>Medicine Form</label>
+                      <input type="text" id="large-input" class=" block w-full p-3 text-gray-900 border border-[#008069] rounded-lg  sm:text-md  focus:border-[#008069] dark:bg-[#008069] dark:border-[#008069]" placeholder="i. tablet" required />
+                  </div>
+                    <div class="mb-6 mt-2">
+                      <label>Compaay</label>
+                      <input type="text" id="large-input" class=" block w-full p-3 text-gray-900 border border-[#008069] rounded-lg  sm:text-md  focus:border-[#008069] dark:bg-[#008069] dark:border-[#008069]" placeholder="Company" required />
+                  </div>
+
+                  <div class="mb-6 mt-4">
+                    <button class="bg-[#008069] text-white w-full uppercase font-bold text-[15px] text-center py-2 rounded-md">update profile</button>
+                  </div>
+                   
+                  </div>
+                </div>
+
+                <!-- Refer And Earn start -->
+                <div id="content6" class="tab-content hidden w-full">
+                 <div class="h-auto" style="box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.1), 0px 0px 0px -1px rgba(0,0,0,0.1), 0px -5px 0px -12px rgba(0,0,0,0.1), 0px 3px 0px -3px rgba(0,0,0,0.1);">
+                   <div>
+                    <img class="w-full h-full object-cover" src="img/refar1.png" alt="">
+                   </div>
+
+                   <div class="flex flex-col justify-center items-center mt-4 mb-6">
+                    <h1 class="text-[20px] font-bold">Invite friends. Earn money.</h1>
+                    <p class="text-[16px]">Tell a friend about  and get <span class="font-bold">40 taka</span> reward.</p>
+                    <p class="text-[16px]">Your referral code: <span class="font-bold">R4K4YR</span></p>
+                    <button class="bg-[#008069] mt-6 text-white capitalize px-3 font-bold text-[14px] text-center py-2 rounded-full">Copy Shareable Link</button>
+                   </div>
+
+                   <div class="flex flex-col justify-center items-center mt-3 ">
+                      <div class="w-full md:w-[400px]">
+                        <p class="text-[15px] text-center" >You will get 40 Taka each time your friends join with your referral code and place their first order. Make sure they enter this code while signing up for .</p>
+                      <p class="text-xs mt-3 text-center">* Your referral code is valid for lifetime.</p>
+                      </div>
+                   </div>
+
+                 </div>
+                </div>
+
+                <div id="content7" class="tab-content hidden w-full">
+                  <div class="">
+                    <ul class="flex flex-col">
+                      <li class="bg-white my-2 shadow-lg" x-data="accordion(1)">
+                        <h2
+                          @click="handleClick()"
+                          class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer"
+                        >
+                          <span>Medicine and Healthcare Orders</span>
+                          <svg
+                            :class="handleRotate()"
+                            class="fill-current text-purple-700 h-6 w-6 transform transition-transform duration-500"
+                            viewBox="0 0 20 20"
+                          >
+                            <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+                          </svg>
+                        </h2>
+                        <div
+                          x-ref="tab"
+                          :style="handleToggle()"
+                          class="border-l-2 border-purple-600 overflow-hidden max-h-0 duration-500 transition-all"
+                        >
+                          <div class="px-3 pb-2">
+                            <h2 class="font-bold text-[16px] mt-2">When will I receive my order?</h2>
+
+                      <p class="text-[15px]"> Your order will be delivered within estimated time shown to you while ordering.</p>
+
+                      <h2 class="font-bold text-[16px] mt-2">I have received damaged items.</h2>
+
+                      <p class="text-[15px]"> We are sorry you had to experience this. Please do not accept the delivery of that order and let us know what happened</p>
+
+                      <h2 class="font-bold text-[16px] mt-2">Items are different from what I ordered.</h2>
+
+                      <p class="text-[15px]">We are sorry you have had to experience this. Please do not accept it from rider. Reject the order straightaway and call to  customer care</p>
+
+                      <h2 class="font-bold text-[16px] mt-2">  What if Items are missing from my order.</h2>
+
+                     <p class="text-[15px]"> In no circumstances, you should receive an order that is incomplete. Once rider reaches your destination, be sure to check expiry date of medicines and your all ordered items was delivered.
+                    </p>
+
+                      <h2 class="font-bold text-[16px] mt-2">How do I cancel my order?</h2>
+
+                    <p class="text-[15px]">  Please call us with your order ID and we will cancel it for you. or you can cancel from my orders option as well.</p>
+
+                    <h2 class="font-bold text-[16px] mt-2">   I want to modify my order.</h2>
+
+                     <p class="text-[15px]"> Sorry, once your order is confirmed, it cannot be modified. Please place a fresh order with any modifications.</p>
+
+                      <h2 class="font-bold text-[16px] mt-2">What is the shelf life of medicines being provided?</h2>
+
+                    <p class="text-[15px]">  We ensure that the shelf life of the medicines being supplied by our partner retailers is, at least, a minimum of 3 months from the date of delivery.</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="bg-white my-2 shadow-lg" x-data="accordion(2)">
+                        <h2
+                          @click="handleClick()"
+                          class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer"
+                        >
+                          <span>Delivery</span>
+                          <svg
+                            :class="handleRotate()"
+                            class="fill-current text-purple-700 h-6 w-6 transform transition-transform duration-500"
+                            viewBox="0 0 20 20"
+                          >
+                            <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+                          </svg>
+                        </h2>
+                        <div
+                          class="border-l-2 border-purple-600 overflow-hidden max-h-0 duration-500 transition-all"
+                          x-ref="tab"
+                          :style="handleToggle()"
+                        >
+                          
+                        <div class="px-3 pb-2">
+                          <h2 class="font-bold text-[16px] mt-2">When will I receive my order?</h2>
+                      <p class="text-[15px]">Your order will be delivered within the Estimated Delivery Date.</p>
+
+                      <h2 class="font-bold text-[16px] mt-2">Order status showing delivered but I have not received my order.</h2>
+                      <p class="text-[15px]">Sorry that you are experiencing this. Please call to connect with us immediately.</p>
+
+                      <h2 class="font-bold text-[16px] mt-2">Which cities do you operate in?</h2>
+                      <p class="text-[15px]">We provide healthcare services in all over Bangladesh now.</p>
+
+                      <h2 class="font-bold text-[16px] mt-2">How can I get my order delivered faster?</h2>
+                      <p class="text-[15px]">We have both Express delivery and Regular delivery option available now. If you need it urgently please select Express delivery.</p>
+
+                      <h2 class="font-bold text-[16px] mt-2">Can I modify my address after Order placement?</h2>
+                      <p class="text-[15px]">Sorry, once the order is placed, we are unable to modify the address.</p>
+
+                      <h2 class="font-bold text-[16px] mt-2">What is the meaning of Delivered status?</h2>
+                      <p class="text-[15px]">When the rider reaches your destination and hands over the products to you, the delivery status changes to 'Delivered'. Status 'Delivered' also means (your company name) has already collected the payment from you via cash or online payment.</p>
+                        </div>
+                        </div>
+                      </li>
+                      <li class="bg-white my-2 shadow-lg" x-data="accordion(3)">
+                        <h2
+                          @click="handleClick()"
+                          class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer"
+                        >
+                          <span>Payments</span>
+                          <svg
+                            :class="handleRotate()"
+                            class="fill-current text-purple-700 h-6 w-6 transform transition-transform duration-500"
+                            viewBox="0 0 20 20"
+                          >
+                            <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+                          </svg>
+                        </h2>
+                        <div
+                          class="border-l-2 border-purple-600 overflow-hidden max-h-0 duration-500 transition-all"
+                          x-ref="tab"
+                          :style="handleToggle()"
+                        >
+                        <div class="px-3 pb-2">
+                          <h2 class="font-bold text-[16px] mt-2">How do customers get discounts?</h2>
+                            <p class="text-[15px]">We deduct the value from every medicine and show it to you before ordering, so that you can see what you are really paying for each medicine.</p>
+
+                            <h2 class="font-bold text-[16px] mt-2">When will I get my refund?</h2>
+                            <p class="text-[15px]">Refund will be credited in (your company name) cash (3-5 business days).</p>
+
+                            <h2 class="font-bold text-[16px] mt-2">I did not receive cashback for my order.</h2>
+                            <p class="text-[15px]">Please read the T&amp;C of the offer carefully for the eligibility of cashback.</p>
+
+                            <h2 class="font-bold text-[16px] mt-2">What are the payment modes at (your company name)?</h2>
+                            <p class="text-[15px]">Cash on Delivery (COD) and Online payment methods such as Bkash, Nagad, Cards, etc.</p>
+                        </div>
+                        </div>
+                      </li>
+                      <li class="bg-white my-2 shadow-lg" x-data="accordion(4)">
+                        <h2
+                          @click="handleClick()"
+                          class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer"
+                        >
+                          <span>Referrals</span>
+                          <svg
+                            :class="handleRotate()"
+                            class="fill-current text-purple-700 h-6 w-6 transform transition-transform duration-500"
+                            viewBox="0 0 20 20"
+                          >
+                            <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+                          </svg>
+                        </h2>
+                        <div
+                          class="border-l-2 border-purple-600 overflow-hidden max-h-0 duration-500 transition-all"
+                          x-ref="tab"
+                          :style="handleToggle()"
+                        >
+                         <div class="px-3 pb-2">
+                          <h2 class="font-bold text-[16px] mt-2">How does your referral program work?</h2>
+                              <p class="text-[15px]">Invite your friends and family members by sharing your referral code. Once they join with your referral code and place their first order, you will get an extra 40 Taka Referral bonus in your (your company name) cash.</p>
+
+                              <h2 class="font-bold text-[16px] mt-2">Why did I not get the referral benefit?</h2>
+                              <p class="text-[15px]">If you are not notified about your referral benefit, it is likely that one or more of the following things happened:</p>
+                              <ol class="list-decimal pl-6">
+                                  <li>The referred member did not apply your referral code while placing the order.</li>
+                                  <li>The user clicked on your link but did not create an account or complete their first purchase.</li>
+                                  <li>The referred member placed an eligible order, but the order was not fulfilled.</li>
+                                  <li>The person who used the code has already placed an order on (your company name).</li>
+                                  <li>Your referral benefit has expired.</li>
+                              </ol>
+
+                              <h2 class="font-bold text-[16px] mt-2">Is there an expiry date to my referral benefit?</h2>
+                              <p class="text-[15px]">No, there is no expiry date. Once you are eligible for the additional benefit, you will surely get it.</p>
+                         </div>
+                        </div>
+                      </li>
+                      <li class="bg-white my-2 shadow-lg" x-data="accordion(5)">
+                        <h2
+                          @click="handleClick()"
+                          class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer"
+                        >
+                          <span>Cash</span>
+                          <svg
+                            :class="handleRotate()"
+                            class="fill-current text-purple-700 h-6 w-6 transform transition-transform duration-500"
+                            viewBox="0 0 20 20"
+                          >
+                            <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+                          </svg>
+                        </h2>
+                        <div
+                          class="border-l-2 border-purple-600 overflow-hidden max-h-0 duration-500 transition-all"
+                          x-ref="tab"
+                          :style="handleToggle()"
+                        >
+                        <div class="px-3 pb-2">
+                          <h2 class="font-bold text-[16px] mt-2">What is (your company name) cash?</h2>
+                          <p class="text-[15px]">This is a virtual wallet to store (your company name) Cash in your account.</p>
+                      
+                          <h2 class="font-bold text-[16px] mt-2">How do I check my (your company name) cash balance?</h2>
+                          <p class="text-[15px]">You can check your (your company name) cash in the Account screen.</p>
+                      
+                          <h2 class="font-bold text-[16px] mt-2">When will the (your company name) money expire?</h2>
+                          <p class="text-[15px]">Any (your company name) Cash deposited in your (your company name) wallet through returns will never expire. At times, our marketing team may deposit promotional cash which will have an expiry that is communicated to you via an SMS.</p>
+                      
+                          <h2 class="font-bold text-[16px] mt-2">Can I add money to my (your company name) cash?</h2>
+                          <p class="text-[15px]">No, you are unable to transfer or add money to your (your company name) cash.</p>
+                      
+                          <h2 class="font-bold text-[16px] mt-2">How can I redeem my (your company name) cash?</h2>
+                          <p class="text-[15px]">If you have any money in your (your company name) cash, it will be automatically deducted from your next order amount, and you will only have to pay for the balance amount (if any).</p>
+                      
+                          <h2 class="font-bold text-[16px] mt-2">Can I transfer money from my (your company name) cash to the bank account?</h2>
+                          <p class="text-[15px]">No, you are unable to transfer money from your (your company name) cash to the bank account.</p>
+                      
+                          <h2 class="font-bold text-[16px] mt-2">How much (your company name) money can I redeem in an order?</h2>
+                          <p class="text-[15px]">There is no limit for redemption of (your company name) cash.</p>
+                      </div>
+                      
+                        </div>
+                      </li>
+                      <li class="bg-white my-2 shadow-lg" x-data="accordion(6)">
+                        <h2
+                          @click="handleClick()"
+                          class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer"
+                        >
+                          <span>Promotions</span>
+                          <svg
+                            :class="handleRotate()"
+                            class="fill-current text-purple-700 h-6 w-6 transform transition-transform duration-500"
+                            viewBox="0 0 20 20"
+                          >
+                            <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+                          </svg>
+                        </h2>
+                        <div
+                          class="border-l-2 border-purple-600 overflow-hidden max-h-0 duration-500 transition-all"
+                          x-ref="tab"
+                          :style="handleToggle()"
+                        >
+                        <div class="px-3 pb-2">
+                          <h2 class="font-bold text-[16px] mt-2">How do I apply a coupon code on my order?</h2>
+                          <p class="text-[15px]">You can apply a coupon on the cart screen while placing an order. If you are getting a message that the coupon code has failed to apply, it may be because you are not eligible for the offer.</p>
+                      
+                          <h2 class="font-bold text-[16px] mt-2">Does (your company name) offer a return of the medicine?</h2>
+                          <p class="text-[15px]">Yes, (your company name) does accept returns of the medicine from customers. We have a 7-day return policy for eligible items. Please check our return section for more details.</p>
+                      </div>
+                      
+                        </div>
+                      </li>
+                      <li class="bg-white my-2 shadow-lg" x-data="accordion(7)">
+                        <h2
+                          @click="handleClick()"
+                          class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer"
+                        >
+                          <span>Return</span>
+                          <svg
+                            :class="handleRotate()"
+                            class="fill-current text-purple-700 h-6 w-6 transform transition-transform duration-500"
+                            viewBox="0 0 20 20"
+                          >
+                            <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+                          </svg>
+                        </h2>
+                        <div
+                          class="border-l-2 border-purple-600 overflow-hidden max-h-0 duration-500 transition-all"
+                          x-ref="tab"
+                          :style="handleToggle()"
+                        >
+                        <div class="px-3 pb-2">
+                          <h2 class="font-bold text-[16px] mt-2">How does (your company name)’s return policy work?</h2>
+                          <p class="text-[15px]">(your company name) offers a flexible return policy for items ordered with us. Under this policy, unopened and unused items must be returned within 7 days from the date of delivery. The return window will be listed in the returns section of the order, once delivered. Items are not eligible for return under the following circumstances:</p>
+                          <ul class="list-disc pl-6">
+                              <li>If items have been opened, partially used, or disfigured. Please check the package carefully at the time of delivery before opening and using.</li>
+                              <li>If the item’s packaging/box or seal has been tampered with. Do not accept the delivery if the package appears to be tampered with.</li>
+                              <li>If it is mentioned on the product details page that the item is non-returnable.</li>
+                              <li>If the return window for items in an order has expired. No items can be returned after 7 days from the delivery date.</li>
+                              <li>If any accessories supplied with the items are missing.</li>
+                              <li>If the item does not have the original serial number/UPC number/barcode affixed, which was present at the time of delivery.</li>
+                              <li>If there is any damage/defect not covered under the manufacturer's warranty.</li>
+                              <li>If the item is damaged due to visible misuse.</li>
+                              <li>Any refrigerated items like insulin or products that are heat-sensitive are non-returnable.</li>
+                              <li>Items related to baby care, food & nutrition, healthcare devices, and sexual wellness such as but not limited to diapers, health drinks, health supplements, glucometers, glucometer strips/lancets, health monitors, condoms, pregnancy/fertility kits, etc.</li>
+                          </ul>
+                      
+                          <h2 class="font-bold text-[16px] mt-2">Do you sell medicine strips in full or can it be single units too?</h2>
+                          <p class="text-[15px]">We sell in single units to give customers flexibility in selecting specific amounts of medicine required. We provide single units of medicine as our pharmacist can cut strips.</p>
+                      
+                          <h2 class="font-bold text-[16px] mt-2">I have broken the seal, can I return it?</h2>
+                          <p class="text-[15px]">No, you cannot return any items with a broken seal.</p>
+                      
+                          <h2 class="font-bold text-[16px] mt-2">Can I return medicine that is partially consumed?</h2>
+                          <p class="text-[15px]">No, you cannot return partially consumed items. Only unopened items that have not been used can be returned.</p>
+                      
+                          <h2 class="font-bold text-[16px] mt-2">Can I ask for a return if the strip is cut?</h2>
+                          <p class="text-[15px]">We provide customers with the option of purchasing medicines as single units. Even if ordering a single tablet of paracetamol, we can deliver that. It is common to have medicines in your order with some strips that are cut. If you want to get a full strip in your order, please order a full strip amount and you will get it accordingly. If you do not order a full strip, you will get cut pieces. If you have ordered 4 single units which are cut pieces and want to return, all 4 pieces must be returned. We do not allow partial return of 1 or 2 pieces.</p>
+                      </div>
+                      
+                      
+                        </div>
+                      </li>
+                    </ul>
+                  </div>                  
+                </div>
+
+
+                <div id="content8" class="tab-content hidden w-full">
+                  <div>ok ok</div>
+                </div>
+                
 
               </div>
             </div>
@@ -1982,7 +2336,7 @@
             <h2 class="text-xl font-semibold mb-2 text-[#10837d]">মেডিসিন প্যাকার/ পিকার (ফার্মেসি)</h2>
             <div class="text-[#A6AAB0] text-[1rem] font-medium">
                <p>warehouse | Part Time</p>
-               <p> Arogga Limited, 6th floor (Lift-5) Plot D/15-1, Road 36, Block D, Section  10, Jutpotti Paris Road Mirpur, Dhaka 1216</p>
+               <p>  Limited, 6th floor (Lift-5) Plot D/15-1, Road 36, Block D, Section  10, Jutpotti Paris Road Mirpur, Dhaka 1216</p>
             </div>
            </div>
 
@@ -1990,7 +2344,7 @@
             <h2 class="text-xl font-semibold mb-2 text-[#10837d]">প্রেসক্রিপশন বুঝার মত দক্ষতা সম্পন্ন লোক প্রয়োজন।</h2>
             <div class="text-[#A6AAB0] text-[1rem] font-medium">
                <p>customer_care | Part Time</p>
-               <p> Arogga Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
+               <p>  Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
             </div>
            </div>
 
@@ -1999,7 +2353,7 @@
             <h2 class="text-xl font-semibold mb-2 text-[#10837d]">technology | full_time</h2>
             <div class="text-[#A6AAB0] text-[1rem] font-medium">
                <p>customer_care | Part Time</p>
-               <p> Arogga Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
+               <p>  Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
             </div>
            </div>
            
@@ -2007,7 +2361,7 @@
             <h2 class="text-xl font-semibold mb-2 text-[#10837d]">Senior Developer (MERN)</h2>
             <div class="text-[#A6AAB0] text-[1rem] font-medium">
                <p>technology | full_time</p>
-               <p> Arogga Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
+               <p>  Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
             </div>
            </div>
 
@@ -2015,7 +2369,7 @@
             <h2 class="text-xl font-semibold mb-2 text-[#10837d]">Senior Developer (MERN)</h2>
             <div class="text-[#A6AAB0] text-[1rem] font-medium">
                <p>technology | full_time</p>
-               <p> Arogga Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
+               <p>  Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
             </div>
            </div>
 
@@ -2023,7 +2377,7 @@
             <h2 class="text-xl font-semibold mb-2 text-[#10837d]">Executive - Elderly Care Products</h2>
             <div class="text-[#A6AAB0] text-[1rem] font-medium">
                <p>technology | full_time</p>
-               <p> Arogga Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
+               <p>  Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
             </div>
            </div>
 
@@ -2031,7 +2385,7 @@
             <h2 class="text-xl font-semibold mb-2 text-[#10837d]">Rider (Cycle/Motorcycle)</h2>
             <div class="text-[#A6AAB0] text-[1rem] font-medium">
                <p>technology | full_time</p>
-               <p> Arogga Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
+               <p>  Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
             </div>
            </div>
 
@@ -2039,7 +2393,7 @@
             <h2 class="text-xl font-semibold mb-2 text-[#10837d]">Rider (Cycle/Motorcycle)</h2>
             <div class="text-[#A6AAB0] text-[1rem] font-medium">
                <p>technology | full_time</p>
-               <p> Arogga Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
+               <p>  Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
             </div>
            </div>
 
@@ -2047,7 +2401,7 @@
             <h2 class="text-xl font-semibold mb-2 text-[#10837d]">Agent - Telesales</h2>
             <div class="text-[#A6AAB0] text-[1rem] font-medium">
                <p>technology | full_time</p>
-               <p> Arogga Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
+               <p>  Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
             </div>
            </div>
 
@@ -2059,7 +2413,7 @@
             <h2 class="text-xl font-semibold mb-2 text-[#10837d]">প্রেসক্রিপশন বুঝার মত দক্ষতা সম্পন্ন লোক প্রয়োজন।</h2>
             <div class="text-[#A6AAB0] text-[1rem] font-medium">
                <p>customer_care | Part Time</p>
-               <p> Arogga Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
+               <p>  Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
             </div>
            </div>
 
@@ -2069,7 +2423,7 @@
             <h2 class="text-xl font-semibold mb-2 text-[#10837d]">technology | full_time</h2>
             <div class="text-[#A6AAB0] text-[1rem] font-medium">
                <p>customer_care | Part Time</p>
-               <p> Arogga Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
+               <p>  Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
             </div>
            </div>
           </div>
@@ -2078,7 +2432,7 @@
               <h2 class="text-xl font-semibold mb-2 text-[#10837d]">Senior Developer (MERN)</h2>
               <div class="text-[#A6AAB0] text-[1rem] font-medium">
                  <p>technology | full_time</p>
-                 <p> Arogga Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
+                 <p>  Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
               </div>
              </div>
           </div>
@@ -2087,7 +2441,7 @@
               <h2 class="text-xl font-semibold mb-2 text-[#10837d]">Rider (Cycle/Motorcycle)</h2>
               <div class="text-[#A6AAB0] text-[1rem] font-medium">
                  <p>technology | full_time</p>
-                 <p> Arogga Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
+                 <p>  Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
               </div>
              </div>
           </div>
@@ -2096,7 +2450,7 @@
               <h2 class="text-xl font-semibold mb-2 text-[#10837d]">Executive - Elderly Care Products</h2>
               <div class="text-[#A6AAB0] text-[1rem] font-medium">
                  <p>technology | full_time</p>
-                 <p> Arogga Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
+                 <p>  Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
               </div>
              </div>
           </div>
@@ -2105,7 +2459,7 @@
               <h2 class="text-xl font-semibold mb-2 text-[#10837d]">Executive - Elderly Care Products</h2>
               <div class="text-[#A6AAB0] text-[1rem] font-medium">
                  <p>technology | full_time</p>
-                 <p> Arogga Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
+                 <p>  Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
               </div>
              </div>
           </div>
@@ -2114,7 +2468,7 @@
               <h2 class="text-xl font-semibold mb-2 text-[#10837d]">Agent - Telesales</h2>
               <div class="text-[#A6AAB0] text-[1rem] font-medium">
                  <p>technology | full_time</p>
-                 <p> Arogga Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
+                 <p>  Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
               </div>
              </div>
           </div>
@@ -2123,7 +2477,7 @@
               <h2 class="text-xl font-semibold mb-2 text-[#10837d]">Agent - Telesales</h2>
               <div class="text-[#A6AAB0] text-[1rem] font-medium">
                  <p>technology | full_time</p>
-                 <p> Arogga Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
+                 <p>  Limited, 6th floor (Lift-5) Plot D/15-1, Road-36, Block-D, Section-10, Mirpur, Dhaka-1216</p>
               </div>
              </div>
           </div>
@@ -2286,16 +2640,21 @@
                       <div>
                         <h2>Address Type</h2>
                         <div>
-                          <div class="flex flex-row justify-between items-center">
-                            <button class="text-[0.875rem] px-[15px] py-2 bg-[#008069] text-[#fff] font-semibold capitalize cursor-pointer rounded-md border border-[#000]">
-                              <i class='bx bx-home mr-1'></i> 
-                              Home</button>
-                              <button class="text-[0.875rem] px-[15px] py-2  font-semibold capitalize cursor-pointer rounded-md border border-[#000]">
-                                <i class='bx bx-buildings'></i> 
-                                Office</button>
-                              <button class="text-[0.875rem] px-[15px] py-2  font-semibold capitalize cursor-pointer rounded-md border border-[#000]">
-                                <i class='bx bx-building-house'></i>
-                                Home Town</button>
+                          <div class="flex flex-row justify-between items-center gap-3 mt-2">
+                            <button class="text-[0.875rem] px-[15px] py-2 font-semibold capitalize cursor-pointer rounded-md border border-[#000] active" onclick="toggleButton(this)">
+                              <i class='bx bx-home mr-1'></i> Home
+                            </button>
+                            <button class="text-[0.875rem] px-[15px] py-2 font-semibold capitalize cursor-pointer rounded-md border border-[#000]" onclick="toggleButton(this)">
+                              <i class='bx bx-buildings'></i> Office
+                            </button>
+                            <button class="text-[0.875rem] px-[15px] py-2 font-semibold capitalize cursor-pointer rounded-md border border-[#000]" onclick="toggleButton(this)">
+                              <i class='bx bx-building-house'></i> Home Town
+                            </button>
+                          </div>
+                          <div class="flex justify-between flex-row items-center mt-4">
+                            <div><h2>Make Default Address</h2></div>
+                            <div><button class="text-[#fff] px-[15px] py-2 font-semibold capitalize cursor-pointer rounded-md  bg-[#008069] text-white uppercase"> save adress
+                            </button></div>
                           </div>
                         </div>
                       </div>
@@ -2371,5 +2730,6 @@
     <script src="script.js"></script>
     <script src="js/popup.js"> </script>
     <script src="js/buttonToggle.js"> </script>
+    <script src="js/accordion.js"> </script>
   </body>
 </html>

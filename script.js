@@ -138,8 +138,15 @@ function toggleList() {
     icon.classList.toggle('rotate180');
   }
 
-
-
 // tabs start 
+  document.querySelector('.flex button:first-child').classList.add('bg-[#008069]', 'text-[#fff]', 'border-hidden');
 
+  function toggleButton(button) {
+    document.querySelectorAll('.flex button').forEach(function(btn) {
+      btn.classList.remove('bg-[#008069]', 'text-[#fff]', 'border-hidden');
+    });
+
+    button.classList.add('bg-[#008069]', 'text-[#fff]', 'border-hidden');
+  }
 // tabs end 
+
