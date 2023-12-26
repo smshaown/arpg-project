@@ -312,6 +312,15 @@ main {
   .accordion-content {
 	display: none;
   }
+
+  #referralInput {
+	border: 1px solid #008069;
+  }
+
+  /* Style the input when focused */
+  #referralInput:focus {
+	border-color: #008069;
+  }
   
 
 @media screen and (max-width: 768px) {

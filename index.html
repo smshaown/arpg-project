@@ -2743,25 +2743,43 @@
         </div>
 
         <!-- signup-popup1 start  -->
-        <div id="signup-popup2" class="overlay">
+        <div id="signup-popup2" class="overlay px-2">
           <div class="bg-white md:w-[700px] w-full h-auto rounded shadow-md popup-animation">
-            <div class="shadow-md relative px-4 pt-4 pb-4 ">    
-              <span id="signup-close" class="absolute cursor-pointer right-[10px] top-[20px] text-black hover:text-gray-400">x</span>      
+            <div class="relative">    
+              <span id="signup-close" class="absolute cursor-pointer right-[10px] top-[10px] text-black  w-[30px] h-[30px] rounded-full justify-center flex items-center bg-[#F5F5F5]">x</span>      
             </div>
 
-            <div class="flex justify-center items-center">
-              <div class="w-1/2 ">
+            <div class="flex justify-center items-center gap-2">
+              <div class="w-1/2 hidden md:block">
                 <div class="bg-[#000]">
                   <img class="w-full h-full" src="img/signup/login.jpg" alt="">
                 </div>
                
                 
               </div>
-              <div class="w-1/2">
+              <div class="w-full md:w-1/2 p-4">
                 <h2 class="font-bold mb-2">Login</h2>
                 <p class="text-[12px] pb-[10px]"  style="border-bottom: 1px dashed rgba(44, 62, 80, 0.2);  color: rgb(182, 184, 195);">Login to make an order, access your orders, special offers, health tips, and more!</p>
                 <div>
-                  
+                  <form class="w-full max-w-sm">
+                    <div class="py-2"> 
+                      <label class="font-bold text-xs text-gary-500">Phone number</label>                   
+                      <input autocomplete="off" name="" type="text" class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" value="+88" />                
+                    </div>
+
+                    <div class="my-3 flex justify-between items-center">
+                      <div>
+                        <h5 id="referralCode" class="underline font-normal text-[13px] cursor-pointer">Have a referral code?</h5>
+                      <input type="text" id="referralInput" class="hidden appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4" placeholder="Enter referral code">
+                      </div>
+                      <button class="uppercase font-semibold text-[14px] rounded-sm py-2 px-3 text-[#fff] bg-[#008069]">Send</button>
+                    </div>
+                  </form>
+
+                  <div class="mt-4">
+                    <p class="text-[13px]">
+                      By continuing you agree to <span class="text-[#008069]">Terms & Conditions, Privacy Policy</span> & <span class="text-[#008069]"> Refund-Return Policy</span></p>
+                  </div>
                 </div>
               </div>
             </div>

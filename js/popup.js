@@ -51,3 +51,14 @@ function createPopup(popupTriggerId, popupId, closePopupId) {
       });
     });
   });
+
+  document.addEventListener("DOMContentLoaded", function() {
+    var referralCode = document.getElementById("referralCode");
+    var referralInput = document.getElementById("referralInput");
+
+    referralCode.addEventListener("click", function() {
+      // Toggle the visibility of both the input and the heading
+      referralCode.classList.toggle("hidden");
+      referralInput.classList.toggle("hidden");
+    });
+  });
