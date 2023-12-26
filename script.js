@@ -150,3 +150,29 @@ function toggleList() {
   }
 // tabs end 
 
+
+
+let currentSlide = 0;
+const slider = document.getElementById('slider');
+const slides = document.querySelectorAll('.slide');
+
+function showSlide(index) {
+    if (index < 0) {
+        currentSlide = slides.length - 1;
+    } else if (index >= slides.length) {
+        currentSlide = 0;
+    } else {
+        currentSlide = index;
+    }
+
+    const newTransformValue = -currentSlide * 300 + 'px';
+    slider.style.transform = 'translateX(' + newTransformValue + ')';
+}
+
+function nextSlide() {
+    showSlide(currentSlide + 1);
+}
+
+function prevSlide() {
+    showSlide(currentSlide - 1);
+}
