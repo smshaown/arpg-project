@@ -71,27 +71,7 @@ function changeContent(content, clickedLink) {
 
 
 
-// product deatils show all / show less
-document.addEventListener('DOMContentLoaded', function () {
-	const showAllToggle = document.getElementById('showAllToggle');
-	const additionalOffersList = document.querySelectorAll('.flex.flex-row.items-center.gap-2.mb-1');
-  
-	for (let i = 3; i < additionalOffersList.length; i++) {
-	  additionalOffersList[i].classList.add('hidden');
-	}
-  
-	showAllToggle.addEventListener('click', function () {
-	  for (let i = 3; i < additionalOffersList.length; i++) {
-		additionalOffersList[i].classList.toggle('hidden');
-	  }
-  
-	  showAllToggle.classList.toggle('show-all');
-	  showAllToggle.classList.toggle('show-less');
-  
-	  const isShowingAll = showAllToggle.classList.contains('show-all');
-	  showAllToggle.textContent = isShowingAll ? 'Show Less' : 'Show All';
-	});
-  });
+
 
 
 //   swiper js code start
