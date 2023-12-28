@@ -73,7 +73,6 @@ function changeContent(content, clickedLink) {
 
 
 
-
 //   swiper js code start
 
 
