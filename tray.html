@@ -1,100 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script
-    src="https://kit.fontawesome.com/53025ffb8e.js"
-    crossorigin="anonymous"
-  ></script>
-  <!-- Tailwind css link  -->
-  <script src="https://cdn.tailwindcss.com"></script>
- 
-  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-  <!-- Link Swiper's CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+      src="https://kit.fontawesome.com/53025ffb8e.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Tailwind css link  -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-<!-- style css link  -->
- <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
-    <div>
-        <a href="#" id="Customer-popup1" class="font-bold">
-          <i class='bx bx-upload'></i> <span class="">Upload Prescription</span>
-        </a>
+    <!-- style css link  -->
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <style>
+      /* Overlay styling */
+      .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+      }
+
+      /* Popup styling */
+      /* .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        border: 1px solid #ccc;
+        padding: 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+      } */
+
+      /* Popup content styling */
+      .popupContent {
+        /* Add styling for the content inside the popup */
+      }
+
+      /* Close button styling */
+      .closePopup {
+        cursor: pointer;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 15px;
+        font-size: 14px;
+        margin-top: 10px;
+      }
+
+      /* Hover effect for the close button */
+      .closePopup:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HTML Structure -->
+    <button
+      class="popupTrigger text-gray-400 left-20"
+      data-popup="uploadPrescriptionPopup"
+    >
+      Open Upload 1
+    </button>
+
+    <button
+      class="popupTrigger text-red-400"
+      data-popup="uploadPrescriptionPopup"
+    >
+      Open Upload 2
+    </button>
+
+    <button class="popupTrigger" data-popup="validPrescriptionPopup">
+      Open Valid
+    </button>
+
+    <div class="overlay popup" id="uploadPrescriptionPopup">
+      <!-- Popup content for Valid Prescription Popup -->
+      <div class="popupContent bg-[#fff] shadow-md">
+        <p>This is the content for Valid 1 2 3</p>
       </div>
+      <button class="closePopup right-20">Close Popup</button>
+    </div>
 
-    
-              
-     <!-- Customer-popup1 start -->
-     <div id="Customer-popup2" class="overlay">
-        <div class="bg-white md:w-[500px] h-[500px] md:mt-[-100px]  rounded shadow-md popup-animation">
-          <div class="bg-[#0C817A] relative px-4 pt-4 pb-4 ">
-            <h2 class="text-white text-lg font-bold text-center"> Add Customer </h2>    
-            <span id="Customer-close" class="absolute cursor-pointer right-[8px] top-[1px] text-white hover:text-gray-400">x</span>      
-          </div>
-
-          <div class="mt-4 px-4 ">
-            <form  id="customerForm">
-              <div class="mt-1">
-                <label for="">Mobile number </label>
-                <input type="text" name="mobileNumber" class="appearance-none block w-full text-gray-700 border border-gray-400 rounded md:mt-2 py-2 px-4 mb-3 leading-tight focus:outline-none focus:shadow focus:border-gray-500" placeholder="find customer by phone">
-              </div>
-              <div class="mt-2">
-                <label for="">Customer name</label>
-                <input type="text" name="customerName" class="appearance-none block w-full text-gray-700 border border-gray-400 rounded md:mt-2 py-2 px-4 mb-3 leading-tight focus:outline-none focus:shadow focus:border-gray-500" placeholder="find customer by name">
-              </div>
-              <div class="mt-2">
-                <label for="">Address</label>
-                <input type="text" name="address" class="appearance-none block w-full text-gray-700 border border-gray-400 rounded md:mt-2 py-2 px-4 mb-3 leading-tight focus:outline-none focus:shadow focus:border-gray-500" placeholder="">
-              </div>
-              <div class="mt-2 pb-6">
-                <label for="">Gender</label>
-                <div class="relative">
-                  <select name="gender" class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-2 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">                      
-                    <option value="পুরুষ">পুরুষ</option>
-                    <option value="মহিলা">মহিলা</option>
-                    <option value="বাচ্চা">বাচ্চা</option>                     
-                  </select>
-                  <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
-                  </div>
-                </div>
-              </div>
-             <div class="flex justify-center items-center">
-              <button  id="submitBtn" class="tab-button mt-6">Add Customer <i class="fa fa-paper-plane"></i></button>
-
-            
-             </div>
-
-            </form>
-          </div>
-        
-        </div>
+    <div class="overlay popup" id="validPrescriptionPopup">
+      <!-- Popup content for Valid Prescription Popup -->
+      <div class="popupContent bg-[#fff] shadow-md">
+        <p>This is the content for Valid Prescription Popup. 4 2 3 6</p>
       </div>
-   <!-- খকর্মচারী-যুক্ত-করুন-popup1 end -->
-   <!-- Sidebar -->
-   <button id="openSidebarBtn">Open Sidebar</button>
-   <button id="closeSidebarBtn" class="">Close Sidebar</button>
-   
-   <!-- Sidebar -->
-   <div id="rightSidebar" class="fixed top-[7rem] right-0 h-svh w-64 bg-orange-500" style="z-index: 9999;">
-     <ul class=" mt-16 text-center">
-       <li class="right-sidebar-item"><a href="#" class="right-sidebar-anchor text-white">Item 1</a></li>
-       <li class="right-sidebar-item"><a href="#" class="right-sidebar-anchor text-white">Item 2</a></li>
-       <li class="right-sidebar-item"><a href="#" class="right-sidebar-anchor text-white">Item 3</a></li>
-       <li class="right-sidebar-item"><a href="#" class="right-sidebar-anchor text-white">Item 4</a></li>
-     </ul>
-   </div>
+      <button class="closePopup right-20">Close Popup</button>
+    </div>
 
-    
-    <script src="js/popup.js">
+    <script>
+      // JavaScript
+      function createPopup(popupTriggerClass, closePopupClass) {
+        const popupTriggers = document.querySelectorAll(
+          `.${popupTriggerClass}`
+        );
+        const closePopups = document.querySelectorAll(`.${closePopupClass}`);
+
+        popupTriggers.forEach((popupTrigger) => {
+          const popupId = popupTrigger.getAttribute("data-popup");
+          const popup = document.getElementById(popupId);
+          const popupContent = popup.querySelector(".popupContent");
+
+          // Event listener for opening the popup
+          popupTrigger.addEventListener("click", function () {
+            // Show the popup
+            popup.style.display = "flex";
+            // You can update the content here based on the popupId
+            popupContent.innerHTML = getContentForPopup(popupId);
+          });
+        });
+
+        closePopups.forEach((closePopup) => {
+          const popup = closePopup.closest(".popup");
+
+          // Event listener for closing the popup
+          closePopup.addEventListener("click", function () {
+            popup.style.display = "none"; // Hide the popup
+          });
+        });
+      }
+
+      // Initialize popups
+      createPopup("popupTrigger", "closePopup");
     </script>
     <script src="js/cartProduct.js"></script>
-        
-
-
-</body>
+  </body>
 </html>

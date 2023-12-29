@@ -59,7 +59,7 @@
           <div class="flex gap-8 items-center text-black md:text-white">
             <!-- hover:border hover:border-white hover:rounded-sm hover:px-2 -->
             <div class="">
-              <h2 id="signup-popup1"  class="cursor-pointer font-bold hover:underline">Sign up</h2>
+              <h2 data-popup="signup-popup"  class="popupTrigger cursor-pointer font-bold hover:underline">Sign up</h2>
             </div>
             <div class="cursor-pointer hidden md:block hover:underline" onclick="changeContent('Hello-User', this)">
               <h4 class="text-[12px]">Hello, User</h4>
@@ -71,7 +71,7 @@
               <h2 class="font-bold">& Earn</h2>
             </div>
 
-            <div class="flex flex-row gap-1 cursor-pointer" id="openSidebarBtn">
+            <div data-popup="Manage-Address-popup" class="popupTrigger flex flex-row gap-1 cursor-pointer" >
               <i class="fa-solid fa-cart-plus text-[22px]"></i>
               <h3 class="font-bold">Cart</h3>
             </div>
@@ -110,8 +110,8 @@
             </div>
             <hr class="mt-1" />
 
-            <ul id="helloUserTab" class="tab-container">
-              <li onclick="changeContent('Hello-User', this)" id="tab1" class="tab-user active hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
+            <ul>
+              <li onclick="changeContent('Hello-User', this)" id="" class="active hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
               >
                 <a href="#" class="ml-[16px]">
                   <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
@@ -121,7 +121,7 @@
                 >
               </li>
 
-              <li onclick="changeContent('Hello-User')" id="tab2" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
+              <li onclick="changeContent('Hello-User')" id="" class="hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
               >
                 <a href="#" class="ml-[16px]">
                   <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
@@ -131,7 +131,7 @@
                 >
               </li>
 
-              <li onclick="changeContent('Hello-User', this)" id="tab3" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
+              <li onclick="changeContent('Hello-User', this)" id="" class="hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
               >
                 <a href="#" class="ml-[16px]">
                   <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
@@ -141,7 +141,7 @@
                 >
               </li>
 
-              <li onclick="changeContent('Hello-User', this)" id="tab4" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
+              <li onclick="changeContent('Hello-User', this)" id="" class="hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
               >
                 <a href="#" class="ml-[16px]">
                   <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
@@ -151,9 +151,9 @@
                 >
               </li>
 
-              <li onclick="changeContent('Hello-User', this)" class="hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
+              <li data-popup="Manage-Address-popup"  class="popupTrigger hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
               >
-                <a href="#" id="Manage-Address-popup1" class="ml-[16px]">
+                <a href="#"  class="ml-[16px]">
                   <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
                     <i class="fa-solid fa-location-dot"></i
                   ></span>
@@ -161,7 +161,7 @@
                 >
               </li>
 
-              <li onclick="changeContent('Hello-User', this)" id="tab5" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
+              <li onclick="changeContent('Hello-User', this)" id="" class="hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
               >
                 <a href="#" class="ml-[16px]">
                   <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
@@ -171,7 +171,7 @@
                 >
               </li>
 
-              <li onclick="changeContent('Hello-User', this)" id="tab6" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
+              <li onclick="changeContent('Hello-User', this)" id="" class="hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
               >
                 <a href="#" class="ml-[16px]">
                   <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
@@ -191,7 +191,7 @@
                 >
               </li>
 
-              <li onclick="changeContent('Hello-User', this)" id="tab7" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
+              <li onclick="changeContent('Hello-User', this)" id="" class="hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
               >
                 <a href="#" class="ml-[16px]">
                   <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
@@ -201,7 +201,7 @@
                 >
               </li>
 
-              <li onclick="changeContent('Hello-User', this)" id="tab8" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
+              <li onclick="changeContent('Hello-User', this)" id="" class="hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
               >
                 <a href="#" class="ml-[16px]">
                   <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
@@ -211,7 +211,7 @@
                 >
               </li>
 
-              <li onclick="changeContent('Hello-User', this)" id="tab9" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
+              <li onclick="changeContent('Hello-User', this)" id="" class="hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
               >
                 <a href="#" class="ml-[16px]">
                   <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
@@ -221,7 +221,7 @@
                 >
               </li>
 
-              <li onclick="changeContent('Hello-User', this)" id="tab10" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
+              <li onclick="changeContent('Hello-User', this)" id="t" class="hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
               >
                 <a href="#" class="ml-[16px]">
                   <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
@@ -266,7 +266,7 @@
               <div class="flex items-center gap-1">
                 <h4>To quick order</h4>
                 <div>
-                  <a href="#" id="Upload-Prescription-popup1" class="font-bold">
+                  <a href="#" data-popup="Upload-Prescription-popup" class="popupTrigger font-bold">
                     <i class='bx bx-upload'></i> <span class="">Upload Prescription</span>
                   </a>
                 </div>
@@ -285,15 +285,6 @@
       <!-- ====== -->
 <!-- SIDEBAR -->
 <section id="sidebar" class="shadow-md">
-  <!-- <a href="#" class="ml-6 toggle-categories">
-    <i class='bx bx-menu toggle-sidebar'></i><span class="ml-3">Categories</span>
-  </a> -->
-
-   <!-- NAVBAR -->
-   <!-- <nav>
-    <i class='bx bx-menu toggle-sidebar' ></i>
-  </nav> -->
-  <!-- NAVBAR -->
 
   <ul class="side-menu mt-[18px]">
     <li class="content-div -mb-[11px] hover:bg-[#E1EDE9] py-[0px]" onclick="changeContent('Covid-19', this)">
@@ -361,8 +352,6 @@
  
 </section>
 <!-- SIDEBAR -->
-
-<!-- NAVBAR -->
 <section id="content">
  
 
@@ -524,7 +513,7 @@
                     <div>
                       <h2 class="text-[1.vw] my-3 font-bold" style="color: var(--olive-green)">Upload Presciption</h2>
 
-                      <button class="px-3 text-center font-bold text-xs py-1 rounded-[4px] text-white" style="background-color: var(--midnight-blue)" >Click Heres</button>
+                      <button data-popup="Upload-Prescription-popup" class="popupTrigger px-3 text-center font-bold text-xs py-1 rounded-[4px] text-white" style="background-color: var(--midnight-blue)" >Click Heres</button>
                     </div>
                     <div class="w-full md:w-[112px] h-[112px]">
                       <img class="w-full h-full " src="img/tenOff/upload.webp" alt="upload-prescription.webp">
@@ -1502,9 +1491,9 @@
                       >
                     </li>
       
-                    <li class="hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
+                    <li data-popup="Manage-Address-popup" class="popupTrigger hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
                     >
-                      <a href="#" id="Manage-Address-popup1" class="ml-[16px]">
+                      <a href="#"  class="ml-[16px]">
                         <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
                           <i class="fa-solid fa-location-dot"></i
                         ></span>
@@ -2596,11 +2585,11 @@
     <!-- All Popup section start -->
     <section>
       <!-- Upload-Prescription start  -->
-      <div id="Upload-Prescription-popup2" class="overlay">
+      <div id="Upload-Prescription-popup" class="overlay popup">
         <div class="bg-white md:w-[700px] w-full h-auto rounded shadow-md popup-animation">
           <div class="shadow-md relative px-4 pt-4 pb-4 ">
             <h2 class="text-black text-lg font-bold"> Prescriptions </h2>    
-            <span id="Upload-Prescription-close" class="absolute cursor-pointer right-[10px] top-[20px] text-black hover:text-gray-400">x</span>      
+            <span class="closePopup absolute cursor-pointer right-[10px] top-[20px] text-black hover:text-gray-400">x</span>      
           </div>
 
           <div class="mt-4 px-4 pb-3">
@@ -2626,12 +2615,12 @@
             </div>
 
             <div>
-              <h2 id="ValidPrescription-popup1" class="cursor-zoom-in font-bold text-[]  text-[#008069] mt-3">Valid prescription guide</h2>
-              <div id="ValidPrescription-popup2" class="overlay">
+              <h2 data-popup="ValidPrescription-popup" class="popupTrigger cursor-zoom-in font-bold text-[]  text-[#008069] mt-3">Valid prescription guide</h2>
+              <div id="ValidPrescription-popup" class="overlay popup">
                 <div class="bg-white w-[300px] h-auto rounded shadow-md popup-animation">
                   <div class="shadow-md relative px-4 pt-4 pb-4 ">
                     <h2 class="text-black text-lg">Valid prescription</h2>    
-                    <span id="ValidPrescription-popup-close" class="absolute cursor-pointer right-[10px] top-[20px] text-black hover:text-gray-400">x</span>      
+                    <span class="closePopup absolute cursor-pointer right-[10px] top-[20px] text-black hover:text-gray-400">x</span>      
                   </div>
         
                   <div class="mt-4 px-4 pb-8">
@@ -2656,127 +2645,190 @@
       
 
         <!-- Manage Address popup  -->
-        <div>
-         <div id="Manage-Address-popup2" class="overlay">
-                    <div class="bg-white w-[430px] h-auto rounded shadow-md">
-                      <div class="shadow-md relative px-4 pt-4 pb-4 ">
-                        <h2 class="text-black text-lg">Address</h2>    
-                        <span id="Manage-Address-close" class="absolute cursor-pointer right-[10px] top-[20px] text-black hover:text-gray-400">x</span>      
-                      </div>
-            
-                      <div class="mt-4 px-4 pb-8">
-                       
-                        <div class="bg-[#E6FCF6] px-2 py-2 ">
-                          <div class="flex justify-between flex-row text-[14px] overflow-hidden">
-                            <ul class="w-[90%]">
-                              <li class=""><span class="font-semibold mr-1">Name:</span> s m shaown</li>
-                              <li class=""><span class="font-semibold mr-1">Phone:</span> 09198065</li>
-                              <li class=""><span class="font-semibold mr-1">Address:</span>shaown,Mohangong,netrkuna</li>
-                            </ul>
-                            <div class="w-[10%]">
-                              <i class='bx bx-dots-vertical-rounded  cursor-pointer'></i>
-                            </div>
-                          </div>
-                          <div class="flex flex-row justify-between items-center text-[14px]">
-                            <div><h2>Address Type: <span class="py-0.5 px-1 text-[#008069] border-[1px] border-[#008069] text-xs rounded-full">Office</span></h2></div>
-                            <div>
-                              <h6 class="bg-gray-400 px-0.5 py-0.5 border-[1px] border-[#000] rounded-full text-xs">Default</h6></div>
-                          </div>
-                          <div>
+        <div>       
+          <div id="Manage-Address-popup" class="overlay popup">
+            <div class="bg-white w-[430px] h-auto rounded shadow-md">
+              <div class="shadow-md relative px-4 pt-4 pb-4">
+                <h2 class="text-black text-lg">Address</h2>
+                <span
+                  
+                  class="closePopup absolute cursor-pointer right-[10px] top-[20px] text-black hover:text-gray-400"
+                  >x</span
+                >
+              </div>
 
-                          </div>
-                        </div>
-
-                        <div id="addShippingAddress-popup1" class="mt-4 h-[130px] bg-[#FCFCFC] flex justify-center flex-col items-center border-dotted border-2 border-gray-600 cursor-pointer">
-                          <i class='bx bx-plus'></i>
-                          <h5>Add New ADdress-</h5>
-                        </div>
-                       
-                      </div>
-                    
-                    </div>
-         </div>
-
-                  <!-- Add Shipping Address popup start  -->
-                  <div id="addShippingAddress-popup2" class="overlay">
-                    <div class="bg-white w-[430px] h-auto rounded shadow-md">
-                      <div class="shadow-md relative px-4 pt-4 pb-4 ">
-                        <h2 class="text-black text-lg">Add Shipping Address</h2>    
-                        <span id="addShippingAddress-close" class="absolute cursor-pointer right-[10px] top-[20px] text-black hover:text-gray-400">x</span>      
-                      </div>
-            
-                      <div class="mt-4 px-4 pb-8">
-                      <div>
-                        <div class="mb-6 mt-2">
-                          <input type="text" id="large-input" class="block w-full p-3 text-gray-900 border border-[#008069] rounded-lg  sm:text-md  focus:border-[#008069] dark:bg-[#008069] dark:border-[#008069]" placeholder="Full Name" required />
-                      </div>
-                       
-                        <div class="mb-6 mt-2">
-                          <input type="text" id="large-input" class="block w-full p-3 text-gray-900 border border-[#008069] rounded-lg  sm:text-md  focus:border-[#008069] dark:bg-[#008069] dark:border-[#008069]" placeholder="" value="01709198065" required />
-                      </div>
-
-                        <div class="mb-6 mt-2">
-                            <select class="block w-full p-3 text-gray-900 border border-[#008069] rounded-lg  sm:text-md  focus:border-[#008069] dark:bg-[#008069] dark:border-[#008069] pr-2">
-                              <option selected>Select district</option>
-                              <option value="US">United States</option>
-                              <option value="CA">Canada</option>
-                              <option value="FR">France</option>
-                              <option value="DE">Germany</option>
-                            </select>
-                        </div>
-                       
-                        <div class="mb-6 mt-2">
-                            <select class="block w-full p-3 text-gray-900 border border-[#008069] rounded-lg  sm:text-md  focus:border-[#008069] dark:bg-[#008069] dark:border-[#008069] pr-2">
-                              <option selected>Select Area</option>
-                              <option value="US">United States</option>
-                              <option value="CA">Canada</option>
-                              <option value="FR">France</option>
-                              <option value="DE">Germany</option>
-                            </select>
-                        </div>
-
-                        <div class="mb-6 mt-2">
-                          <input type="text" id="large-input" class="block w-full p-3 text-gray-900 border border-[#008069] rounded-lg  sm:text-md  focus:border-[#008069] dark:bg-[#008069] dark:border-[#008069]" placeholder="Address" required />
-                      </div>
-                      </div>
-
-                      <div>
-                        <h2>Address Type</h2>
-                        <div>
-                          <div class="flex flex-row justify-between items-center gap-3 mt-2">
-                            <button class="text-[0.875rem] px-[15px] py-2 font-semibold capitalize cursor-pointer rounded-md border border-[#000] active" onclick="toggleButton(this)">
-                              <i class='bx bx-home mr-1'></i> Home
-                            </button>
-                            <button class="text-[0.875rem] px-[15px] py-2 font-semibold capitalize cursor-pointer rounded-md border border-[#000]" onclick="toggleButton(this)">
-                              <i class='bx bx-buildings'></i> Office
-                            </button>
-                            <button class="text-[0.875rem] px-[15px] py-2 font-semibold capitalize cursor-pointer rounded-md border border-[#000]" onclick="toggleButton(this)">
-                              <i class='bx bx-building-house'></i> Home Town
-                            </button>
-                          </div>
-                          <div class="flex justify-between flex-row items-center mt-4">
-                            <div><h2>Make Default Address</h2></div>
-                            <div><button class="text-[#fff] px-[15px] py-2 font-semibold capitalize cursor-pointer rounded-md  bg-[#008069] text-white uppercase"> save adress
-                            </button></div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div>
-
-                      </div>
-                       
-                      </div>
-                    
+              <div class="mt-4 px-4 pb-8">
+                <div class="bg-[#E6FCF6] px-2 py-2">
+                  <div
+                    class="flex justify-between flex-row text-[14px] overflow-hidden"
+                  >
+                    <ul class="w-[90%]">
+                      <li class="">
+                        <span class="font-semibold mr-1">Name:</span> s m shaown
+                      </li>
+                      <li class="">
+                        <span class="font-semibold mr-1">Phone:</span> 09198065
+                      </li>
+                      <li class="">
+                        <span class="font-semibold mr-1">Address:</span
+                        >shaown,Mohangong,netrkuna
+                      </li>
+                    </ul>
+                    <div class="w-[10%]">
+                      <i class="bx bx-dots-vertical-rounded cursor-pointer"></i>
                     </div>
                   </div>
+                  <div class="flex flex-row justify-between items-center text-[14px]">
+                    <div>
+                      <h2>
+                        Address Type:
+                        <span
+                          class="py-0.5 px-1 text-[#008069] border-[1px] border-[#008069] text-xs rounded-full"
+                          >Office</span
+                        >
+                      </h2>
+                    </div>
+                    <div>
+                      <h6
+                        class="bg-gray-400 px-0.5 py-0.5 border-[1px] border-[#000] rounded-full text-xs"
+                      >
+                        Default
+                      </h6>
+                    </div>
+                  </div>
+                  <div></div>
+                </div>
+
+                <div
+                  data-popup="addShippingAddress-popup"
+                  class="popupTrigger mt-4 h-[130px] bg-[#FCFCFC] flex justify-center flex-col items-center border-dotted border-2 border-gray-600 cursor-pointer"
+                >
+                  <i class="bx bx-plus"></i>
+                  <h5>Add New ADdress-</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <!-- Add Shipping Address popup start  -->
+        <div id="addShippingAddress-popup" class="overlay popup">
+          <div class="bg-white w-[430px] h-auto rounded shadow-md">
+            <div class="shadow-md relative px-4 pt-4 pb-4">
+              <h2 class="text-black text-lg">Add Shipping Address</h2>
+              <span
+               
+                class="closePopup absolute cursor-pointer right-[10px] top-[20px] text-black hover:text-gray-400"
+                >x</span
+              >
+            </div>
+
+            <div class="mt-4 px-4 pb-8">
+              <div>
+                <div class="mb-6 mt-2">
+                  <input
+                    type="text"
+                    id="large-input"
+                    class="block w-full p-3 text-gray-900 border border-[#008069] rounded-lg sm:text-md focus:border-[#008069] dark:bg-[#008069] dark:border-[#008069]"
+                    placeholder="Full Name"
+                    required
+                  />
+                </div>
+
+                <div class="mb-6 mt-2">
+                  <input
+                    type="text"
+                    id="large-input"
+                    class="block w-full p-3 text-gray-900 border border-[#008069] rounded-lg sm:text-md focus:border-[#008069] dark:bg-[#008069] dark:border-[#008069]"
+                    placeholder=""
+                    value="01709198065"
+                    required
+                  />
+                </div>
+
+                <div class="mb-6 mt-2">
+                  <select
+                    class="block w-full p-3 text-gray-900 border border-[#008069] rounded-lg sm:text-md focus:border-[#008069] dark:bg-[#008069] dark:border-[#008069] pr-2"
+                  >
+                    <option selected>Select district</option>
+                    <option value="US">United States</option>
+                    <option value="CA">Canada</option>
+                    <option value="FR">France</option>
+                    <option value="DE">Germany</option>
+                  </select>
+                </div>
+
+                <div class="mb-6 mt-2">
+                  <select
+                    class="block w-full p-3 text-gray-900 border border-[#008069] rounded-lg sm:text-md focus:border-[#008069] dark:bg-[#008069] dark:border-[#008069] pr-2"
+                  >
+                    <option selected>Select Area</option>
+                    <option value="US">United States</option>
+                    <option value="CA">Canada</option>
+                    <option value="FR">France</option>
+                    <option value="DE">Germany</option>
+                  </select>
+                </div>
+
+                <div class="mb-6 mt-2">
+                  <input
+                    type="text"
+                    id="large-input"
+                    class="block w-full p-3 text-gray-900 border border-[#008069] rounded-lg sm:text-md focus:border-[#008069] dark:bg-[#008069] dark:border-[#008069]"
+                    placeholder="Address"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div>
+                <h2>Address Type</h2>
+                <div>
+                  <div
+                    class="flex flex-row justify-between items-center gap-3 mt-2"
+                  >
+                    <button
+                      class="text-[0.875rem] px-[15px] py-2 font-semibold capitalize cursor-pointer rounded-md border border-[#000] active"
+                      onclick="toggleButton(this)"
+                    >
+                      <i class="bx bx-home mr-1"></i> Home
+                    </button>
+                    <button
+                      class="text-[0.875rem] px-[15px] py-2 font-semibold capitalize cursor-pointer rounded-md border border-[#000]"
+                      onclick="toggleButton(this)"
+                    >
+                      <i class="bx bx-buildings"></i> Office
+                    </button>
+                    <button
+                      class="text-[0.875rem] px-[15px] py-2 font-semibold capitalize cursor-pointer rounded-md border border-[#000]"
+                      onclick="toggleButton(this)"
+                    >
+                      <i class="bx bx-building-house"></i> Home Town
+                    </button>
+                  </div>
+                  <div class="flex justify-between flex-row items-center mt-4">
+                    <div><h2>Make Default Address</h2></div>
+                    <div>
+                      <button
+                        class="text-[#fff] px-[15px] py-2 font-semibold capitalize cursor-pointer rounded-md bg-[#008069] text-white uppercase"
+                      >
+                        save adress
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div></div>
+            </div>
+          </div>
+        </div>
         </div>
 
         <!-- signup-popup1 start  -->
-        <div id="signup-popup2" class="overlay px-3">
+        <div id="signup-popup" class="overlay popup px-3">
           <div class="bg-white md:w-[700px] w-full h-auto rounded shadow-md popup-animation">
             <div class="relative">    
-              <span id="signup-close" class="absolute cursor-pointer right-[10px] top-[10px] text-black  w-[30px] h-[30px] rounded-full justify-center flex items-center bg-[#F5F5F5]">x</span>      
+              <span class="closePopup absolute cursor-pointer right-[10px] top-[10px] text-black  w-[30px] h-[30px] rounded-full justify-center flex items-center bg-[#F5F5F5]">x</span>      
             </div>
 
             <div class="flex justify-center items-center gap-2">
