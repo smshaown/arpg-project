@@ -21,6 +21,8 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
+    <link rel="stylesheet" href="style.css" />
+
     <!-- style css link  -->
     <!-- <link rel="stylesheet" href="style.css" /> -->
     <style>
@@ -109,6 +111,104 @@
       </div>
       <button class="closePopup right-20">Close Popup</button>
     </div>
+    <div class="fixed top-4 left-4 cursor-pointer" onclick="smallToggleMenu()">
+      <i class="bx bx-menu text-3xl"></i>
+    </div>
+    <ul
+      id="smallDeviceMenu"
+      class="menu bg-gray-100 w-60 h-screen fixed top-0 left-0 overflow-x-hidden transition-transform duration-500 transform -translate-x-full z-9999"
+    >
+      <li
+        class="content-div -mb-[11px] hover:bg-[#E1EDE9] py-[0px]"
+        onclick="changeContent('Covid-19', this)"
+      >
+        <a href="#">
+          <img src="img/covit.png" alt="" />
+          <span class="ml-2 text-[13px]">Covid-19 Special</span>
+        </a>
+      </li>
+      <li
+        class="content-div -mb-[11px] hover:bg-[#E1EDE9]"
+        onclick="changeContent('Women-Care', this)"
+      >
+        <a href="#">
+          <img src="img/women.png" alt="" />
+          <span class="ml-2 text-[13px]">Women Care</span>
+        </a>
+      </li>
+      <li
+        class="content-div -mb-[11px] hover:bg-[#E1EDE9]"
+        onclick="changeContent('Devices', this)"
+      >
+        <a href="#">
+          <img src="img/Devices.png" alt="" />
+          <span class="ml-2 text-[13px]">Devices</span>
+        </a>
+      </li>
+      <li
+        class="content-div -mb-[11px] hover:bg-[#E1EDE9]"
+        onclick="changeContent('Sexual-Wellness', this)"
+      >
+        <a href="#">
+          <img src="img/sexual.png" alt="" />
+          <span class="ml-2 text-[13px]">Sexual Wellness</span>
+        </a>
+      </li>
+      <li
+        class="content-div -mb-[11px] hover:bg-[#E1EDE9]"
+        onclick="changeContent('Herbal-and-Homeopathy', this)"
+      >
+        <a href="#">
+          <img src="img/Herbal.png" alt="" />
+          <span class="ml-2 text-[13px]">Herbal and Homeopathy</span>
+        </a>
+      </li>
+      <li
+        class="content-div -mb-[11px] hover:bg-[#E1EDE9]"
+        onclick="changeContent('Baby-Mom-care', this)"
+      >
+        <a href="#">
+          <img src="img/boby.png" alt="" />
+          <span class="ml-2 text-[13px]">Baby & Mom care</span>
+        </a>
+      </li>
+      <li
+        class="content-div -mb-[11px] hover:bg-[#E1EDE9]"
+        onclick="changeContent('Nutrition-and-drinks', this)"
+      >
+        <a href="#">
+          <img src="img/nutrition.png" alt="" />
+          <span class="ml-2 text-[13px]">Nutrition and drinks</span>
+        </a>
+      </li>
+      <li
+        class="content-div -mb-[11px] hover:bg-[#E1EDE9]"
+        onclick="changeContent('Personal-care', this)"
+      >
+        <a href="#">
+          <img src="img/personal.png" alt="" />
+          <span class="ml-2 text-[13px]">Personal care</span>
+        </a>
+      </li>
+      <li
+        class="content-div -mb-[11px] hover:bg-[#E1EDE9]"
+        onclick="changeContent('Supplements-and-Vitamins', this)"
+      >
+        <a href="#">
+          <img src="img/supplemens.png" alt="" />
+          <span class="ml-2 text-[13px]">Supplements and Vitamins</span>
+        </a>
+      </li>
+      <li
+        class="content-div -mb-[11px] hover:bg-[#E1EDE9]"
+        onclick="changeContent('Veterinary', this)"
+      >
+        <a href="#">
+          <img src="img/veterinary.png" alt="" />
+          <span class="ml-2 text-[13px]">Veterinary</span>
+        </a>
+      </li>
+    </ul>
 
     <script>
       // JavaScript
@@ -144,7 +244,13 @@
 
       // Initialize popups
       createPopup("popupTrigger", "closePopup");
+      // small toggle menu start
+      function smallToggleMenu() {
+        var menu = document.getElementById("smallDeviceMenu");
+        menu.classList.toggle("translate-x-full");
+      }
     </script>
     <script src="js/cartProduct.js"></script>
+    <!-- <script src="js/popup.js"></script> -->
   </body>
 </html>

@@ -42,6 +42,14 @@ createPopup("popupTrigger", "closePopup");
       referralInput.classList.toggle("hidden");
     });
   });
+  
+// small toggle menu start 
+function smallToggleMenu() {
+  var menu = document.getElementById('smallDeviceMenu');
+  menu.classList.toggle('translate-x-full');
+}
 
+
+  
 
   

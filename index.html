@@ -95,6 +95,14 @@
             </div>
           </div>
         </div>
+
+        <div class="lg:hidden cursor-pointer font-bold mt-2 flex flex-row items-center gap-2 text-white" onclick="smallToggleMenu()">
+          <i class='bx bx-menu text-3xl'></i><span>Categories</span>
+        </div>
+        
+
+        
+
         <!-- navbar start  -->
         <div
           id="navbar"
@@ -110,128 +118,119 @@
             </div>
             <hr class="mt-1" />
 
-            <ul>
-              <li onclick="changeContent('Hello-User', this)" id="" class="active hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
-              >
-                <a href="#" class="ml-[16px]">
+            <ul id="helloUserTab" class="tab-container">
+              <li onclick="changeContent('Hello-User', this)" id="tab1" class="tab-user active hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
+                <a href="#" class="ml-[16px]" onclick="openTab(1, 'helloUserTab');">
                   <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
-                    <i class="fa-solid fa-table-list"></i
-                  ></span>
-                  My Orders</a
-                >
+                    <i class="fa-solid fa-table-list"></i>
+                  </span>
+                  My Orders
+                </a>
               </li>
-
-              <li onclick="changeContent('Hello-User')" id="" class="hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
-              >
-                <a href="#" class="ml-[16px]">
+            
+              <li id="tab2" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
+                <a href="#" class="ml-[16px]" onclick="openTab(2, 'helloUserTab');">
                   <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
-                    <i class="fa-solid fa-user"></i
-                  ></span>
-                  My Account</a
-                >
+                    <i class="fa-solid fa-user"></i>
+                  </span>
+                  My Account
+                </a>
               </li>
-
-              <li onclick="changeContent('Hello-User', this)" id="" class="hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
-              >
-                <a href="#" class="ml-[16px]">
+            
+              <li id="tab3" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
+                <a href="#" class="ml-[16px]" onclick="openTab(3, 'helloUserTab');">
                   <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
-                    <i class="fa-solid fa-clipboard-list"></i
-                  ></span>
-                My Prescriptions</a
-                >
+                    <i class="fa-solid fa-clipboard-list"></i>
+                  </span>
+                  My Prescriptions
+                </a>
               </li>
-
-              <li onclick="changeContent('Hello-User', this)" id="" class="hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
-              >
-                <a href="#" class="ml-[16px]">
+            
+              <li id="tab4" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
+                <a href="#" class="ml-[16px]" onclick="openTab(4, 'helloUserTab');">
                   <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
-                    <i class="fa-solid fa-heart"></i
-                  ></span>
-                  Favourite</a
-                >
+                    <i class="fa-solid fa-heart"></i>
+                  </span>
+                  Favourite
+                </a>
               </li>
-
-              <li data-popup="Manage-Address-popup"  class="popupTrigger hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
-              >
-                <a href="#"  class="ml-[16px]">
+            
+              <li id="tab5" data-popup="Manage-Address-popup" class="popupTrigger hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
+                <a href="#" class="ml-[16px]" onclick="openTab(5, 'helloUserTab');">
                   <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
-                    <i class="fa-solid fa-location-dot"></i
-                  ></span>
-                  Manage Address</a
-                >
+                    <i class="fa-solid fa-location-dot"></i>
+                  </span>
+                  Manage Address
+                </a>
               </li>
-
-              <li onclick="changeContent('Hello-User', this)" id="" class="hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
-              >
-                <a href="#" class="ml-[16px]">
+            
+              <li id="tab6" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
+                <a href="#" class="ml-[16px]" onclick="openTab(6, 'helloUserTab');">
                   <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
-                    <i class="fa-solid fa-notes-medical"></i
-                  ></span>
-                  Request Medicine</a
-                >
+                    <i class="fa-solid fa-notes-medical"></i>
+                  </span>
+                  Request Medicine
+                </a>
               </li>
-
-              <li onclick="changeContent('Hello-User', this)" id="" class="hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
-              >
-                <a href="#" class="ml-[16px]">
+            
+              <li id="tab7" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
+                <a href="#" class="ml-[16px]" onclick="openTab(7, 'helloUserTab');">
                   <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
-                    <i class="fa-solid fa-gift"></i
-                  ></span>
-                  Refer And Earn</a
-                >
+                    <i class="fa-solid fa-gift"></i>
+                  </span>
+                  Refer And Earn
+                </a>
               </li>
-
-              <li onclick="changeContent('Hello-User', this)" class="hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
-              >
-                <a href="#" class="ml-[16px]">
+            
+              <li id="tab8" class="hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
+                <a href="#" class="ml-[16px]" onclick="openTab(8, 'helloUserTab');">
                   <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
-                    <i class="fa-solid fa-phone"></i
-                  ></span>
-                  Call To Order</a
-                >
+                    <i class="fa-solid fa-phone"></i>
+                  </span>
+                  Call To Order
+                </a>
               </li>
-
-              <li onclick="changeContent('Hello-User', this)" id="" class="hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
-              >
-                <a href="#" class="ml-[16px]">
+            
+              <li id="tab9" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
+                <a href="#" class="ml-[16px]" onclick="openTab(9, 'helloUserTab');">
                   <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
-                    <i class="fa-solid fa-clipboard-question"></i
-                  ></span>
-                  FAQs</a
-                >
+                    <i class="fa-solid fa-clipboard-question"></i>
+                  </span>
+                  FAQs
+                </a>
               </li>
-
-              <li onclick="changeContent('Hello-User', this)" id="" class="hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
-              >
-                <a href="#" class="ml-[16px]">
+            
+              <li id="tab10" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
+                <a href="#" class="ml-[16px]" onclick="openTab(10, 'helloUserTab');">
                   <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
-                    <i class="fa-solid fa-calendar-days"></i
-                  ></span>
-                  Special Offers</a
-                >
+                    <i class="fa-solid fa-calendar-days"></i>
+                  </span>
+                  Special Offers
+                </a>
               </li>
-
-              <li onclick="changeContent('Hello-User', this)" id="" class="hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
-              >
-                <a href="#" class="ml-[16px]">
+            
+              <li id="tab11" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
+                <a href="#" class="ml-[16px]" onclick="openTab(11, 'helloUserTab');">
                   <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
-                    <i class="fa-brands fa-square-facebook"></i
-                  ></span>
-                  Facebook Page</a
-                >
+                    <i class="fa-brands fa-square-facebook"></i>
+                  </span>
+                  Facebook Page
+                </a>
               </li>
-
-              <li onclick="changeContent('Hello-User', this)" id="t" class="hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
-              >
-                <a href="#" class="ml-[16px]">
+            
+              <li id="tab12" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
+                <a href="#" class="ml-[16px]" onclick="openTab(12, 'helloUserTab');">
                   <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
-                    <i class="fa-solid fa-thumbs-up"></i
-                  ></span>
-                  Rate Us</a
-                >
+                    <i class="fa-solid fa-thumbs-up"></i>
+                  </span>
+                  Rate Us
+                </a>
               </li>
             </ul>
           </div>
+          
+        
+
         </div>
       </div>
       <div class="container mx-auto py-2 text-white hidden lg:block">
@@ -276,16 +275,82 @@
 
             </div>
         </div>
-        </div>
+      </div>
+        
  </div>
 
- 
+ <!-- small device menu  -->
+ <div id="">
+  <ul id="smallDeviceMenu"
+  class="menu lg:hidden bg-white w-[250px] h-screen fixed top-[172px] left-[-250px]  transition-transform duration-500 transform -translate-x-full shadow-lg " style="z-index: 99999"
+>
+    <li class="content-div -mb-[11px] hover:bg-[#E1EDE9] pl-3 mb-3" onclick="changeContent('Covid-19', this)">
+      <a href="#" class="flex flex-row gap-2 items-center py-2">
+         <img class="h-[25px] w-[25px] object-cover object-fit " src="img/covit.png" alt="">
+         <span class="ml-2 text-[13px]">Covid-19 Special</span>
+      </a>      
+    </li>
+    <li class="content-div -mb-[11px] hover:bg-[#E1EDE9] pl-3 mb-3" onclick="changeContent('Women-Care', this)">
+      <a href="#" class="flex flex-row gap-2 items-center py-2">
+         <img class="h-[25px] w-[25px] object-cover object-fit " src="img/women.png" alt="">
+         <span class="ml-2 text-[13px]">Women Care</span>
+      </a>      
+    </li>
+    <li class="content-div -mb-[11px] hover:bg-[#E1EDE9] pl-3 mb-3" onclick="changeContent('Devices', this)">
+      <a href="#" class="flex flex-row gap-2 items-center py-2">
+         <img class="h-[25px] w-[25px] object-cover object-fit " src="img/Devices.png" alt="Devices">
+         <span class="ml-2 text-[13px]">Devices</span>
+      </a>      
+    </li>
+    <li class="content-div -mb-[11px] hover:bg-[#E1EDE9] pl-3 mb-3" onclick="changeContent('Sexual-Wellness', this)">
+      <a href="#" class="flex flex-row gap-2 items-center py-2">
+         <img class="h-[25px] w-[25px] object-cover object-fit " src="img/sexual.png" alt="Sexual Wellness">
+         <span class="ml-2 text-[13px]">Sexual Wellness</span>
+      </a>      
+    </li>
+    <li class="content-div -mb-[11px] hover:bg-[#E1EDE9] pl-3 mb-3" onclick="changeContent('Herbal-and-Homeopathy', this)">
+      <a href="#" class="flex flex-row gap-2 items-center py-2">
+         <img class="h-[25px] w-[25px] object-cover object-fit " src="img/Herbal.png" alt="Herbal and Homeopathy">
+         <span class="ml-2 text-[13px]">Herbal and Homeopathy</span>
+      </a>      
+    </li>
+    <li class="content-div -mb-[11px] hover:bg-[#E1EDE9] pl-3 mb-3" onclick="changeContent('Baby-Mom-care', this)">
+      <a href="#" class="flex flex-row gap-2 items-center py-2">
+         <img class="h-[25px] w-[25px] object-cover object-fit " src="img/boby.png" alt="Baby & Mom care">
+         <span class="ml-2 text-[13px]">Baby & Mom care</span>
+      </a>      
+    </li>
+    <li class="content-div -mb-[11px] hover:bg-[#E1EDE9] pl-3 mb-3" onclick="changeContent('Personal-care', this)">
+      <a href="#" class="flex flex-row gap-2 items-center py-2">
+         <img class="h-[25px] w-[25px] object-cover object-fit " src="img/Personal.png" alt="Personal care">
+         <span class="ml-2 text-[13px]">Personal care</span>
+      </a>      
+    </li>
+    <li class="content-div -mb-[11px] hover:bg-[#E1EDE9] pl-3 mb-3" onclick="changeContent('Supplements-and-Vitamins', this)">
+      <a href="#" class="flex flex-row gap-2 items-center py-2">
+         <img class="h-[25px] w-[25px] object-cover object-fit " src="img/supplemens.png" alt="Supplements and Vitamins">
+         <span class="ml-2 text-[13px]">Supplements and Vitamins</span>
+      </a>      
+    </li>
+    <li class="content-div -mb-[11px] hover:bg-[#E1EDE9] pl-3 mb-3" onclick="changeContent('Veterinary', this)">
+      <a href="#" class="flex flex-row gap-2 items-center py-2">
+         <img class="h-[25px] w-[25px] object-cover object-fit " src="img/veterinary.png" alt="Veterinary">
+         <span class="ml-2 text-[13px]">Veterinary</span>
+      </a>      
+    </li>
+  </ul>
+</div>
 
 
       <!-- ====== -->
 <!-- SIDEBAR -->
 <section id="sidebar" class="shadow-md">
 
+
+  
+
+
+  <!-- large device menu -->
   <ul class="side-menu mt-[18px]">
     <li class="content-div -mb-[11px] hover:bg-[#E1EDE9] py-[0px]" onclick="changeContent('Covid-19', this)">
       <a href="#">
@@ -1451,124 +1516,112 @@
                   <hr class="mt-1" />
       
                   <ul id="helloUserTab" class="tab-container">
-                    <li id="tab1" class="tab-user active hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
-                    >
-                      <a href="#" class="ml-[16px]">
+                    <li id="tab1" class="tab-user active hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
+                      <a href="#" class="ml-[16px]" onclick="openTab(1, 'helloUserTab');">
                         <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
-                          <i class="fa-solid fa-table-list"></i
-                        ></span>
-                        My Orders</a
-                      >
+                          <i class="fa-solid fa-table-list"></i>
+                        </span>
+                        My Orders
+                      </a>
                     </li>
-      
-                    <li id="tab2" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
-                    >
-                      <a href="#" class="ml-[16px]">
+                  
+                    <li id="tab2" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
+                      <a href="#" class="ml-[16px]" onclick="openTab(2, 'helloUserTab');">
                         <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
-                          <i class="fa-solid fa-user"></i
-                        ></span>
-                        My Account</a
-                      >
+                          <i class="fa-solid fa-user"></i>
+                        </span>
+                        My Account
+                      </a>
                     </li>
-      
-                    <li id="tab3" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
-                    >
-                      <a href="#" class="ml-[16px]">
+                  
+                    <li id="tab3" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
+                      <a href="#" class="ml-[16px]" onclick="openTab(3, 'helloUserTab');">
                         <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
-                          <i class="fa-solid fa-clipboard-list"></i
-                        ></span>
-                      My Prescriptions</a
-                      >
+                          <i class="fa-solid fa-clipboard-list"></i>
+                        </span>
+                        My Prescriptions
+                      </a>
                     </li>
-      
-                    <li id="tab4" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
-                    >
-                      <a href="#" class="ml-[16px]">
+                  
+                    <li id="tab4" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
+                      <a href="#" class="ml-[16px]" onclick="openTab(4, 'helloUserTab');">
                         <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
-                          <i class="fa-solid fa-heart"></i
-                        ></span>
-                        Favourite</a
-                      >
+                          <i class="fa-solid fa-heart"></i>
+                        </span>
+                        Favourite
+                      </a>
                     </li>
-      
-                    <li data-popup="Manage-Address-popup" class="popupTrigger hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
-                    >
-                      <a href="#"  class="ml-[16px]">
+                  
+                    <li id="tab5" data-popup="Manage-Address-popup" class="popupTrigger hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
+                      <a href="#" class="ml-[16px]" onclick="openTab(5, 'helloUserTab');">
                         <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
-                          <i class="fa-solid fa-location-dot"></i
-                        ></span>
-                        Manage Address</a
-                      >
+                          <i class="fa-solid fa-location-dot"></i>
+                        </span>
+                        Manage Address
+                      </a>
                     </li>
-      
-                    <li id="tab5" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
-                    >
-                      <a href="#" class="ml-[16px]">
+                  
+                    <li id="tab6" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
+                      <a href="#" class="ml-[16px]" onclick="openTab(6, 'helloUserTab');">
                         <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
-                          <i class="fa-solid fa-notes-medical"></i
-                        ></span>
-                        Request Medicine</a
-                      >
+                          <i class="fa-solid fa-notes-medical"></i>
+                        </span>
+                        Request Medicine
+                      </a>
                     </li>
-      
-                    <li id="tab6" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
-                    >
-                      <a href="#" class="ml-[16px]">
+                  
+                    <li id="tab7" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
+                      <a href="#" class="ml-[16px]" onclick="openTab(7, 'helloUserTab');">
                         <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
-                          <i class="fa-solid fa-gift"></i
-                        ></span>
-                        Refer And Earn</a
-                      >
+                          <i class="fa-solid fa-gift"></i>
+                        </span>
+                        Refer And Earn
+                      </a>
                     </li>
-      
-                    <li  class="hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
-                    >
-                      <a href="#" class="ml-[16px]">
+                  
+                    <li id="tab8" class="hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
+                      <a href="#" class="ml-[16px]" onclick="openTab(8, 'helloUserTab');">
                         <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
-                          <i class="fa-solid fa-phone"></i
-                        ></span>
-                        Call To Order</a
-                      >
+                          <i class="fa-solid fa-phone"></i>
+                        </span>
+                        Call To Order
+                      </a>
                     </li>
-      
-                    <li id="tab7" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
-                    >
-                      <a href="#" class="ml-[16px]">
+                  
+                    <li id="tab9" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
+                      <a href="#" class="ml-[16px]" onclick="openTab(9, 'helloUserTab');">
                         <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
-                          <i class="fa-solid fa-clipboard-question"></i
-                        ></span>
-                        FAQs</a
-                      >
+                          <i class="fa-solid fa-clipboard-question"></i>
+                        </span>
+                        FAQs
+                      </a>
                     </li>
-      
-                    <li id="tab8" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
-                    >
-                      <a href="#" class="ml-[16px]">
+                  
+                    <li id="tab10" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
+                      <a href="#" class="ml-[16px]" onclick="openTab(10, 'helloUserTab');">
                         <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
-                          <i class="fa-solid fa-calendar-days"></i
-                        ></span>
-                        Special Offers</a
-                      >
+                          <i class="fa-solid fa-calendar-days"></i>
+                        </span>
+                        Special Offers
+                      </a>
                     </li>
-      
-                    <li id="tab9" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
-                    >
-                      <a href="#" class="ml-[16px]">
+                  
+                    <li id="tab11" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
+                      <a href="#" class="ml-[16px]" onclick="openTab(11, 'helloUserTab');">
                         <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
-                          <i class="fa-brands fa-square-facebook"></i
-                        ></span>
-                        Facebook Page</a
-                      >
+                          <i class="fa-brands fa-square-facebook"></i>
+                        </span>
+                        Facebook Page
+                      </a>
                     </li>
-      
-                    <li id="tab10" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]"
-                    >
-                      <a href="#" class="ml-[16px]">
+                  
+                    <li id="tab12" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
+                      <a href="#" class="ml-[16px]" onclick="openTab(12, 'helloUserTab');">
                         <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
-                          <i class="fa-solid fa-thumbs-up"></i
-                        ></span>
-                        Rate Us</a
-                      >
+                          <i class="fa-solid fa-thumbs-up"></i>
+                        </span>
+                        Rate Us
+                      </a>
                     </li>
                   </ul>
                 </div>
