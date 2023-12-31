@@ -96,9 +96,13 @@ function toggleList() {
     button.classList.add('bg-[#008069]', 'text-[#fff]', 'border-hidden');
   }
 // tabs end 
-
-
-
+function toggleSubMenu(event) {
+  event.preventDefault();
+  var submenu = event.currentTarget.querySelector('.submenu');
+  var icon = event.currentTarget.querySelector('.icon');
+  submenu.classList.toggle('open');
+  icon.classList.toggle('rotate');
+}
 
 // login referral code 
 

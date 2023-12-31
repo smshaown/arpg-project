@@ -119,13 +119,19 @@
       class="menu bg-gray-100 w-60 h-screen fixed top-0 left-0 overflow-x-hidden transition-transform duration-500 transform -translate-x-full z-9999"
     >
       <li
-        class="content-div -mb-[11px] hover:bg-[#E1EDE9] py-[0px]"
-        onclick="changeContent('Covid-19', this)"
+        class="content-div -mb-[11px] hover:bg-[#E1EDE9]"
+        onclick="toggleSubMenu('subMenuId')"
       >
         <a href="#">
-          <img src="img/covit.png" alt="" />
-          <span class="ml-2 text-[13px]">Covid-19 Special</span>
+          <img src="img/women.png" alt="" />
+          <span class="ml-2 text-[13px]">Women Care</span>
         </a>
+        <ul class="submenu" id="subMenuId">
+          <!-- Submenu items go here -->
+          <li><a href="#">Submenu Item 1</a></li>
+          <li><a href="#">Submenu Item 2</a></li>
+          <!-- Add more submenu items as needed -->
+        </ul>
       </li>
       <li
         class="content-div -mb-[11px] hover:bg-[#E1EDE9]"
@@ -248,6 +254,24 @@
       function smallToggleMenu() {
         var menu = document.getElementById("smallDeviceMenu");
         menu.classList.toggle("translate-x-full");
+      }
+      function toggleSubMenu(subMenuId) {
+        var submenu = document.getElementById(subMenuId);
+        if (submenu.style.display === "block") {
+          submenu.style.display = "none";
+        } else {
+          submenu.style.display = "block";
+          document.addEventListener("click", function closeSubMenu(event) {
+            // Check if the click is outside the submenu and the menu item
+            if (
+              !submenu.contains(event.target) &&
+              !document.getElementById("womenCareItem").contains(event.target)
+            ) {
+              submenu.style.display = "none";
+              document.removeEventListener("click", closeSubMenu);
+            }
+          });
+        }
       }
     </script>
     <script src="js/cartProduct.js"></script>

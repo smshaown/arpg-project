@@ -352,12 +352,20 @@
 
   <!-- large device menu -->
   <ul class="side-menu mt-[18px]">
-    <li class="content-div -mb-[11px] hover:bg-[#E1EDE9] py-[0px]" onclick="changeContent('Covid-19', this)">
-      <a href="#">
-         <img src="img/covit.png" alt="">
-         <span class="ml-2 text-[13px]">Covid-19 Special</span>
-      </a>      
-    </li>
+   <li class="content-div -mb-[11px] hover:bg-[#E1EDE9]" onclick="toggleSubMenu(event)">
+    <a href="#" class="flex flex-row gap-2 py-2">
+        <img class="h-[25px] w-[25px] object-cover object-fit" src="img/covit.png" alt="">
+        <span class="ml-2 text-[13px]">Covid-19 Special</span>
+        <i class='bx bxs-chevron-right icon'></i>
+    </a>
+
+    <!-- Submenu -->
+    <ul class="submenu pl-10">
+        <li class="hover:text-[#008069]" onclick="changeContent('Covid-19', this)"><a  href="#">Covid-19</a></li>
+        <li class="hover:text-[#008069]" onclick="changeContent('Women-Care', this)"><a  href="#">Women-Care</a></li>
+        <!-- Add more submenu items as needed -->
+    </ul>
+</li>
     <li class="content-div -mb-[11px] hover:bg-[#E1EDE9]" onclick="changeContent('Women-Care', this)">
       <a href="#">
         <img src="img/women.png" alt="">
