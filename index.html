@@ -71,7 +71,7 @@
               <h2 class="font-bold">& Earn</h2>
             </div>
 
-            <div data-popup="Manage-Address-popup" class="popupTrigger flex flex-row gap-1 cursor-pointer" >
+            <div id="openSidebarBtn" class="flex flex-row gap-1 cursor-pointer" >
               <i class="fa-solid fa-cart-plus text-[22px]"></i>
               <h3 class="font-bold">Cart</h3>
             </div>
@@ -118,108 +118,97 @@
             </div>
             <hr class="mt-1" />
 
-            <ul id="helloUserTab" class="tab-container">
-              <li onclick="changeContent('Hello-User', this)" id="tab1" class="tab-user active hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
-                <a href="#" class="ml-[16px]" onclick="openTab(1, 'helloUserTab');">
+            <ul id="helloUserLeftSide ">
+              <li  data-target="myOrdersContent" class="UserNavItems hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]" onclick="changeContent('Hello-User', this)">
+                <a href="#" class="ml-[16px]">
                   <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
                     <i class="fa-solid fa-table-list"></i>
                   </span>
                   My Orders
                 </a>
               </li>
-            
-              <li id="tab2" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
-                <a href="#" class="ml-[16px]" onclick="openTab(2, 'helloUserTab');">
+              <li  data-target="myAccountContent" class="UserNavItems hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
+                <a href="#" class="ml-[16px]">
                   <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
                     <i class="fa-solid fa-user"></i>
                   </span>
                   My Account
                 </a>
               </li>
-            
-              <li id="tab3" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
-                <a href="#" class="ml-[16px]" onclick="openTab(3, 'helloUserTab');">
+              <li  data-target="myPrescriptionsContent" class="UserNavItems hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
+                <a href="#" class="ml-[16px]">
                   <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
                     <i class="fa-solid fa-clipboard-list"></i>
                   </span>
                   My Prescriptions
                 </a>
               </li>
-            
-              <li id="tab4" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
-                <a href="#" class="ml-[16px]" onclick="openTab(4, 'helloUserTab');">
+              <li class="UserNavItems hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
+                <a href="#" class="ml-[16px]">
                   <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
                     <i class="fa-solid fa-heart"></i>
                   </span>
                   Favourite
                 </a>
               </li>
-            
-              <li id="tab5" data-popup="Manage-Address-popup" class="popupTrigger hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
-                <a href="#" class="ml-[16px]" onclick="openTab(5, 'helloUserTab');">
+              <li data-popup="Manage-Address-popup" class="popupTrigger hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
+                <a href="#" class="ml-[16px]">
                   <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
                     <i class="fa-solid fa-location-dot"></i>
                   </span>
                   Manage Address
                 </a>
               </li>
-            
-              <li id="tab6" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
-                <a href="#" class="ml-[16px]" onclick="openTab(6, 'helloUserTab');">
+              <li data-target="requestMedicineContent" class="UserNavItems hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
+                <a href="#" class="ml-[16px]">
                   <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
                     <i class="fa-solid fa-notes-medical"></i>
                   </span>
                   Request Medicine
                 </a>
               </li>
-            
-              <li id="tab7" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
-                <a href="#" class="ml-[16px]" onclick="openTab(7, 'helloUserTab');">
+              <li data-target="referAndEarnContent" class="UserNavItems hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
+                <a href="#" class="ml-[16px]">
                   <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
                     <i class="fa-solid fa-gift"></i>
                   </span>
                   Refer And Earn
                 </a>
               </li>
-            
-              <li id="tab8" class="hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
-                <a href="#" class="ml-[16px]" onclick="openTab(8, 'helloUserTab');">
+              <li data-target="callToOrderContent" class="UserNavItems hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
+                <a href="#" class="ml-[16px]">
                   <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
                     <i class="fa-solid fa-phone"></i>
                   </span>
                   Call To Order
                 </a>
               </li>
-            
-              <li id="tab9" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
-                <a href="#" class="ml-[16px]" onclick="openTab(9, 'helloUserTab');">
+              <li data-target="faqsContent" class="UserNavItems hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
+                <a href="#" class="ml-[16px]">
                   <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
                     <i class="fa-solid fa-clipboard-question"></i>
                   </span>
                   FAQs
                 </a>
               </li>
-            
-              <li id="tab10" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
-                <a href="#" class="ml-[16px]" onclick="openTab(10, 'helloUserTab');">
+              <li data-target="specialOffersContent" class="UserNavItems hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
+                <a href="#" class="ml-[16px]">
                   <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
                     <i class="fa-solid fa-calendar-days"></i>
                   </span>
                   Special Offers
                 </a>
               </li>
-            
-              <li id="tab11" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
-                <a href="#" class="ml-[16px]" onclick="openTab(11, 'helloUserTab');">
+              <li data-target="facebookPageContent" class="UserNavItems hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
+                <a href="#" class="ml-[16px]">
                   <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
                     <i class="fa-brands fa-square-facebook"></i>
                   </span>
                   Facebook Page
                 </a>
               </li>
-            
-              <li id="tab12" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
-                <a href="#" class="ml-[16px]" onclick="openTab(12, 'helloUserTab');">
+              <li data-target="rateUsContent" class="UserNavItems hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
+                <a href="#" class="ml-[16px]">
                   <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
                     <i class="fa-solid fa-thumbs-up"></i>
                   </span>
@@ -280,7 +269,7 @@
  </div>
 
  <!-- small device menu  -->
- <div id="">
+ <div>
   <ul id="smallDeviceMenu"
   class="menu lg:hidden bg-white w-[250px] h-screen fixed top-[172px] left-[-250px]  transition-transform duration-500 transform -translate-x-full shadow-lg " style="z-index: 99999"
 >
@@ -346,82 +335,78 @@
 <!-- SIDEBAR -->
 <section id="sidebar" class="shadow-md">
 
-
-  
-
-
   <!-- large device menu -->
-  <ul class="side-menu mt-[18px]">
-   <li class="content-div -mb-[11px] hover:bg-[#E1EDE9]" onclick="toggleSubMenu(event)">
-    <a href="#" class="flex flex-row gap-2 py-2">
-        <img class="h-[25px] w-[25px] object-cover object-fit" src="img/covit.png" alt="">
-        <span class="ml-2 text-[13px]">Covid-19 Special</span>
-        <i class='bx bxs-chevron-right icon'></i>
-    </a>
+     <ul class="side-menu mt-[18px]">
+            <li class="content-div -mb-[11px] hover:bg-[#E1EDE9]" onclick="toggleSubMenu(event)">
+              <a href="#" class="flex flex-row gap-2 py-2">
+                  <img class="h-[25px] w-[25px] object-cover object-fit" src="img/covit.png" alt="">
+                  <span class="ml-2 text-[13px]">Covid-19 Special</span>
+                  <i class='bx bxs-chevron-right icon'></i>
+              </a>
 
-    <!-- Submenu -->
-    <ul class="submenu pl-10">
-        <li class="hover:text-[#008069]" onclick="changeContent('Covid-19', this)"><a  href="#">Covid-19</a></li>
-        <li class="hover:text-[#008069]" onclick="changeContent('Women-Care', this)"><a  href="#">Women-Care</a></li>
-        <!-- Add more submenu items as needed -->
-    </ul>
-</li>
-    <li class="content-div -mb-[11px] hover:bg-[#E1EDE9]" onclick="changeContent('Women-Care', this)">
-      <a href="#">
-        <img src="img/women.png" alt="">
-        <span class="ml-2 text-[13px]">Women Care</span>
-      </a>      
-    </li>
-    <li class="content-div -mb-[11px] hover:bg-[#E1EDE9]" onclick="changeContent('Devices', this)">
-      <a href="#">
-        <img src="img/Devices.png" alt="">
-        <span class="ml-2 text-[13px]">Devices</span>
-      </a>     
-    </li>
-    <li class="content-div -mb-[11px] hover:bg-[#E1EDE9]" onclick="changeContent('Sexual-Wellness', this)">
-      <a href="#">
-        <img src="img/sexual.png" alt="">
-        <span class="ml-2 text-[13px]">Sexual Wellness</span>
-      </a>      
-    </li>
-    <li class="content-div -mb-[11px] hover:bg-[#E1EDE9]" onclick="changeContent('Herbal-and-Homeopathy', this)">
-      <a href="#">
-        <img src="img/Herbal.png" alt="">
-        <span class="ml-2 text-[13px]">Herbal and Homeopathy</span>
-      </a>      
-    </li>
-    <li class="content-div -mb-[11px] hover:bg-[#E1EDE9]" onclick="changeContent('Baby-Mom-care', this)">
-      <a href="#">
-        <img src="img/boby.png" alt="">
-        <span class="ml-2 text-[13px]">Baby & Mom care</span>
-      </a>
-    </li>
-    <li class="content-div -mb-[11px] hover:bg-[#E1EDE9]" onclick="changeContent('Nutrition-and-drinks', this)">
-      <a href="#">
-        <img src="img/nutrition.png" alt="">
-        <span class="ml-2 text-[13px]">Nutrition and drinks</span>
-      </a>
-    </li>
-    <li class="content-div -mb-[11px] hover:bg-[#E1EDE9]" onclick="changeContent('Personal-care', this)">
-      <a href="#">
-        <img src="img/personal.png" alt="">
-        <span class="ml-2 text-[13px]">Personal care</span>
-      </a>
-    </li>
-    <li class="content-div -mb-[11px] hover:bg-[#E1EDE9]" onclick="changeContent('Supplements-and-Vitamins', this)">
-      <a href="#">
-        <img src="img/supplemens.png" alt="">
-        <span class="ml-2 text-[13px]">Supplements and Vitamins</span>
-      </a>
-    </li>
-    <li class="content-div -mb-[11px] hover:bg-[#E1EDE9]" onclick="changeContent('Veterinary', this)">
-      <a href="#">
-        <img src="img/veterinary.png" alt="">
-        <span class="ml-2 text-[13px]">Veterinary</span>
-      </a>
-    </li>
+              <!-- Submenu -->
+              <ul class="submenu pl-10">
+                  <li class="hover:text-[#008069]" onclick="changeContent('Covid-19', this)"><a  href="#">Covid-19</a></li>
+                  <li class="hover:text-[#008069]" onclick="changeContent('Women-Care', this)"><a  href="#">Women-Care</a></li>
+                  <!-- Add more submenu items as needed -->
+              </ul>
+          </li>
+          <li class="content-div -mb-[11px] hover:bg-[#E1EDE9]" onclick="changeContent('Women-Care', this)">
+            <a href="#">
+              <img src="img/women.png" alt="">
+              <span class="ml-2 text-[13px]">Women Care</span>
+            </a>      
+          </li>
+          <li class="content-div -mb-[11px] hover:bg-[#E1EDE9]" onclick="changeContent('Devices', this)">
+            <a href="#">
+              <img src="img/Devices.png" alt="">
+              <span class="ml-2 text-[13px]">Devices</span>
+            </a>     
+          </li>
+          <li class="content-div -mb-[11px] hover:bg-[#E1EDE9]" onclick="changeContent('Sexual-Wellness', this)">
+            <a href="#">
+              <img src="img/sexual.png" alt="">
+              <span class="ml-2 text-[13px]">Sexual Wellness</span>
+            </a>      
+          </li>
+          <li class="content-div -mb-[11px] hover:bg-[#E1EDE9]" onclick="changeContent('Herbal-and-Homeopathy', this)">
+            <a href="#">
+              <img src="img/Herbal.png" alt="">
+              <span class="ml-2 text-[13px]">Herbal and Homeopathy</span>
+            </a>      
+          </li>
+          <li class="content-div -mb-[11px] hover:bg-[#E1EDE9]" onclick="changeContent('Baby-Mom-care', this)">
+            <a href="#">
+              <img src="img/boby.png" alt="">
+              <span class="ml-2 text-[13px]">Baby & Mom care</span>
+            </a>
+          </li>
+          <li class="content-div -mb-[11px] hover:bg-[#E1EDE9]" onclick="changeContent('Nutrition-and-drinks', this)">
+            <a href="#">
+              <img src="img/nutrition.png" alt="">
+              <span class="ml-2 text-[13px]">Nutrition and drinks</span>
+            </a>
+          </li>
+          <li class="content-div -mb-[11px] hover:bg-[#E1EDE9]" onclick="changeContent('Personal-care', this)">
+            <a href="#">
+              <img src="img/personal.png" alt="">
+              <span class="ml-2 text-[13px]">Personal care</span>
+            </a>
+          </li>
+          <li class="content-div -mb-[11px] hover:bg-[#E1EDE9]" onclick="changeContent('Supplements-and-Vitamins', this)">
+            <a href="#">
+              <img src="img/supplemens.png" alt="">
+              <span class="ml-2 text-[13px]">Supplements and Vitamins</span>
+            </a>
+          </li>
+          <li class="content-div -mb-[11px] hover:bg-[#E1EDE9]" onclick="changeContent('Veterinary', this)">
+            <a href="#">
+              <img src="img/veterinary.png" alt="">
+              <span class="ml-2 text-[13px]">Veterinary</span>
+            </a>
+          </li>
     
-  </ul>
+      </ul>
  
 </section>
 <!-- SIDEBAR -->
@@ -753,11 +738,6 @@
   </div>
 
      </div>
-
-    <div>
-
-    </div>
-
     </div>
 
     <div id="Women-Care" class="content-div" style="display: none;">
@@ -1514,7 +1494,7 @@
      <section>
         <div id="Hello-User" class="content-div mb-10" style="display: none;">
             <div class="flex flex-row gap-4">
-              <div class="w-[300px] rounded-lg hidden lg:block" style="box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);" >
+              <div class="w-[350px] rounded-lg hidden lg:block" style="box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);" >
                 <div class="flex flex-col bg-white py-8 space-y-4">
                   <div class="flex flex-row items-center gap-5">
                     <span class="ml-[20px]" >
@@ -1523,108 +1503,98 @@
                   </div>
                   <hr class="mt-1" />
       
-                  <ul id="helloUserTab" class="tab-container">
-                    <li id="tab1" class="tab-user active hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
-                      <a href="#" class="ml-[16px]" onclick="openTab(1, 'helloUserTab');">
+                  <ul id="helloUserLeftSide ">
+                    <li  data-target="myOrdersContent" class="UserNavItems hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
+                      <a href="#" class="ml-[16px]">
                         <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
                           <i class="fa-solid fa-table-list"></i>
                         </span>
                         My Orders
                       </a>
                     </li>
-                  
-                    <li id="tab2" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
-                      <a href="#" class="ml-[16px]" onclick="openTab(2, 'helloUserTab');">
+                    <li  data-target="myAccountContent" class="UserNavItems hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
+                      <a href="#" class="ml-[16px]">
                         <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
                           <i class="fa-solid fa-user"></i>
                         </span>
                         My Account
                       </a>
                     </li>
-                  
-                    <li id="tab3" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
-                      <a href="#" class="ml-[16px]" onclick="openTab(3, 'helloUserTab');">
+                 
+                    <li  data-target="myPrescriptionsContent" class="UserNavItems hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
+                      <a href="#" class="ml-[16px]">
                         <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
                           <i class="fa-solid fa-clipboard-list"></i>
                         </span>
                         My Prescriptions
                       </a>
                     </li>
-                  
-                    <li id="tab4" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
-                      <a href="#" class="ml-[16px]" onclick="openTab(4, 'helloUserTab');">
+                    <li data-target="favouriteContent" class="UserNavItems hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
+                      <a href="#" class="ml-[16px]">
                         <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
                           <i class="fa-solid fa-heart"></i>
                         </span>
                         Favourite
                       </a>
                     </li>
-                  
-                    <li id="tab5" data-popup="Manage-Address-popup" class="popupTrigger hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
-                      <a href="#" class="ml-[16px]" onclick="openTab(5, 'helloUserTab');">
+                    <li data-popup="Manage-Address-popup" class="popupTrigger hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
+                      <a href="#" class="ml-[16px]">
                         <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
                           <i class="fa-solid fa-location-dot"></i>
                         </span>
                         Manage Address
                       </a>
                     </li>
-                  
-                    <li id="tab6" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
-                      <a href="#" class="ml-[16px]" onclick="openTab(6, 'helloUserTab');">
+                    <li data-target="requestMedicineContent" class="UserNavItems hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
+                      <a href="#" class="ml-[16px]">
                         <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
                           <i class="fa-solid fa-notes-medical"></i>
                         </span>
                         Request Medicine
                       </a>
                     </li>
-                  
-                    <li id="tab7" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
-                      <a href="#" class="ml-[16px]" onclick="openTab(7, 'helloUserTab');">
+                    <li data-target="referAndEarnContent" class="UserNavItems hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
+                      <a href="#" class="ml-[16px]">
                         <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
                           <i class="fa-solid fa-gift"></i>
                         </span>
                         Refer And Earn
                       </a>
                     </li>
-                  
-                    <li id="tab8" class="hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
-                      <a href="#" class="ml-[16px]" onclick="openTab(8, 'helloUserTab');">
+                    <li data-target="callToOrderContent" class="UserNavItems hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
+                      <a href="#" class="ml-[16px]">
                         <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
                           <i class="fa-solid fa-phone"></i>
                         </span>
                         Call To Order
                       </a>
                     </li>
-                  
-                    <li id="tab9" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
-                      <a href="#" class="ml-[16px]" onclick="openTab(9, 'helloUserTab');">
+                    <li data-target="faqsContent" class="UserNavItems hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
+                      <a href="#" class="ml-[16px]">
                         <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
                           <i class="fa-solid fa-clipboard-question"></i>
                         </span>
                         FAQs
                       </a>
                     </li>
-                  
-                    <li id="tab10" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
-                      <a href="#" class="ml-[16px]" onclick="openTab(10, 'helloUserTab');">
+                    <li data-target="specialOffersContent" class="UserNavItems hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
+                      <a href="#" class="ml-[16px]">
                         <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
                           <i class="fa-solid fa-calendar-days"></i>
                         </span>
                         Special Offers
                       </a>
                     </li>
-                  
-                    <li id="tab11" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
-                      <a href="#" class="ml-[16px]" onclick="openTab(11, 'helloUserTab');">
+                    <li data-target="facebookPageContent" class="UserNavItems hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
+                      <a href="#" class="ml-[16px]">
                         <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
                           <i class="fa-brands fa-square-facebook"></i>
                         </span>
                         Facebook Page
                       </a>
                     </li>
-                  
-                    <li id="tab12" class="tab-user hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
-                      <a href="#" class="ml-[16px]" onclick="openTab(12, 'helloUserTab');">
+                    <li data-target="rateUsContent" class="UserNavItems hover:bg-[#E6FCF6] cursor-pointer text-[17px] py-[16px]">
+                      <a href="#" class="ml-[16px]">
                         <span class="mr-[25px]" style="color: rgba(0, 0, 0, 0.54)">
                           <i class="fa-solid fa-thumbs-up"></i>
                         </span>
@@ -1632,72 +1602,141 @@
                       </a>
                     </li>
                   </ul>
+
+
                 </div>
               </div>
 
-              <!-- My Orders  -->
-              <div id="content1" class="tab-content w-full">
-                <div id="button-container" class="button-container px-2 py-3 w-[100%] h-auto" style="box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.1), 0px 0px 0px -1px rgba(0,0,0,0.1), 0px -5px 0px -12px rgba(0,0,0,0.1), 0px 3px 0px -3px rgba(0,0,0,0.1);
-                "  >
+
+              <div id="helloUserRightSide" class="w-full">
+                <div id="myOrdersContent" class="content active">
+                  <div
+                  id="button-container"
+                  class="button-container px-2 py-3 w-[100%] h-auto"
+                  style="
+                    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1),
+                      0px 0px 0px -1px rgba(0, 0, 0, 0.1),
+                      0px -5px 0px -12px rgba(0, 0, 0, 0.1),
+                      0px 3px 0px -3px rgba(0, 0, 0, 0.1);
+                  "
+                >
                   <button class="tab-button active" id="button1">All</button>
                   <button class="tab-button" id="button2">confirmed</button>
                   <button class="tab-button" id="button3">delivering</button>
                   <button class="tab-button" id="button4">delivered</button>
-                
+          
                   <div class="mt-4">
                     <div id="button-content1" class="button-content">
-                      <p class="bg-[#E8F4FD] px-2 py-2 w-full text-[14px] font-medium rounded-md">No Orders Yet</p>
+                      <p
+                        class="bg-[#E8F4FD] px-2 py-2 w-full text-[14px] font-medium rounded-md"
+                      >
+                        No Orders Yet
+                      </p>
                     </div>
                     <div id="button-content2" class="button-content hidden">
-                      <p class="bg-[#E8F4FD] px-2 py-2 w-full text-[14px] font-medium rounded-md">No Orders Yet</p>
+                      <p
+                        class="bg-[#E8F4FD] px-2 py-2 w-full text-[14px] font-medium rounded-md"
+                      >
+                        No Orders Yet
+                      </p>
                     </div>
                     <div id="button-content3" class="button-content hidden">
-                      <p class="bg-[#E8F4FD] px-2 py-2 w-full text-[14px] font-medium rounded-md">No Orders Yet</p>
+                      <p
+                        class="bg-[#E8F4FD] px-2 py-2 w-full text-[14px] font-medium rounded-md"
+                      >
+                        No Orders Yet
+                      </p>
                     </div>
                     <div id="button-content4" class="button-content hidden">
-                      <p class="bg-[#E8F4FD] px-2 py-2 w-full text-[14px] font-medium rounded-md">No Orders Yet</p>
+                      <p
+                        class="bg-[#E8F4FD] px-2 py-2 w-full text-[14px] font-medium rounded-md"
+                      >
+                        No Orders Yet
+                      </p>
                     </div>
                   </div>
                 </div>
-                
+                </div>
 
-              </div>
-                <!-- my Account  -->
-              <div id="content2" class="tab-content hidden w-full" >
-                <div class="px-2 py-3 h-full" style="box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.1), 0px 0px 0px -1px rgba(0,0,0,0.1), 0px -5px 0px -12px rgba(0,0,0,0.1), 0px 3px 0px -3px rgba(0,0,0,0.1);" >
+                <div id="myAccountContent" class="content w-full">
+                  <div
+                    class="px-2 py-3 h-full"
+                    style="
+                      box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1),
+                        0px 0px 0px -1px rgba(0, 0, 0, 0.1),
+                        0px -5px 0px -12px rgba(0, 0, 0, 0.1),
+                        0px 3px 0px -3px rgba(0, 0, 0, 0.1);
+                    "
+                  >
                     <div>
                       <div class="relative">
-                        <i class='bx bxs-user w-[80px] h-[80px] text-[60px] flex justify-center items-center text-white rounded-full bg-[#BDBDBD] p-2'></i>
+                        <i
+                          class="bx bxs-user w-[80px] h-[80px] text-[60px] flex justify-center items-center text-white rounded-full bg-[#BDBDBD] p-2"
+                        ></i>
                         <div class="absolute left-0 bottom-0">
-                            <!-- Hidden file input -->
-                            <input type="file" id="fileInput" style="display: none;">
-                            
-                            <label for="fileInput" class="w-[34px] h-[34px] bg-[#04594A] flex justify-center items-center rounded-full text-[#fff] cursor-pointer">
-                                <i class='bx bx-pencil'></i>
-                            </label>
+                          <!-- Hidden file input -->
+                          <input type="file" id="fileInput" style="display: none" />
+
+                          <label
+                            for="fileInput"
+                            class="w-[34px] h-[34px] bg-[#04594A] flex justify-center items-center rounded-full text-[#fff] cursor-pointer"
+                          >
+                            <i class="bx bx-pencil"></i>
+                          </label>
                         </div>
-                    </div>
-                    <hr class="mt-3 mb-3" style="border: 1px solid #ddd;" />    
+                      </div>
+                      <hr class="mt-3 mb-3" style="border: 1px solid #ddd" />
                       <div>
                         <div class="mb-6 mt-2">
-                          <input type="text" id="large-input" class="block w-full p-4 text-gray-900 border border-[#008069] rounded-lg  sm:text-md  focus:border-[#008069] dark:bg-[#008069] dark:border-[#008069]" placeholder="Full Name" required />
-                      </div>
+                          <input
+                            type="text"
+                            id="large-input"
+                            class="block w-full p-4 text-gray-900 border border-[#008069] rounded-lg sm:text-md focus:border-[#008069] dark:bg-[#008069] dark:border-[#008069]"
+                            placeholder="Full Name"
+                            required
+                          />
+                        </div>
                         <div class="mb-6 mt-2">
-                          <input type="number" id="large-input" class=" block w-full p-4 text-gray-900 border border-[#008069] rounded-lg  sm:text-md  focus:border-[#008069] dark:bg-[#008069] dark:border-[#008069]" value="01709198065" disabled />
-                          <p class="text-xs text-gray-400 px-3">Mobile number cannot be changed</p>
-                      </div>
+                          <input
+                            type="number"
+                            id="large-input"
+                            class="block w-full p-4 text-gray-900 border border-[#008069] rounded-lg sm:text-md focus:border-[#008069] dark:bg-[#008069] dark:border-[#008069]"
+                            value="01709198065"
+                            disabled
+                          />
+                          <p class="text-xs text-gray-400 px-3">
+                            Mobile number cannot be changed
+                          </p>
+                        </div>
                         <div class="mb-6 mt-2">
-                          <input type="number" id="large-input" class=" block w-full p-4 text-gray-900 border border-[#008069] rounded-lg  sm:text-md  focus:border-[#008069] dark:bg-[#008069] dark:border-[#008069]" placeholder="Email Address" required />
-                      </div>
+                          <input
+                            type="number"
+                            id="large-input"
+                            class="block w-full p-4 text-gray-900 border border-[#008069] rounded-lg sm:text-md focus:border-[#008069] dark:bg-[#008069] dark:border-[#008069]"
+                            placeholder="Email Address"
+                            required
+                          />
+                        </div>
 
-                      <div class="mb-6 mt-4">
-                        <button class="bg-[#008069] text-white w-full uppercase font-bold text-[15px] text-center py-2 rounded-md">update profile</button>
-                      </div>
-                       
+                        <div class="mb-6 mt-4">
+                          <button
+                            class="bg-[#008069] text-white w-full uppercase font-bold text-[15px] text-center py-2 rounded-md"
+                          >
+                            update profile
+                          </button>
+                        </div>
                       </div>
                       <!-- Cash (Usable) -->
                       <div>
-                        <div class="w-full flex fle-row justify-between items-center py-3 px-2 rounded-md"  style="box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.1), 0px 0px 0px -1px rgba(0,0,0,0.1), 0px -5px 0px -12px rgba(0,0,0,0.1), 0px 3px 0px -3px rgba(0,0,0,0.1);">
+                        <div
+                          class="w-full flex fle-row justify-between items-center py-3 px-2 rounded-md"
+                          style="
+                            box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1),
+                              0px 0px 0px -1px rgba(0, 0, 0, 0.1),
+                              0px -5px 0px -12px rgba(0, 0, 0, 0.1),
+                              0px 3px 0px -3px rgba(0, 0, 0, 0.1);
+                          "
+                        >
                           <h2>Cash (Usable)</h2>
                           <p>৳0</p>
                         </div>
@@ -1706,85 +1745,161 @@
                       <div class="pb-6 pt-6 flex justify-center items-center">
                         <p>No more result!</p>
                       </div>
-                        
-                      </div>
-                    
                     </div>
+                  </div>
                 </div>
 
-                <!-- my Prescriptions -->
-                <div id="content3" class="tab-content hidden w-full"  style="box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.1), 0px 0px 0px -1px rgba(0,0,0,0.1), 0px -5px 0px -12px rgba(0,0,0,0.1), 0px 3px 0px -3px rgba(0,0,0,0.1);">
+                <div id="myPrescriptionsContent" class="content">
+                  <div style="
+                    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1),
+                      0px 0px 0px -1px rgba(0, 0, 0, 0.1),
+                      0px -5px 0px -12px rgba(0, 0, 0, 0.1),
+                      0px 3px 0px -3px rgba(0, 0, 0, 0.1);
+                  "
+                >
                   <div class="px-3 py-3 mx-2">
-                    <div class="bg-[#F9F9F9]" >
-                      <div class="bg-[#008069] w-[60px] h-[60px] rounded-full flex justify-center items-center text-[#fff]">
-                        <i class='bx bx-plus text-lg'></i>
+                    <div class="bg-[#F9F9F9]">
+                      <div
+                        class="bg-[#008069] w-[60px] h-[60px] rounded-full flex justify-center items-center text-[#fff]"
+                      >
+                        <i class="bx bx-plus text-lg"></i>
                       </div>
-                      <p class="bg-[#E8F4FD] mt-4 px-2 py-2 w-full text-[14px] font-medium rounded-md">No Orders Yet</p>
+                      <p
+                        class="bg-[#E8F4FD] mt-4 px-2 py-2 w-full text-[14px] font-medium rounded-md"
+                      >
+                        No Orders Yet
+                      </p>
                     </div>
-                  </div>                 
+                  </div>
+               </div>
                 </div>
 
-                <!-- Favourite -->
-                <div id="content4" class="tab-content hidden w-full">
-                   <div class="h-auto" style="box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.1), 0px 0px 0px -1px rgba(0,0,0,0.1), 0px -5px 0px -12px rgba(0,0,0,0.1), 0px 3px 0px -3px rgba(0,0,0,0.1);">
-                     <div class="flex justify-center items-center px-3 py-3">
-                      <img src="img/Favourite.png" alt="">
-                     </div>
-                   </div>
+
+                <div id="favouriteContent" class="content">
+                  <div
+                    class="h-auto"
+                    style="
+                      box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1),
+                        0px 0px 0px -1px rgba(0, 0, 0, 0.1),
+                        0px -5px 0px -12px rgba(0, 0, 0, 0.1),
+                        0px 3px 0px -3px rgba(0, 0, 0, 0.1);
+                    "
+                  >
+                    <div class="flex justify-center items-center px-3 py-3">
+                      <img src="img/Favourite.png" alt="" />
+                    </div>
+                  </div>
                 </div>
 
-                <!-- <Request Medicine start -->
-                <div id="content5" class="tab-content hidden w-full">
-                  <div class="px-3 py-3 h-auto" style="box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.1), 0px 0px 0px -1px rgba(0,0,0,0.1), 0px -5px 0px -12px rgba(0,0,0,0.1), 0px 3px 0px -3px rgba(0,0,0,0.1);">
-                    <div class="mb-6 mt-2">
-                      <label for="">Medicine Name</label>
-                      <input type="text" id="large-input" class="block w-full p-3 text-gray-900 border border-[#008069] rounded-lg  sm:text-md  focus:border-[#008069] dark:bg-[#008069] dark:border-[#008069]" placeholder="Medicine Name" required />
-                  </div>
-                    <div class="mb-6 mt-2">
-                      <label for="">Strength</label>
-                      <input type="number" id="large-input" class=" block w-full p-3 text-gray-900 border border-[#008069] rounded-lg  sm:text-md  focus:border-[#008069] dark:bg-[#008069] dark:border-[#008069]" placeholder="i. e 10mg" required />
-                  </div>
-                    <div class="mb-6 mt-2">
-                      <label>Medicine Form</label>
-                      <input type="text" id="large-input" class=" block w-full p-3 text-gray-900 border border-[#008069] rounded-lg  sm:text-md  focus:border-[#008069] dark:bg-[#008069] dark:border-[#008069]" placeholder="i. tablet" required />
-                  </div>
-                    <div class="mb-6 mt-2">
-                      <label>Compaay</label>
-                      <input type="text" id="large-input" class=" block w-full p-3 text-gray-900 border border-[#008069] rounded-lg  sm:text-md  focus:border-[#008069] dark:bg-[#008069] dark:border-[#008069]" placeholder="Company" required />
-                  </div>
 
+                <div id="requestMedicineContent" class="content">
+                  <div
+                  class="px-3 py-3 h-auto"
+                  style="
+                    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1),
+                      0px 0px 0px -1px rgba(0, 0, 0, 0.1),
+                      0px -5px 0px -12px rgba(0, 0, 0, 0.1),
+                      0px 3px 0px -3px rgba(0, 0, 0, 0.1);
+                  "
+                >
+                  <div class="mb-6 mt-2">
+                    <label for="">Medicine Name</label>
+                    <input
+                      type="text"
+                      id="large-input"
+                      class="block w-full p-3 text-gray-900 border border-[#008069] rounded-lg sm:text-md focus:border-[#008069] dark:bg-[#008069] dark:border-[#008069]"
+                      placeholder="Medicine Name"
+                      required
+                    />
+                  </div>
+                  <div class="mb-6 mt-2">
+                    <label for="">Strength</label>
+                    <input
+                      type="number"
+                      id="large-input"
+                      class="block w-full p-3 text-gray-900 border border-[#008069] rounded-lg sm:text-md focus:border-[#008069] dark:bg-[#008069] dark:border-[#008069]"
+                      placeholder="i. e 10mg"
+                      required
+                    />
+                  </div>
+                  <div class="mb-6 mt-2">
+                    <label>Medicine Form</label>
+                    <input
+                      type="text"
+                      id="large-input"
+                      class="block w-full p-3 text-gray-900 border border-[#008069] rounded-lg sm:text-md focus:border-[#008069] dark:bg-[#008069] dark:border-[#008069]"
+                      placeholder="i. tablet"
+                      required
+                    />
+                  </div>
+                  <div class="mb-6 mt-2">
+                    <label>Compaay</label>
+                    <input
+                      type="text"
+                      id="large-input"
+                      class="block w-full p-3 text-gray-900 border border-[#008069] rounded-lg sm:text-md focus:border-[#008069] dark:bg-[#008069] dark:border-[#008069]"
+                      placeholder="Company"
+                      required
+                    />
+                  </div>
+          
                   <div class="mb-6 mt-4">
-                    <button class="bg-[#008069] text-white w-full uppercase font-bold text-[15px] text-center py-2 rounded-md">update profile</button>
-                  </div>
-                   
+                    <button
+                      class="bg-[#008069] text-white w-full uppercase font-bold text-[15px] text-center py-2 rounded-md"
+                    >
+                      update profile
+                    </button>
                   </div>
                 </div>
+                </div>
 
-                <!-- Refer And Earn start -->
-                <div id="content6" class="tab-content hidden w-full">
-                 <div class="h-auto" style="box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.1), 0px 0px 0px -1px rgba(0,0,0,0.1), 0px -5px 0px -12px rgba(0,0,0,0.1), 0px 3px 0px -3px rgba(0,0,0,0.1);">
-                   <div>
-                    <img class="w-full h-full object-cover" src="img/refar1.png" alt="">
-                   </div>
-
-                   <div class="flex flex-col justify-center items-center mt-4 mb-6">
+                <div id="referAndEarnContent" class="content">
+                  <div
+                  class="h-auto"
+                  style="
+                    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1),
+                      0px 0px 0px -1px rgba(0, 0, 0, 0.1),
+                      0px -5px 0px -12px rgba(0, 0, 0, 0.1),
+                      0px 3px 0px -3px rgba(0, 0, 0, 0.1);
+                  "
+                >
+                  <div>
+                    <img class="w-full h-full object-cover" src="img/refar1.png" alt="" />
+                  </div>
+          
+                  <div class="flex flex-col justify-center items-center mt-4 mb-6">
                     <h1 class="text-[20px] font-bold">Invite friends. Earn money.</h1>
-                    <p class="text-[16px]">Tell a friend about  and get <span class="font-bold">40 taka</span> reward.</p>
-                    <p class="text-[16px]">Your referral code: <span class="font-bold">R4K4YR</span></p>
-                    <button class="bg-[#008069] mt-6 text-white capitalize px-3 font-bold text-[14px] text-center py-2 rounded-full">Copy Shareable Link</button>
-                   </div>
-
-                   <div class="flex flex-col justify-center items-center mt-3 ">
-                      <div class="w-full md:w-[400px]">
-                        <p class="text-[15px] text-center" >You will get 40 Taka each time your friends join with your referral code and place their first order. Make sure they enter this code while signing up for .</p>
-                      <p class="text-xs mt-3 text-center">* Your referral code is valid for lifetime.</p>
-                      </div>
-                   </div>
-
-                 </div>
+                    <p class="text-[16px]">
+                      Tell a friend about and get
+                      <span class="font-bold">40 taka</span> reward.
+                    </p>
+                    <p class="text-[16px]">
+                      Your referral code: <span class="font-bold">R4K4YR</span>
+                    </p>
+                    <button
+                      class="bg-[#008069] mt-6 text-white capitalize px-3 font-bold text-[14px] text-center py-2 rounded-full"
+                    >
+                      Copy Shareable Link
+                    </button>
+                  </div>
+          
+                  <div class="flex flex-col justify-center items-center mt-3">
+                    <div class="w-full md:w-[400px]">
+                      <p class="text-[15px] text-center">
+                        You will get 40 Taka each time your friends join with your
+                        referral code and place their first order. Make sure they enter
+                        this code while signing up for .
+                      </p>
+                      <p class="text-xs mt-3 text-center">
+                        * Your referral code is valid for lifetime.
+                      </p>
+                    </div>
+                  </div>
+                </div>
                 </div>
 
-                <div id="content7" class="tab-content hidden w-full">
+                <div id="callToOrderContent" class="content">Call To Order Content</div>
+                <div id="faqsContent" class="content">
                   <div class="">
                     <ul class="flex flex-col">
                       <li class="bg-white my-2 shadow-lg" x-data="accordion(1)">
@@ -1798,7 +1913,9 @@
                             class="fill-current text-purple-700 h-6 w-6 transform transition-transform duration-500"
                             viewBox="0 0 20 20"
                           >
-                            <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+                            <path
+                              d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"
+                            ></path>
                           </svg>
                         </h2>
                         <div
@@ -1807,34 +1924,72 @@
                           class="border-l-2 border-purple-600 overflow-hidden max-h-0 duration-500 transition-all"
                         >
                           <div class="px-3 pb-2">
-                            <h2 class="font-bold text-[16px] mt-2">When will I receive my order?</h2>
-
-                      <p class="text-[15px]"> Your order will be delivered within estimated time shown to you while ordering.</p>
-
-                      <h2 class="font-bold text-[16px] mt-2">I have received damaged items.</h2>
-
-                      <p class="text-[15px]"> We are sorry you had to experience this. Please do not accept the delivery of that order and let us know what happened</p>
-
-                      <h2 class="font-bold text-[16px] mt-2">Items are different from what I ordered.</h2>
-
-                      <p class="text-[15px]">We are sorry you have had to experience this. Please do not accept it from rider. Reject the order straightaway and call to  customer care</p>
-
-                      <h2 class="font-bold text-[16px] mt-2">  What if Items are missing from my order.</h2>
-
-                     <p class="text-[15px]"> In no circumstances, you should receive an order that is incomplete. Once rider reaches your destination, be sure to check expiry date of medicines and your all ordered items was delivered.
-                    </p>
-
-                      <h2 class="font-bold text-[16px] mt-2">How do I cancel my order?</h2>
-
-                    <p class="text-[15px]">  Please call us with your order ID and we will cancel it for you. or you can cancel from my orders option as well.</p>
-
-                    <h2 class="font-bold text-[16px] mt-2">   I want to modify my order.</h2>
-
-                     <p class="text-[15px]"> Sorry, once your order is confirmed, it cannot be modified. Please place a fresh order with any modifications.</p>
-
-                      <h2 class="font-bold text-[16px] mt-2">What is the shelf life of medicines being provided?</h2>
-
-                    <p class="text-[15px]">  We ensure that the shelf life of the medicines being supplied by our partner retailers is, at least, a minimum of 3 months from the date of delivery.</p>
+                            <h2 class="font-bold text-[16px] mt-2">
+                              When will I receive my order?
+                            </h2>
+            
+                            <p class="text-[15px]">
+                              Your order will be delivered within estimated time shown to
+                              you while ordering.
+                            </p>
+            
+                            <h2 class="font-bold text-[16px] mt-2">
+                              I have received damaged items.
+                            </h2>
+            
+                            <p class="text-[15px]">
+                              We are sorry you had to experience this. Please do not accept
+                              the delivery of that order and let us know what happened
+                            </p>
+            
+                            <h2 class="font-bold text-[16px] mt-2">
+                              Items are different from what I ordered.
+                            </h2>
+            
+                            <p class="text-[15px]">
+                              We are sorry you have had to experience this. Please do not
+                              accept it from rider. Reject the order straightaway and call
+                              to customer care
+                            </p>
+            
+                            <h2 class="font-bold text-[16px] mt-2">
+                              What if Items are missing from my order.
+                            </h2>
+            
+                            <p class="text-[15px]">
+                              In no circumstances, you should receive an order that is
+                              incomplete. Once rider reaches your destination, be sure to
+                              check expiry date of medicines and your all ordered items was
+                              delivered.
+                            </p>
+            
+                            <h2 class="font-bold text-[16px] mt-2">
+                              How do I cancel my order?
+                            </h2>
+            
+                            <p class="text-[15px]">
+                              Please call us with your order ID and we will cancel it for
+                              you. or you can cancel from my orders option as well.
+                            </p>
+            
+                            <h2 class="font-bold text-[16px] mt-2">
+                              I want to modify my order.
+                            </h2>
+            
+                            <p class="text-[15px]">
+                              Sorry, once your order is confirmed, it cannot be modified.
+                              Please place a fresh order with any modifications.
+                            </p>
+            
+                            <h2 class="font-bold text-[16px] mt-2">
+                              What is the shelf life of medicines being provided?
+                            </h2>
+            
+                            <p class="text-[15px]">
+                              We ensure that the shelf life of the medicines being supplied
+                              by our partner retailers is, at least, a minimum of 3 months
+                              from the date of delivery.
+                            </p>
                           </div>
                         </div>
                       </li>
@@ -1849,7 +2004,9 @@
                             class="fill-current text-purple-700 h-6 w-6 transform transition-transform duration-500"
                             viewBox="0 0 20 20"
                           >
-                            <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+                            <path
+                              d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"
+                            ></path>
                           </svg>
                         </h2>
                         <div
@@ -1857,26 +2014,58 @@
                           x-ref="tab"
                           :style="handleToggle()"
                         >
-                          
-                        <div class="px-3 pb-2">
-                          <h2 class="font-bold text-[16px] mt-2">When will I receive my order?</h2>
-                      <p class="text-[15px]">Your order will be delivered within the Estimated Delivery Date.</p>
-
-                      <h2 class="font-bold text-[16px] mt-2">Order status showing delivered but I have not received my order.</h2>
-                      <p class="text-[15px]">Sorry that you are experiencing this. Please call to connect with us immediately.</p>
-
-                      <h2 class="font-bold text-[16px] mt-2">Which cities do you operate in?</h2>
-                      <p class="text-[15px]">We provide healthcare services in all over Bangladesh now.</p>
-
-                      <h2 class="font-bold text-[16px] mt-2">How can I get my order delivered faster?</h2>
-                      <p class="text-[15px]">We have both Express delivery and Regular delivery option available now. If you need it urgently please select Express delivery.</p>
-
-                      <h2 class="font-bold text-[16px] mt-2">Can I modify my address after Order placement?</h2>
-                      <p class="text-[15px]">Sorry, once the order is placed, we are unable to modify the address.</p>
-
-                      <h2 class="font-bold text-[16px] mt-2">What is the meaning of Delivered status?</h2>
-                      <p class="text-[15px]">When the rider reaches your destination and hands over the products to you, the delivery status changes to 'Delivered'. Status 'Delivered' also means (your company name) has already collected the payment from you via cash or online payment.</p>
-                        </div>
+                          <div class="px-3 pb-2">
+                            <h2 class="font-bold text-[16px] mt-2">
+                              When will I receive my order?
+                            </h2>
+                            <p class="text-[15px]">
+                              Your order will be delivered within the Estimated Delivery
+                              Date.
+                            </p>
+            
+                            <h2 class="font-bold text-[16px] mt-2">
+                              Order status showing delivered but I have not received my
+                              order.
+                            </h2>
+                            <p class="text-[15px]">
+                              Sorry that you are experiencing this. Please call to connect
+                              with us immediately.
+                            </p>
+            
+                            <h2 class="font-bold text-[16px] mt-2">
+                              Which cities do you operate in?
+                            </h2>
+                            <p class="text-[15px]">
+                              We provide healthcare services in all over Bangladesh now.
+                            </p>
+            
+                            <h2 class="font-bold text-[16px] mt-2">
+                              How can I get my order delivered faster?
+                            </h2>
+                            <p class="text-[15px]">
+                              We have both Express delivery and Regular delivery option
+                              available now. If you need it urgently please select Express
+                              delivery.
+                            </p>
+            
+                            <h2 class="font-bold text-[16px] mt-2">
+                              Can I modify my address after Order placement?
+                            </h2>
+                            <p class="text-[15px]">
+                              Sorry, once the order is placed, we are unable to modify the
+                              address.
+                            </p>
+            
+                            <h2 class="font-bold text-[16px] mt-2">
+                              What is the meaning of Delivered status?
+                            </h2>
+                            <p class="text-[15px]">
+                              When the rider reaches your destination and hands over the
+                              products to you, the delivery status changes to 'Delivered'.
+                              Status 'Delivered' also means (your company name) has already
+                              collected the payment from you via cash or online payment.
+                            </p>
+                          </div>
                         </div>
                       </li>
                       <li class="bg-white my-2 shadow-lg" x-data="accordion(3)">
@@ -1890,7 +2079,9 @@
                             class="fill-current text-purple-700 h-6 w-6 transform transition-transform duration-500"
                             viewBox="0 0 20 20"
                           >
-                            <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+                            <path
+                              d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"
+                            ></path>
                           </svg>
                         </h2>
                         <div
@@ -1898,19 +2089,40 @@
                           x-ref="tab"
                           :style="handleToggle()"
                         >
-                        <div class="px-3 pb-2">
-                          <h2 class="font-bold text-[16px] mt-2">How do customers get discounts?</h2>
-                            <p class="text-[15px]">We deduct the value from every medicine and show it to you before ordering, so that you can see what you are really paying for each medicine.</p>
-
-                            <h2 class="font-bold text-[16px] mt-2">When will I get my refund?</h2>
-                            <p class="text-[15px]">Refund will be credited in (your company name) cash (3-5 business days).</p>
-
-                            <h2 class="font-bold text-[16px] mt-2">I did not receive cashback for my order.</h2>
-                            <p class="text-[15px]">Please read the T&amp;C of the offer carefully for the eligibility of cashback.</p>
-
-                            <h2 class="font-bold text-[16px] mt-2">What are the payment modes at (your company name)?</h2>
-                            <p class="text-[15px]">Cash on Delivery (COD) and Online payment methods such as Bkash, Nagad, Cards, etc.</p>
-                        </div>
+                          <div class="px-3 pb-2">
+                            <h2 class="font-bold text-[16px] mt-2">
+                              How do customers get discounts?
+                            </h2>
+                            <p class="text-[15px]">
+                              We deduct the value from every medicine and show it to you
+                              before ordering, so that you can see what you are really
+                              paying for each medicine.
+                            </p>
+            
+                            <h2 class="font-bold text-[16px] mt-2">
+                              When will I get my refund?
+                            </h2>
+                            <p class="text-[15px]">
+                              Refund will be credited in (your company name) cash (3-5
+                              business days).
+                            </p>
+            
+                            <h2 class="font-bold text-[16px] mt-2">
+                              I did not receive cashback for my order.
+                            </h2>
+                            <p class="text-[15px]">
+                              Please read the T&amp;C of the offer carefully for the
+                              eligibility of cashback.
+                            </p>
+            
+                            <h2 class="font-bold text-[16px] mt-2">
+                              What are the payment modes at (your company name)?
+                            </h2>
+                            <p class="text-[15px]">
+                              Cash on Delivery (COD) and Online payment methods such as
+                              Bkash, Nagad, Cards, etc.
+                            </p>
+                          </div>
                         </div>
                       </li>
                       <li class="bg-white my-2 shadow-lg" x-data="accordion(4)">
@@ -1924,7 +2136,9 @@
                             class="fill-current text-purple-700 h-6 w-6 transform transition-transform duration-500"
                             viewBox="0 0 20 20"
                           >
-                            <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+                            <path
+                              d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"
+                            ></path>
                           </svg>
                         </h2>
                         <div
@@ -1932,23 +2146,52 @@
                           x-ref="tab"
                           :style="handleToggle()"
                         >
-                         <div class="px-3 pb-2">
-                          <h2 class="font-bold text-[16px] mt-2">How does your referral program work?</h2>
-                              <p class="text-[15px]">Invite your friends and family members by sharing your referral code. Once they join with your referral code and place their first order, you will get an extra 40 Taka Referral bonus in your (your company name) cash.</p>
-
-                              <h2 class="font-bold text-[16px] mt-2">Why did I not get the referral benefit?</h2>
-                              <p class="text-[15px]">If you are not notified about your referral benefit, it is likely that one or more of the following things happened:</p>
-                              <ol class="list-decimal pl-6">
-                                  <li>The referred member did not apply your referral code while placing the order.</li>
-                                  <li>The user clicked on your link but did not create an account or complete their first purchase.</li>
-                                  <li>The referred member placed an eligible order, but the order was not fulfilled.</li>
-                                  <li>The person who used the code has already placed an order on (your company name).</li>
-                                  <li>Your referral benefit has expired.</li>
-                              </ol>
-
-                              <h2 class="font-bold text-[16px] mt-2">Is there an expiry date to my referral benefit?</h2>
-                              <p class="text-[15px]">No, there is no expiry date. Once you are eligible for the additional benefit, you will surely get it.</p>
-                         </div>
+                          <div class="px-3 pb-2">
+                            <h2 class="font-bold text-[16px] mt-2">
+                              How does your referral program work?
+                            </h2>
+                            <p class="text-[15px]">
+                              Invite your friends and family members by sharing your
+                              referral code. Once they join with your referral code and
+                              place their first order, you will get an extra 40 Taka
+                              Referral bonus in your (your company name) cash.
+                            </p>
+            
+                            <h2 class="font-bold text-[16px] mt-2">
+                              Why did I not get the referral benefit?
+                            </h2>
+                            <p class="text-[15px]">
+                              If you are not notified about your referral benefit, it is
+                              likely that one or more of the following things happened:
+                            </p>
+                            <ol class="list-decimal pl-6">
+                              <li>
+                                The referred member did not apply your referral code while
+                                placing the order.
+                              </li>
+                              <li>
+                                The user clicked on your link but did not create an account
+                                or complete their first purchase.
+                              </li>
+                              <li>
+                                The referred member placed an eligible order, but the order
+                                was not fulfilled.
+                              </li>
+                              <li>
+                                The person who used the code has already placed an order on
+                                (your company name).
+                              </li>
+                              <li>Your referral benefit has expired.</li>
+                            </ol>
+            
+                            <h2 class="font-bold text-[16px] mt-2">
+                              Is there an expiry date to my referral benefit?
+                            </h2>
+                            <p class="text-[15px]">
+                              No, there is no expiry date. Once you are eligible for the
+                              additional benefit, you will surely get it.
+                            </p>
+                          </div>
                         </div>
                       </li>
                       <li class="bg-white my-2 shadow-lg" x-data="accordion(5)">
@@ -1962,7 +2205,9 @@
                             class="fill-current text-purple-700 h-6 w-6 transform transition-transform duration-500"
                             viewBox="0 0 20 20"
                           >
-                            <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+                            <path
+                              d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"
+                            ></path>
                           </svg>
                         </h2>
                         <div
@@ -1970,29 +2215,66 @@
                           x-ref="tab"
                           :style="handleToggle()"
                         >
-                        <div class="px-3 pb-2">
-                          <h2 class="font-bold text-[16px] mt-2">What is (your company name) cash?</h2>
-                          <p class="text-[15px]">This is a virtual wallet to store (your company name) Cash in your account.</p>
-                      
-                          <h2 class="font-bold text-[16px] mt-2">How do I check my (your company name) cash balance?</h2>
-                          <p class="text-[15px]">You can check your (your company name) cash in the Account screen.</p>
-                      
-                          <h2 class="font-bold text-[16px] mt-2">When will the (your company name) money expire?</h2>
-                          <p class="text-[15px]">Any (your company name) Cash deposited in your (your company name) wallet through returns will never expire. At times, our marketing team may deposit promotional cash which will have an expiry that is communicated to you via an SMS.</p>
-                      
-                          <h2 class="font-bold text-[16px] mt-2">Can I add money to my (your company name) cash?</h2>
-                          <p class="text-[15px]">No, you are unable to transfer or add money to your (your company name) cash.</p>
-                      
-                          <h2 class="font-bold text-[16px] mt-2">How can I redeem my (your company name) cash?</h2>
-                          <p class="text-[15px]">If you have any money in your (your company name) cash, it will be automatically deducted from your next order amount, and you will only have to pay for the balance amount (if any).</p>
-                      
-                          <h2 class="font-bold text-[16px] mt-2">Can I transfer money from my (your company name) cash to the bank account?</h2>
-                          <p class="text-[15px]">No, you are unable to transfer money from your (your company name) cash to the bank account.</p>
-                      
-                          <h2 class="font-bold text-[16px] mt-2">How much (your company name) money can I redeem in an order?</h2>
-                          <p class="text-[15px]">There is no limit for redemption of (your company name) cash.</p>
-                      </div>
-                      
+                          <div class="px-3 pb-2">
+                            <h2 class="font-bold text-[16px] mt-2">
+                              What is (your company name) cash?
+                            </h2>
+                            <p class="text-[15px]">
+                              This is a virtual wallet to store (your company name) Cash in
+                              your account.
+                            </p>
+            
+                            <h2 class="font-bold text-[16px] mt-2">
+                              How do I check my (your company name) cash balance?
+                            </h2>
+                            <p class="text-[15px]">
+                              You can check your (your company name) cash in the Account
+                              screen.
+                            </p>
+            
+                            <h2 class="font-bold text-[16px] mt-2">
+                              When will the (your company name) money expire?
+                            </h2>
+                            <p class="text-[15px]">
+                              Any (your company name) Cash deposited in your (your company
+                              name) wallet through returns will never expire. At times, our
+                              marketing team may deposit promotional cash which will have an
+                              expiry that is communicated to you via an SMS.
+                            </p>
+            
+                            <h2 class="font-bold text-[16px] mt-2">
+                              Can I add money to my (your company name) cash?
+                            </h2>
+                            <p class="text-[15px]">
+                              No, you are unable to transfer or add money to your (your
+                              company name) cash.
+                            </p>
+            
+                            <h2 class="font-bold text-[16px] mt-2">
+                              How can I redeem my (your company name) cash?
+                            </h2>
+                            <p class="text-[15px]">
+                              If you have any money in your (your company name) cash, it
+                              will be automatically deducted from your next order amount,
+                              and you will only have to pay for the balance amount (if any).
+                            </p>
+            
+                            <h2 class="font-bold text-[16px] mt-2">
+                              Can I transfer money from my (your company name) cash to the
+                              bank account?
+                            </h2>
+                            <p class="text-[15px]">
+                              No, you are unable to transfer money from your (your company
+                              name) cash to the bank account.
+                            </p>
+            
+                            <h2 class="font-bold text-[16px] mt-2">
+                              How much (your company name) money can I redeem in an order?
+                            </h2>
+                            <p class="text-[15px]">
+                              There is no limit for redemption of (your company name) cash.
+                            </p>
+                          </div>
                         </div>
                       </li>
                       <li class="bg-white my-2 shadow-lg" x-data="accordion(6)">
@@ -2006,7 +2288,9 @@
                             class="fill-current text-purple-700 h-6 w-6 transform transition-transform duration-500"
                             viewBox="0 0 20 20"
                           >
-                            <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+                            <path
+                              d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"
+                            ></path>
                           </svg>
                         </h2>
                         <div
@@ -2014,14 +2298,26 @@
                           x-ref="tab"
                           :style="handleToggle()"
                         >
-                        <div class="px-3 pb-2">
-                          <h2 class="font-bold text-[16px] mt-2">How do I apply a coupon code on my order?</h2>
-                          <p class="text-[15px]">You can apply a coupon on the cart screen while placing an order. If you are getting a message that the coupon code has failed to apply, it may be because you are not eligible for the offer.</p>
-                      
-                          <h2 class="font-bold text-[16px] mt-2">Does (your company name) offer a return of the medicine?</h2>
-                          <p class="text-[15px]">Yes, (your company name) does accept returns of the medicine from customers. We have a 7-day return policy for eligible items. Please check our return section for more details.</p>
-                      </div>
-                      
+                          <div class="px-3 pb-2">
+                            <h2 class="font-bold text-[16px] mt-2">
+                              How do I apply a coupon code on my order?
+                            </h2>
+                            <p class="text-[15px]">
+                              You can apply a coupon on the cart screen while placing an
+                              order. If you are getting a message that the coupon code has
+                              failed to apply, it may be because you are not eligible for
+                              the offer.
+                            </p>
+            
+                            <h2 class="font-bold text-[16px] mt-2">
+                              Does (your company name) offer a return of the medicine?
+                            </h2>
+                            <p class="text-[15px]">
+                              Yes, (your company name) does accept returns of the medicine
+                              from customers. We have a 7-day return policy for eligible
+                              items. Please check our return section for more details.
+                            </p>
+                          </div>
                         </div>
                       </li>
                       <li class="bg-white my-2 shadow-lg" x-data="accordion(7)">
@@ -2035,7 +2331,9 @@
                             class="fill-current text-purple-700 h-6 w-6 transform transition-transform duration-500"
                             viewBox="0 0 20 20"
                           >
-                            <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+                            <path
+                              d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"
+                            ></path>
                           </svg>
                         </h2>
                         <div
@@ -2043,118 +2341,239 @@
                           x-ref="tab"
                           :style="handleToggle()"
                         >
-                        <div class="px-3 pb-2">
-                          <h2 class="font-bold text-[16px] mt-2">How does (your company name)’s return policy work?</h2>
-                          <p class="text-[15px]">(your company name) offers a flexible return policy for items ordered with us. Under this policy, unopened and unused items must be returned within 7 days from the date of delivery. The return window will be listed in the returns section of the order, once delivered. Items are not eligible for return under the following circumstances:</p>
-                          <ul class="list-disc pl-6">
-                              <li>If items have been opened, partially used, or disfigured. Please check the package carefully at the time of delivery before opening and using.</li>
-                              <li>If the item’s packaging/box or seal has been tampered with. Do not accept the delivery if the package appears to be tampered with.</li>
-                              <li>If it is mentioned on the product details page that the item is non-returnable.</li>
-                              <li>If the return window for items in an order has expired. No items can be returned after 7 days from the delivery date.</li>
-                              <li>If any accessories supplied with the items are missing.</li>
-                              <li>If the item does not have the original serial number/UPC number/barcode affixed, which was present at the time of delivery.</li>
-                              <li>If there is any damage/defect not covered under the manufacturer's warranty.</li>
+                          <div class="px-3 pb-2">
+                            <h2 class="font-bold text-[16px] mt-2">
+                              How does (your company name)’s return policy work?
+                            </h2>
+                            <p class="text-[15px]">
+                              (your company name) offers a flexible return policy for items
+                              ordered with us. Under this policy, unopened and unused items
+                              must be returned within 7 days from the date of delivery. The
+                              return window will be listed in the returns section of the
+                              order, once delivered. Items are not eligible for return under
+                              the following circumstances:
+                            </p>
+                            <ul class="list-disc pl-6">
+                              <li>
+                                If items have been opened, partially used, or disfigured.
+                                Please check the package carefully at the time of delivery
+                                before opening and using.
+                              </li>
+                              <li>
+                                If the item’s packaging/box or seal has been tampered with.
+                                Do not accept the delivery if the package appears to be
+                                tampered with.
+                              </li>
+                              <li>
+                                If it is mentioned on the product details page that the item
+                                is non-returnable.
+                              </li>
+                              <li>
+                                If the return window for items in an order has expired. No
+                                items can be returned after 7 days from the delivery date.
+                              </li>
+                              <li>
+                                If any accessories supplied with the items are missing.
+                              </li>
+                              <li>
+                                If the item does not have the original serial number/UPC
+                                number/barcode affixed, which was present at the time of
+                                delivery.
+                              </li>
+                              <li>
+                                If there is any damage/defect not covered under the
+                                manufacturer's warranty.
+                              </li>
                               <li>If the item is damaged due to visible misuse.</li>
-                              <li>Any refrigerated items like insulin or products that are heat-sensitive are non-returnable.</li>
-                              <li>Items related to baby care, food & nutrition, healthcare devices, and sexual wellness such as but not limited to diapers, health drinks, health supplements, glucometers, glucometer strips/lancets, health monitors, condoms, pregnancy/fertility kits, etc.</li>
-                          </ul>
-                      
-                          <h2 class="font-bold text-[16px] mt-2">Do you sell medicine strips in full or can it be single units too?</h2>
-                          <p class="text-[15px]">We sell in single units to give customers flexibility in selecting specific amounts of medicine required. We provide single units of medicine as our pharmacist can cut strips.</p>
-                      
-                          <h2 class="font-bold text-[16px] mt-2">I have broken the seal, can I return it?</h2>
-                          <p class="text-[15px]">No, you cannot return any items with a broken seal.</p>
-                      
-                          <h2 class="font-bold text-[16px] mt-2">Can I return medicine that is partially consumed?</h2>
-                          <p class="text-[15px]">No, you cannot return partially consumed items. Only unopened items that have not been used can be returned.</p>
-                      
-                          <h2 class="font-bold text-[16px] mt-2">Can I ask for a return if the strip is cut?</h2>
-                          <p class="text-[15px]">We provide customers with the option of purchasing medicines as single units. Even if ordering a single tablet of paracetamol, we can deliver that. It is common to have medicines in your order with some strips that are cut. If you want to get a full strip in your order, please order a full strip amount and you will get it accordingly. If you do not order a full strip, you will get cut pieces. If you have ordered 4 single units which are cut pieces and want to return, all 4 pieces must be returned. We do not allow partial return of 1 or 2 pieces.</p>
-                      </div>
-                      
-                      
+                              <li>
+                                Any refrigerated items like insulin or products that are
+                                heat-sensitive are non-returnable.
+                              </li>
+                              <li>
+                                Items related to baby care, food & nutrition, healthcare
+                                devices, and sexual wellness such as but not limited to
+                                diapers, health drinks, health supplements, glucometers,
+                                glucometer strips/lancets, health monitors, condoms,
+                                pregnancy/fertility kits, etc.
+                              </li>
+                            </ul>
+            
+                            <h2 class="font-bold text-[16px] mt-2">
+                              Do you sell medicine strips in full or can it be single units
+                              too?
+                            </h2>
+                            <p class="text-[15px]">
+                              We sell in single units to give customers flexibility in
+                              selecting specific amounts of medicine required. We provide
+                              single units of medicine as our pharmacist can cut strips.
+                            </p>
+            
+                            <h2 class="font-bold text-[16px] mt-2">
+                              I have broken the seal, can I return it?
+                            </h2>
+                            <p class="text-[15px]">
+                              No, you cannot return any items with a broken seal.
+                            </p>
+            
+                            <h2 class="font-bold text-[16px] mt-2">
+                              Can I return medicine that is partially consumed?
+                            </h2>
+                            <p class="text-[15px]">
+                              No, you cannot return partially consumed items. Only unopened
+                              items that have not been used can be returned.
+                            </p>
+            
+                            <h2 class="font-bold text-[16px] mt-2">
+                              Can I ask for a return if the strip is cut?
+                            </h2>
+                            <p class="text-[15px]">
+                              We provide customers with the option of purchasing medicines
+                              as single units. Even if ordering a single tablet of
+                              paracetamol, we can deliver that. It is common to have
+                              medicines in your order with some strips that are cut. If you
+                              want to get a full strip in your order, please order a full
+                              strip amount and you will get it accordingly. If you do not
+                              order a full strip, you will get cut pieces. If you have
+                              ordered 4 single units which are cut pieces and want to
+                              return, all 4 pieces must be returned. We do not allow partial
+                              return of 1 or 2 pieces.
+                            </p>
+                          </div>
                         </div>
                       </li>
                     </ul>
-                  </div>                  
+                  </div>
                 </div>
 
-
-                <div id="content8" class="tab-content hidden w-full">
+                <div id="specialOffersContent" class="content">
                   <div class="h-auto">
-                    <div class="flex flex-row justify-between items-center py-2 px-4" style="box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.1), 0px 0px 0px -1px rgba(0,0,0,0.1), 0px -5px 0px -12px rgba(0,0,0,0.1), 0px 3px 0px -3px rgba(0,0,0,0.1);">                      
+                    <div
+                      class="flex flex-row justify-between items-center py-2 px-4"
+                      style="
+                        box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1),
+                          0px 0px 0px -1px rgba(0, 0, 0, 0.1),
+                          0px -5px 0px -12px rgba(0, 0, 0, 0.1),
+                          0px 3px 0px -3px rgba(0, 0, 0, 0.1);
+                      "
+                    >
                       <div class="flex items-center gap-10">
-                        <img src="img/offer-mike.webp" alt="">
-                         <div>
+                        <img src="img/offer-mike.webp" alt="" />
+                        <div>
                           <h2 class="font-bold text-[16px]">Cashback ৳100</h2>
                           <p class="font-bold text-[14px]">For purchasing above ৳5000+</p>
-                         </div>
+                        </div>
                       </div>
                       <div>
-                        <div class="bg-[#000] rounded-full text-white w-[30px] h-[30px] flex justify-center items-center">
-                          <i class='bx bx-chevron-right text-[20px]'></i>
+                        <div
+                          class="bg-[#000] rounded-full text-white w-[30px] h-[30px] flex justify-center items-center"
+                        >
+                          <i class="bx bx-chevron-right text-[20px]"></i>
                         </div>
                       </div>
                     </div>
-                    <div class="flex flex-row justify-between items-center py-2 px-4 mt-3" style="box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.1), 0px 0px 0px -1px rgba(0,0,0,0.1), 0px -5px 0px -12px rgba(0,0,0,0.1), 0px 3px 0px -3px rgba(0,0,0,0.1);">                      
+                    <div
+                      class="flex flex-row justify-between items-center py-2 px-4 mt-3"
+                      style="
+                        box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1),
+                          0px 0px 0px -1px rgba(0, 0, 0, 0.1),
+                          0px -5px 0px -12px rgba(0, 0, 0, 0.1),
+                          0px 3px 0px -3px rgba(0, 0, 0, 0.1);
+                      "
+                    >
                       <div class="flex items-center gap-10">
-                        <img src="img/offer-mike.webp" alt="">
-                         <div>
+                        <img src="img/offer-mike.webp" alt="" />
+                        <div>
                           <h2 class="font-bold text-[16px]">Cashback ৳80</h2>
                           <p class="font-bold text-[14px]">For purchasing above ৳4000+</p>
-                         </div>
+                        </div>
                       </div>
                       <div>
-                        <div class="bg-[#000] rounded-full text-white w-[30px] h-[30px] flex justify-center items-center">
-                          <i class='bx bx-chevron-right text-[20px]'></i>
+                        <div
+                          class="bg-[#000] rounded-full text-white w-[30px] h-[30px] flex justify-center items-center"
+                        >
+                          <i class="bx bx-chevron-right text-[20px]"></i>
                         </div>
                       </div>
                     </div>
-                    <div class="flex flex-row justify-between items-center py-2 px-4 mt-3" style="box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.1), 0px 0px 0px -1px rgba(0,0,0,0.1), 0px -5px 0px -12px rgba(0,0,0,0.1), 0px 3px 0px -3px rgba(0,0,0,0.1);">                      
+                    <div
+                      class="flex flex-row justify-between items-center py-2 px-4 mt-3"
+                      style="
+                        box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1),
+                          0px 0px 0px -1px rgba(0, 0, 0, 0.1),
+                          0px -5px 0px -12px rgba(0, 0, 0, 0.1),
+                          0px 3px 0px -3px rgba(0, 0, 0, 0.1);
+                      "
+                    >
                       <div class="flex items-center gap-10">
-                        <img src="img/offer-mike.webp" alt="">
-                         <div>
+                        <img src="img/offer-mike.webp" alt="" />
+                        <div>
                           <h2 class="font-bold text-[16px]">Cashback ৳60</h2>
                           <p class="font-bold text-[14px]">For purchasing above ৳3000+</p>
-                         </div>
+                        </div>
                       </div>
                       <div>
-                        <div class="bg-[#000] rounded-full text-white w-[30px] h-[30px] flex justify-center items-center">
-                          <i class='bx bx-chevron-right text-[20px]'></i>
+                        <div
+                          class="bg-[#000] rounded-full text-white w-[30px] h-[30px] flex justify-center items-center"
+                        >
+                          <i class="bx bx-chevron-right text-[20px]"></i>
                         </div>
                       </div>
                     </div>
-                    <div class="flex flex-row justify-between items-center py-2 px-4 mt-3" style="box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.1), 0px 0px 0px -1px rgba(0,0,0,0.1), 0px -5px 0px -12px rgba(0,0,0,0.1), 0px 3px 0px -3px rgba(0,0,0,0.1);">                      
+                    <div
+                      class="flex flex-row justify-between items-center py-2 px-4 mt-3"
+                      style="
+                        box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1),
+                          0px 0px 0px -1px rgba(0, 0, 0, 0.1),
+                          0px -5px 0px -12px rgba(0, 0, 0, 0.1),
+                          0px 3px 0px -3px rgba(0, 0, 0, 0.1);
+                      "
+                    >
                       <div class="flex items-center gap-10">
-                        <img src="img/offer-mike.webp" alt="">
-                         <div>
+                        <img src="img/offer-mike.webp" alt="" />
+                        <div>
                           <h2 class="font-bold text-[16px]">Cashback ৳40</h2>
                           <p class="font-bold text-[14px]">For purchasing above ৳2000+</p>
-                         </div>
+                        </div>
                       </div>
                       <div>
-                        <div class="bg-[#000] rounded-full text-white w-[30px] h-[30px] flex justify-center items-center">
-                          <i class='bx bx-chevron-right text-[20px]'></i>
+                        <div
+                          class="bg-[#000] rounded-full text-white w-[30px] h-[30px] flex justify-center items-center"
+                        >
+                          <i class="bx bx-chevron-right text-[20px]"></i>
                         </div>
                       </div>
                     </div>
-                    <div class="flex flex-row justify-between items-center py-2 px-4 mt-3" style="box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.1), 0px 0px 0px -1px rgba(0,0,0,0.1), 0px -5px 0px -12px rgba(0,0,0,0.1), 0px 3px 0px -3px rgba(0,0,0,0.1);">                      
+                    <div
+                      class="flex flex-row justify-between items-center py-2 px-4 mt-3"
+                      style="
+                        box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1),
+                          0px 0px 0px -1px rgba(0, 0, 0, 0.1),
+                          0px -5px 0px -12px rgba(0, 0, 0, 0.1),
+                          0px 3px 0px -3px rgba(0, 0, 0, 0.1);
+                      "
+                    >
                       <div class="flex items-center gap-10">
-                        <img src="img/offer-mike.webp" alt="">
-                         <div>
+                        <img src="img/offer-mike.webp" alt="" />
+                        <div>
                           <h2 class="font-bold text-[16px]">Cashback ৳20</h2>
                           <p class="font-bold text-[14px]">For purchasing above ৳1000+</p>
-                         </div>
+                        </div>
                       </div>
                       <div>
-                        <div class="bg-[#000] rounded-full text-white w-[30px] h-[30px] flex justify-center items-center">
-                          <i class='bx bx-chevron-right text-[20px]'></i>
+                        <div
+                          class="bg-[#000] rounded-full text-white w-[30px] h-[30px] flex justify-center items-center"
+                        >
+                          <i class="bx bx-chevron-right text-[20px]"></i>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                
+                <div id="facebookPageContent" class="content">Facebook Page Content</div>
+                <div id="rateUsContent" class="content">Rate Us Content</div>
+              </div>
+
+            
 
               </div>
             </div>
@@ -2937,6 +3356,127 @@
 
 
     </section>
+
+    <!-- cart sider bar start  -->
+    <section>
+        <div
+          id="rightSidebar"
+          class="hidden fixed top-[7rem] right-0 h-svh w-[350px] bg-[#fff] shadow-lg border-l-2 border-gray-300 transform translate-x-full transition-transform duration-300 ease-in-out" style="z-index: 9999;">
+          <div id="closeSidebarBtn" class="cursor-pointer text-white bg-[#b7b7b7] w-[16px] h-[60px] absolute top-[40%] -left-[20px] flex justify-center items-center rounded-l-lg" style="border: 1px solid rgba(0,0,0,.1)">
+            <i class='bx bxs-chevron-right text-[20px] font-bold'></i>
+          </div>
+          <div class="fixded text-[#fff] flex justify-between items-center flex-row bg-[#008069] w-full px-2 py-1">
+            <p class="text-xs">Free delivery above ৳999 order (Outside Dhaka)</p>
+            <span id="closeSidebarBtn" class="cursor-pointer"><i class='bx bx-x text-[25px]'></i></span>
+          </div>
+          <div class="bg-[#FAFAFA] overflow-y-scroll px-2 pb-3 h-[410px]">
+            <div>
+              <p class="text-[13px] mt-3 mb-1">Items not Requiring Prescriptions <span>1</span></p>
+              <div class="flex flex-row items-center gap-3 bg-[#fff] py-2 px-2 rounded-md">
+                <div class="w-[60px] h-[60px] border-[1px] border-[#008069] rounded-full">
+                  <img class="w-full h-full p-[8px] object-fit object-cover" src="img/covid/img1.webp" alt="" />
+                </div>
+                <div class="w-[230px]">
+                     <div class="flex flex-row items-center justify-between">
+                        <p class="text-[#4a5568] hover:text-[#008069] text-[14px] font-bold  cursor-pointer">Femicon</p>
+                        <i class='bx bx-x cursor-pointer'></i>
+                     </div>  
+                     <div class="flex flex-row items-center justify-between my-0.5">
+                        <p class="text-[11px]">SMC Enterprise Limited</p>
+                        <p class="text-[12px]"><span class="line-through mr-2 font-bold" style="color: rgba(138, 136, 136, 0.87);">৳ 2080</span> <span class="font-bold text-[#008069]">৳ 1872</span></p>
+                     </div>  
+                     <div>
+                      <p class="text-[11px]">0.03+75+0.30mg - Tablet</p>
+                     </div>   
+                     <div>
+                       <div class="mt-1">
+                          <p class="text-[12px]">1456 Tablets</p>
+                       </div>
+                       <div>
+
+                       </div>
+                     </div>  
+                  <div>
+                </div>
+                </div>
+              </div>
+
+              <div class="flex flex-row items-center gap-3 bg-[#fff] py-2 px-2 rounded-md mt-3">
+                <div>
+                  <div class="w-[40px] h-[40px]">
+                    <img class="w-full h-full object-fit object-cover" src="img/address.webp" alt="">
+                  </div>                 
+                  <p class="text-[11px] mt-[2px] text-[#fff] py-[1px] text-center px-[1px] rounded-[5px]" style="background-color: rgb(43, 109, 189);">Office</p>
+                </div>
+                <div class="w-full flex flex-row justify-between items-center gap-2">
+                   <div class="w-[150px]">
+                    <p class="text-[14px]">s m shaown</p>
+                    <p class="text-[12px]">0170918065</p>
+                    <p class="text-[12px] block text-ellipsis overflow-hidden">shaown, Baimail -Konabari </p>
+                  </div>
+                  <div class="border-[1px] border-[#ddd] p-[4px] bg-[#f2fff8] font-bold text-center rounded-[5px] cursor-pointer">
+                    <p class="flex flex-row items-center text-[12px]">Change <span class="ml-1"><i class='bx bx-down-arrow text-[10px] mt-0.5'></i></span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-[#fff] py-2 px-2 rounded-md mt-4">
+                <div class="mb-2">
+                  <div><h5 class="underline cursor-pointer text-[15px]">Have coupon code?</h5></div>
+                </div>
+                <div class="text-[13px]" style="color: #54aa8f; border: 1px dashed #6d8a80; padding: 10px; background: #f2fff8; border-radius: 5px;">
+                  <div class="flex felx-row items-center gap-2">
+                    <img class="w-[20px] h-[20px] object-cover" src="img/taka.webp" alt="">
+                    <p>You are saving ৳ <span class="font-bold">226</span> in this order.</p>
+                  </div>
+                  <div class="flex felx-row items-center gap-2 MT-1">
+                    <img class="w-[20px] h-[20px] object-cover" src="img/taka.webp" alt="">
+                    <p>You will receive ৳ <span class="font-bold">40</span> cashback for this order after delivery.</p>
+                  </div>
+                </div>
+                <div class="mt-5">
+                    <div class="text-[14px]">
+                      <div class="flex flex-row justify-between items-center w-full">
+                        <p>Subtotal</p>
+                        <p>৳ 2080</p>
+                      </div>
+                      <div class="flex flex-row justify-between items-center w-full mt-1">
+                        <p>Discount applied</p>
+                        <p>-৳ 208</p>
+                      </div>
+                      <div class="flex flex-row justify-between items-center w-full mt-1">
+                        <p>1-5 Days delivery (Outside Dhaka)</p>
+                        <p>৳ 00</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="border border-dashed border-green-500 rounded-md px-2 py-1.5 mt-2 flex flex-col gap-2">
+                  <div class="flex flex-row justify-between items-center">
+                    <div class="flex flex-row gap-3">
+                     <span> <i class='bx bxs-check-circle text-[24px] text-[#008069]'></i></span>
+                      <img class="w-[120px] h-[24px] object-fit object-cover" src="img/regular.webp" alt="">
+                    </div>
+                    <div>
+                      <h3 class="text-[16px] font-bold capitalize" style="color: rgb(16, 131, 125);">Free</h3>
+                    </div>
+                  </div>
+                  <div>
+                    <p class="text-[14px]">1-5 Days delivery (Outside Dhaka)</p>
+                  </div>
+                </div>  
+                <div class="flex justify-between items-center text-[14px] font-bold mt-0.5" style="color: rgb(16, 132, 126);">
+                  <p>Amount Payable</p>
+                  <p>৳ 1872</p>
+                </div>              
+              </div>
+             
+             
+            </div>
+          </div>
+          <div class="">
+            
+          </div>
+        </div>
+    </section>
   </main>
 </section>
 
@@ -2998,6 +3538,8 @@
       }
     });
   });
+
+  
 
 
   </script>

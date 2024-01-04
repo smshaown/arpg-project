@@ -53,3 +53,39 @@ function smallToggleMenu() {
   
 
   
+const leftSideLinks = document.querySelectorAll('.UserNavItems');
+const contentSections = document.querySelectorAll('.content');
+
+leftSideLinks.forEach((link, index) => {
+    link.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        // Remove the "active" class from all links
+        leftSideLinks.forEach((otherLink) => {
+            otherLink.classList.remove('active');
+        });
+
+        // Add the "active" class to the clicked link
+        this.classList.add('active');
+
+        const targetContentId = this.getAttribute('data-target');
+        updateRightSideContent(targetContentId, index);
+    });
+});
+
+function updateRightSideContent(targetContentId, index) {
+    contentSections.forEach(content => {
+        content.classList.remove('active');
+    });
+
+    const selectedContent = document.getElementById(targetContentId);
+    if (selectedContent) {
+        selectedContent.classList.add('active');
+    }
+
+    // You can add additional logic here to customize the content based on the targetContentId
+    console.log(`Switched to content section: ${targetContentId}`);
+}
+
+
+

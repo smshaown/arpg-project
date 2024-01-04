@@ -341,7 +341,7 @@ main {
   }
   main {
     /* padding: 24px 30px 30px 30px; */
-    padding-top: 24px;
+    padding-top: 60px;
     padding-left: 10px;
     /* padding-bottom: 10px; */
     padding-right: 10px;
@@ -413,4 +413,16 @@ main {
 }
 .submenu li a.hover {
   color: white !important;
+}
+
+#helloUserRightSide .content {
+  display: none;
+}
+#helloUserRightSide .content.active {
+  display: block;
+}
+
+.UserNavItems.active {
+  color: #008069;
+  background: #e6fcf6;
 }
